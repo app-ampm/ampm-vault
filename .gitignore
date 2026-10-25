@@ -5,3 +5,5 @@
 .obsidian/plugins/*/data.json
 .trash/
 .DS_Store
+.sync-state
+.current-session
