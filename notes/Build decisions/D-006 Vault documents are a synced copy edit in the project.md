@@ -7,7 +7,7 @@ status: accepted
 area: process
 relates: []
 supersedes: ""
-session: "[[2026-10-24 Session b649d80e]]"
+session: "[[2026-10-23 Session b649d80e]]"
 tags: [ampm, build-decision, area/process, status/accepted]
 ---
 # D-006 Vault documents are a synced copy; edit in the project
@@ -27,4 +27,4 @@ The vault should show the design documents with their diagrams and let notes lin
 - Wikilinks from notes to documents keep working because the copy keeps the same file names.
 
 ## Links
-- Session: [[2026-10-24 Session b649d80e]]
+- Session: [[2026-10-23 Session b649d80e]]

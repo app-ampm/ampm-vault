@@ -7,7 +7,7 @@ status: accepted
 area: tooling
 relates: []
 supersedes: ""
-session: "[[2026-10-24 Session b649d80e]]"
+session: "[[2026-10-23 Session b649d80e]]"
 tags: [ampm, build-decision, area/tooling, status/accepted]
 ---
 # D-003 Two repositories, with the vault nested at vault/
@@ -28,5 +28,5 @@ The project folder is the repository `ampm-platform`. The vault lives inside it 
 - The documents in the vault are a synced copy, see [[D-006 Vault documents are a synced copy edit in the project|D-006]].
 
 ## Links
-- Session: [[2026-10-24 Session b649d80e]]
+- Session: [[2026-10-23 Session b649d80e]]
 - Related: [[D-004 Repository identity bound to the project account app-ampm|D-004]], [[D-005 Automatic commits at the end of every Claude Code turn|D-005]]

@@ -7,7 +7,7 @@ status: accepted
 area: process
 relates: []
 supersedes: ""
-session: "[[2026-10-24 Session b649d80e]]"
+session: "[[2026-10-23 Session b649d80e]]"
 tags: [ampm, build-decision, area/process, status/accepted]
 ---
 # D-005 Automatic commits at the end of every Claude Code turn
@@ -29,5 +29,5 @@ A Claude Code Stop hook runs `docs/tools/checkpoint.sh --hook` at the end of eve
 - The hook is silent unless it committed, when Claude Code shows a one-line message.
 
 ## Links
-- Session: [[2026-10-24 Session b649d80e]]
+- Session: [[2026-10-23 Session b649d80e]]
 - Related: [[D-003 Two repositories with the vault nested at vault|D-003]], [[D-007 Session journal build decision records and Bases dashboards|D-007]]

@@ -7,7 +7,7 @@ status: accepted
 area: process
 relates: []
 supersedes: ""
-session: "[[2026-10-24 Session b649d80e]]"
+session: "[[2026-10-23 Session b649d80e]]"
 tags: [ampm, build-decision, area/process, status/accepted]
 ---
 # D-007 Session journal, build decision records and Bases dashboards
@@ -31,5 +31,5 @@ With the repositories in place the vault mirrored every file but recorded neithe
 - Build and test records are deferred until there is a build pipeline to write them.
 
 ## Links
-- Session: [[2026-10-24 Session b649d80e]]
+- Session: [[2026-10-23 Session b649d80e]]
 - Related: [[D-005 Automatic commits at the end of every Claude Code turn|D-005]]

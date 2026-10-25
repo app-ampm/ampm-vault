@@ -7,7 +7,7 @@ status: accepted
 area: tooling
 relates: []
 supersedes: ""
-session: "[[2026-10-24 Session b649d80e]]"
+session: "[[2026-10-23 Session b649d80e]]"
 tags: [ampm, build-decision, area/tooling, status/accepted]
 ---
 # D-004 Repository identity bound to the project account app-ampm
@@ -28,5 +28,5 @@ Both repositories carry a local `user.name` and `user.email` (the account's no-r
 - A fresh clone needs `bash docs/tools/setup_git.sh` to restore the identity, helper and hooks.
 
 ## Links
-- Session: [[2026-10-24 Session b649d80e]]
+- Session: [[2026-10-23 Session b649d80e]]
 - Related: [[D-003 Two repositories with the vault nested at vault|D-003]]
