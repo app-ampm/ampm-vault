@@ -15,3 +15,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-005 Automatic commits at the end of every Claude Code turn|D-005]] | Automatic commits at the end of every Claude Code turn | process | accepted | 2026-10-26 |
 | [[D-006 Vault documents are a synced copy edit in the project|D-006]] | Vault documents are a synced copy; edit in the project | process | accepted | 2026-10-26 |
 | [[D-007 Session journal build decision records and Bases dashboards|D-007]] | Session journal, build decision records and Bases dashboards | process | accepted | 2026-10-26 |
+| [[D-008 Session memory in MemPalace and a graphify knowledge graph|D-008]] | Session memory in MemPalace and a graphify knowledge graph | tooling | accepted | 2026-10-26 |
