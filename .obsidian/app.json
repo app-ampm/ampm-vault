@@ -1,0 +1,11 @@
+{
+  "userIgnoreFilters": [],
+  "attachmentFolderPath": "attachments",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "notes/Log",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": false,
+  "readableLineLength": true,
+  "showFrontmatter": true,
+  "propertiesInDocument": "visible"
+}

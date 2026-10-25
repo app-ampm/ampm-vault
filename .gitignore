@@ -1,0 +1,7 @@
+# AMPM Obsidian vault repository
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+.trash/
+.DS_Store
