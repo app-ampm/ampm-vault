@@ -31,7 +31,7 @@ Work on AMPM happens in many Claude Code sessions, each in its own worktree, and
 - Each session starts with a context line stating what the wing holds and whether the graph is stale; `~/Library/Logs/ampm-memory-hooks.log` records what the hooks did.
 - `graphify-out/graph.json` changes wholesale on every rebuild; large diffs to it are expected.
 - Every tool call pays about 75 ms for graphify's guard; `graphify claude uninstall --project` removes it if that is not worth it.
-- Until the global hooks are changed or `wing_api` is split, AMPM transcripts are also filed in `wing_api`; searches scoped to `ampm` are unaffected.
+- Until the global hooks are changed, a *running* session's transcript sits in `wing_api`: MemPalace keys drawers by content and upserts, so the global save hook (no wing named) overwrites the wing the project hooks set; the global session-end hook is project-aware, so a cleanly ended session lands in `ampm`. Switching the two global hooks to `mempalace hook run --hook stop|precompact --harness claude-code` and running `mempalace wings split --wing wing_api` fixes this for every project on the machine; the user decides.
 
 ## Links
 - Session: worktree session af3728ca on branch `claude/git-repo-setup-10512b` (no journal note; the session started before the journal existed)
