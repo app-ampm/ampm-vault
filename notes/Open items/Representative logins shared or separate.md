@@ -18,5 +18,5 @@ tags: [ampm, open-item, status/open]
 
 ## Answer
 
-_Record AMPM's confirmation here with the date, set `status: confirmed` above, then update docs/decisions.json and run the generators._
+**Working decision 26 October 2026**: two individually authenticated accounts, the brief's stated preference, consistent with verifying each client by email and mobile. The brief's section 5 rules were reconfirmed as written. Status stays open until AMPM countersigns; then set `status: confirmed`.
 

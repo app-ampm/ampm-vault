@@ -1,12 +1,12 @@
 ---
 type: open-item
 id: OI-1
-status: open
+status: confirmed
 owner: AMPM
 raised_on: 2026-10-25
 affects_estimate: true
 questions: [Q3, Q10]
-tags: [ampm, open-item, status/open]
+tags: [ampm, open-item, status/confirmed]
 ---
 # Demo duration and limits
 
@@ -18,5 +18,5 @@ tags: [ampm, open-item, status/open]
 
 ## Answer
 
-_Record AMPM's confirmation here with the date, set `status: confirmed` above, then update docs/decisions.json and run the generators._
+**Answered 26 October 2026** (relayed by the developer, to be countersigned by AMPM): the demo has no time limit; three locations; one real hotel per location with indicative prices; managed by the admin. Recorded in docs/decisions.json (Q3, A-28, U-1, V-10).
 
