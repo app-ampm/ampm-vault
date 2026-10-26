@@ -21,3 +21,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-011 Platform blueprint as the sign-off instrument for architecture, data model and flows|D-011]] | Platform blueprint as the sign-off instrument for architecture, data model and flows | process | accepted | 2026-10-26 |
 | [[D-012 Delivery model  one developer building the platform with Claude Code|D-012]] | Delivery model: one developer building the platform with Claude Code | process | accepted | 2026-10-26 |
 | [[D-013 Engineering standards adopted  the AMPM edition of the universal-app standards|D-013]] | Engineering standards adopted: the AMPM edition of the universal-app standards | tooling | accepted | 2026-10-26 |
+| [[D-014 Build plan version 0.1  estimation method, baseline and levers|D-014]] | Build plan version 0.1: estimation method, baseline and levers | process | accepted | 2026-10-26 |
