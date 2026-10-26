@@ -25,6 +25,7 @@ On 26 October 2026 the user asked to reconsider Supabase, to see alternatives wi
 - Google Cloud or Azure. Both have two Indian regions and equivalent posture, but they require rewriting the infrastructure design, and Identity Platform's phone OTP at about US$0.07 per SMS in India is priced wrongly for OTP sign-in.
 - DigitalOcean Bangalore. Lowest bill and simplest console, with PITR and a standby, but no second region, no key management, and identity from elsewhere anyway.
 - Neon, Railway, Render, Fly Managed Postgres, Hetzner. No confirmed Indian region; ruled out while data residency stands.
+- A dedicated VPS (asked the same day). Added to the options as G1 (the VPS runs the application; a managed PostgreSQL with PITR, S3 in Mumbai and Cognito hold the data and identity; about ₹8,000 to 20,000 a month) and G2 (everything on the box with pgBackRest archives to a Mumbai bucket, about ₹5,000 to 11,000 a month, highest operations and data risk). G1 is a sound build-time platform if the VPS is in an Indian datacentre and dedicated to AMPM; it sets aside the architecture's principle 7 deliberately.
 
 ## Consequences
 - When the developer locks R13 and the identity service, this record moves to accepted with the chosen option; the architecture draft's T-2, T-6 and T-13 are updated in version 0.3; the standards' hosting row is fixed.
