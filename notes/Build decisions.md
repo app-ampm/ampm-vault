@@ -16,3 +16,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-006 Vault documents are a synced copy edit in the project|D-006]] | Vault documents are a synced copy; edit in the project | process | accepted | 2026-10-26 |
 | [[D-007 Session journal build decision records and Bases dashboards|D-007]] | Session journal, build decision records and Bases dashboards | process | accepted | 2026-10-26 |
 | [[D-008 Session memory in MemPalace and a graphify knowledge graph|D-008]] | Session memory in MemPalace and a graphify knowledge graph | tooling | accepted | 2026-10-26 |
+| [[D-009 Round-two questions tracked as R1 to R19 in their own review document and page|D-009]] | Round-two questions tracked as R1 to R19 in their own review document and page | process | accepted | 2026-10-26 |
