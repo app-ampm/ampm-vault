@@ -3,12 +3,12 @@ type: build-decision
 id: D-015
 title: "Data platform and identity service: options compared, choice pending"
 date: 2026-10-26
-status: proposed
+status: accepted
 area: architecture
 relates: [D-013, D-014, T-2, T-6, T-13]
 supersedes: ""
 session: "[[2026-10-26 Session 6d9c1b45]]"
-tags: [ampm, build-decision, area/architecture, status/proposed]
+tags: [ampm, build-decision, area/architecture, status/accepted]
 ---
 # D-015 Data platform and identity service: options compared, choice pending
 
@@ -16,7 +16,7 @@ tags: [ampm, build-decision, area/architecture, status/proposed]
 On 26 October 2026 the user asked to reconsider Supabase, to see alternatives with prices, and to understand why Supabase was in the picture and what a different platform would give. Supabase had entered through the engineering standards document; the architecture draft had chosen AWS in Mumbai with Hyderabad copies (T-2, T-13) and self-managed authentication (T-6). The user also stated that decisions are locked by the developer, not signed by anyone, and that the plan must let building start soon.
 
 ## Decision
-- Proposed, pending the developer's choice: option B, AWS lite in Mumbai (single-AZ RDS with PITR, three S3 buckets with KMS keys, two small Fargate tasks, a small Redis, CloudFront, secrets, logs) at about US$180 to 250 a month during the build, growing into the drafted topology (Multi-AZ, Hyderabad copies, firewall) at launch by configuration, with Cognito as the identity service (free at AMPM's scale; custom SMS sender to the DLT provider; TOTP). Alternative if AWS is unfamiliar: option C, Supabase Pro in Mumbai with Small compute and point-in-time recovery, the API on a small Mumbai container host, Upstash Redis, and an S3 bucket in Mumbai with its own key for identity documents, at a similar build-time cost, with Supabase Auth.
+- **Locked by the developer on 26 October 2026: option G2, everything on AMPM's dedicated VPS**, with pgBackRest archives to an S3 bucket in Mumbai and rehearsed restores; files in Mumbai buckets (identity documents under their own key); Cognito recommended for identity. Conditions: the VPS is in an Indian datacentre and dedicated to AMPM; the four facts (provider and city, specification, isolation, root holder) are recorded in `docs/engineering/vps-setup.md` before installation. The specification and runbooks are that document; the infrastructure rules are `.claude/rules/infra.md`. The earlier recommendation, kept for the record: option B, AWS lite in Mumbai (single-AZ RDS with PITR, three S3 buckets with KMS keys, two small Fargate tasks, a small Redis, CloudFront, secrets, logs) at about US$180 to 250 a month during the build, growing into the drafted topology (Multi-AZ, Hyderabad copies, firewall) at launch by configuration, with Cognito as the identity service (free at AMPM's scale; custom SMS sender to the DLT provider; TOTP). Alternative if AWS is unfamiliar: option C, Supabase Pro in Mumbai with Small compute and point-in-time recovery, the API on a small Mumbai container host, Upstash Redis, and an S3 bucket in Mumbai with its own key for identity documents, at a similar build-time cost, with Supabase Auth.
 - Written as `docs/engineering/platform-options.md`: the requirements the platform must meet, six options with Indian regions (AWS as drafted, AWS lite, Supabase Mumbai, DigitalOcean Bangalore, Google Cloud Mumbai and Delhi, Azure Central and South India) with build-time and launch costs and what each gives up, the hosts ruled out on residency (Neon, Railway, Render, Fly Managed Postgres unconfirmed, Hetzner, R2 for identity documents), the identity options (Supabase Auth, Cognito, Firebase Identity Platform, Clerk, Auth0, self-hosted Keycloak or Zitadel, in-API), and the recommendation.
 - The build plan moved to version 0.2 as an execution plan: no sign-offs, gates closed by the developer after AMPM's acceptance test, the decision calendar as the developer's lock list, and a new part 11 with sprint 0 in detail (what to lock in one sitting, the accounts to open, sprints 1 and 2 day by day, the first session's brief). The blueprint's sign-off sheets became lock sheets.
 
