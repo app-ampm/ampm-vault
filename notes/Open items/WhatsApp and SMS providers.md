@@ -18,5 +18,5 @@ tags: [ampm, open-item, status/open]
 
 ## Answer
 
-_Record AMPM's confirmation here with the date, set `status: confirmed` above, then update docs/decisions.json and run the generators._
+**Partly answered 26 October 2026**: staff sign in with a password plus an authenticator-app code and the identity service is Cognito (Q13 closed, A-13, T-6, U-9). The WhatsApp and SMS providers themselves (Q11, R15) are still to be chosen; the developer selects, AMPM owns the accounts.
 
