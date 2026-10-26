@@ -23,3 +23,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-013 Engineering standards adopted  the AMPM edition of the universal-app standards|D-013]] | Engineering standards adopted: the AMPM edition of the universal-app standards | tooling | accepted | 2026-10-26 |
 | [[D-014 Build plan version 0.1  estimation method, baseline and levers|D-014]] | Build plan version 0.1: estimation method, baseline and levers | process | accepted | 2026-10-26 |
 | [[D-015 Data platform and identity service  options compared, choice pending|D-015]] | Data platform and identity service: options compared, choice pending | architecture | accepted | 2026-10-26 |
+| [[D-016 Sprint-0 baseline locked  40 hours a week, time and materials, no levers, code in this repository|D-016]] | Sprint-0 baseline locked: 40 hours a week, time and materials, no levers, code in this repository | process | accepted | 2026-10-26 |
