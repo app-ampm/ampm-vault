@@ -38,3 +38,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-028 Transcripts are masked for credentials before they are mined into memory|D-028]] | Transcripts are masked for credentials before they are mined into memory | tooling | accepted | 2026-10-27 |
 | [[D-029 Denial is absence by default, and repositories scope from the guard's decision|D-029]] | Denial is absence by default, and repositories scope from the guard's decision | permissions | accepted | 2026-10-27 |
 | [[D-030 Screen-reader announcements on iOS go through useAnnounce|D-030]] | Screen-reader announcements on iOS go through useAnnounce | screens | accepted | 2026-10-27 |
+| [[D-031 Job runner and event bus (BullMQ on Redis)|D-031]] | Job runner and event bus (BullMQ on Redis) | architecture | accepted | 2026-10-28 |
