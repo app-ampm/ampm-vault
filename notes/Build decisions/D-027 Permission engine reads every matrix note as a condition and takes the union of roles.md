@@ -56,6 +56,10 @@ visibility classes gave HT and VC finance on unsided records and clients SENSITI
   update (the engine fails closed: each action needs its own grant); the meaning of "any active" and "any open state"
   (src/statuses.ts defines them); whether bare "any" may move terminal records; the comment reading of §6 and the
   "CR (o) UD" reading of §5.9 (POL-19); the §10 key names that do not match §5 (OUTSIDE_KEYS maps three).
+- Two more contradictions for AMPM: §4 line 125 lets only SA and FA read RESTRICTED-BANK and FA and SA write it,
+  while §5.8 line 233 gives VC "RU" and SA "R" on vendor bank details; the engine reads it fail-closed (VC nothing, SA
+  R, FA RU) in both the key and the class layer. §2 line 82 promises a Creative user with no membership their own
+  tasks, while §5.13 line 293 gives CD tasks on assigned weddings only; the engine follows §5.13.
 - Explicit grants and `accountIds` need a data source (module B); project status needs `wedding_projects`.
 - Updates [[D-022 Domain, policy and API skeleton  generated permission matrix, Cognito and local identity, pipeline guards, Prisma 7 module A|D-022]]: the generator no longer keeps notes as text, and the generated suites moved from
   src/generated to src/authz beside the golden tables.

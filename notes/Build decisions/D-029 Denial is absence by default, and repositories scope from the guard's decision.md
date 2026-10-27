@@ -45,6 +45,15 @@ assigned role in §2 but holds incidents only on its weddings (§5.13 line 296).
 - Whether a client reads guest-addressed documents (and a guest client-addressed ones) is not stated in the documents;
   the code admits each audience's own value and public only, which fails closed.
 - Client, guest and demo routes decide with decideReach() and entitlements, not staff keys.
+- A principal whose only read of the records is own-scope ("(o)") gets 404 for a refused action, even on a record it
+  owns: before the record is read the guard cannot tell its own records from another's, and absence leaks nothing.
+  A route that must answer 403 there loads the record first and decides in the service.
+- The read behind a key is the record it acts on: a class row reads through its table's row, and a decision row
+  (readiness exceptions, closing the project, decisions on the client's behalf) through the record it decides on
+  (`packages/policy/src/record-rows.ts`).
+- A path that names another wedding answers 404 on list routes too (AC-12.2, architecture §6); AC-06.4 reads as
+  "empty lists" for the same principals, so test-cases.md should say which holds.
+- Body-parser refusals carry the request id and the fixed wording, never the parser's text.
 
 ## Links
 - Session: [[2026-10-26 Session 6d9c1b45]]
