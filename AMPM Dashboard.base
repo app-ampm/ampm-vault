@@ -1,5 +1,3 @@
-# Live tables over the vault's note properties (Obsidian Bases). Open this file, or embed a view in a note with
-# ![[AMPM Dashboard.base#Open items]]. Each view is a tab; columns are note properties.
 properties:
   note.affects_estimate:
     displayName: Affects estimate
@@ -22,16 +20,16 @@ views:
     name: Open items
     filters:
       and:
-        - 'type == "open-item"'
+        - type == "open-item"
     order:
       - file.name
-      - note.status
-      - note.owner
-      - note.affects_estimate
-      - note.questions
-      - note.raised_on
+      - status
+      - owner
+      - affects_estimate
+      - questions
+      - raised_on
     sort:
-      - property: note.status
+      - property: status
         direction: ASC
       - property: file.name
         direction: ASC
@@ -39,14 +37,14 @@ views:
     name: Build decisions
     filters:
       and:
-        - 'type == "build-decision"'
+        - type == "build-decision"
     order:
       - file.name
-      - note.status
-      - note.area
-      - note.date
-      - note.relates
-      - note.session
+      - status
+      - area
+      - date
+      - relates
+      - session
     sort:
       - property: file.name
         direction: DESC
@@ -54,28 +52,28 @@ views:
     name: Sessions
     filters:
       and:
-        - 'type == "session"'
+        - type == "session"
     order:
       - file.name
-      - note.title
-      - note.started
-      - note.requests
-      - note.commits
+      - title
+      - started
+      - requests
+      - commits
     sort:
-      - property: note.date
+      - property: date
         direction: DESC
   - type: table
     name: AMPM decisions
     filters:
       and:
-        - 'type == "decision"'
+        - type == "decision"
     order:
       - file.name
-      - note.status
-      - note.tier
-      - note.decided_on
+      - status
+      - tier
+      - decided_on
     sort:
-      - property: note.tier
+      - property: tier
         direction: ASC
       - property: file.name
         direction: ASC
@@ -83,14 +81,14 @@ views:
     name: Assumptions
     filters:
       and:
-        - 'type == "assumption"'
+        - type == "assumption"
     order:
       - file.name
-      - note.status
-      - note.register
-      - note.questions
+      - status
+      - register
+      - questions
     sort:
-      - property: note.status
+      - property: status
         direction: ASC
       - property: file.name
         direction: ASC
@@ -98,17 +96,17 @@ views:
     name: Assumptions not settled
     filters:
       and:
-        - 'type == "assumption"'
+        - type == "assumption"
         - or:
-            - 'status == "open"'
-            - 'status == "partly"'
+            - status == "open"
+            - status == "partly"
     order:
       - file.name
-      - note.status
-      - note.register
-      - note.questions
+      - status
+      - register
+      - questions
     sort:
-      - property: note.register
+      - property: register
         direction: ASC
       - property: file.name
         direction: ASC
@@ -116,14 +114,14 @@ views:
     name: Findings
     filters:
       and:
-        - 'type == "finding"'
+        - type == "finding"
     order:
       - file.name
-      - note.kind
-      - note.title
-      - note.questions
+      - kind
+      - title
+      - questions
     sort:
-      - property: note.kind
+      - property: kind
         direction: ASC
       - property: file.name
         direction: ASC
