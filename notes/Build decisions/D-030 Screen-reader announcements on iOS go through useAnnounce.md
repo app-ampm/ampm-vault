@@ -24,7 +24,10 @@ to be announced.
 { queue: true })` on iOS only, once per appearance and again when the message changes; Android keeps its live regions
 and the web its alert and status roles, so nothing is said twice. Surfaces join title and body with
 `announcementText()`. A surface hidden from VoiceOver (accessibilityElementsHidden, aria-hidden, display none, a bare
-`hidden` class) stays silent; `importantForAccessibility` is Android-only and does not count. ErrorState speaks the
+`hidden` class) stays silent; `importantForAccessibility` is Android-only and does not count. NativeWind variants
+are resolved against the platform first: `native:hidden` and `ios:hidden` hide on iOS, `web:flex` re-shows only on
+the web, a breakpoint of the tokens' screens leaves visibility to the width (so the surface still announces), state
+variants (`dark:`, `hover:`) never re-show, and `!hidden` counts as hidden. Input's field error follows the same rule. ErrorState speaks the
 same text on every platform; OfflineState announces itself politely, not as an alert.
 
 ## Alternatives considered
@@ -38,6 +41,7 @@ same text on every platform; OfflineState announces itself politely, not as an a
 - A surface hidden and shown again with the same message stays silent (Activity and strict mode re-run effects with
   refs kept); a changed message is announced.
 - The UI gallery queues several announcements on iOS when it loads, since it renders every story at once.
+- The dev access token in apps/mobile/.env is read only when `__DEV__`, so a production export never carries it.
 - Not yet checked with VoiceOver on a device or simulator.
 
 ## Links

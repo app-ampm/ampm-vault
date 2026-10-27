@@ -53,7 +53,12 @@ assigned role in §2 but holds incidents only on its weddings (§5.13 line 296).
   (`packages/policy/src/record-rows.ts`).
 - A path that names another wedding answers 404 on list routes too (AC-12.2, architecture §6); AC-06.4 reads as
   "empty lists" for the same principals, so test-cases.md should say which holds.
-- Body-parser refusals carry the request id and the fixed wording, never the parser's text.
+- Every §10 key spelling resolves to its row (`packages/policy/src/document-keys.ts`, beside OUTSIDE_KEYS and
+  KEY_ALIASES), so a route may name the key as the matrix document writes it.
+- `refusalFor()` (apps/api/src/policy/refusal.ts) gives services the same 403/404 choice; with the record's owner
+  it answers 403 on the principal's own record, as AC-12.1 asks once the record is read.
+- The request id and context are created before the body parser, so parser refusals carry the request id, and
+  they answer with the fixed wording, never the parser's text or any part of the body.
 
 ## Links
 - Session: [[2026-10-26 Session 6d9c1b45]]

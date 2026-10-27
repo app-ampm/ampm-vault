@@ -20,23 +20,38 @@ free pages of the Chroma SQLite file (secure_delete is off).
 
 ## Decision
 
-`docs/tools/memory_hook.sh` runs `docs/tools/redact_secrets.py` on a transcript before `mempalace mine`, and does not
-mine when the script is missing or fails. The script masks GitHub, AWS, JWT, Slack, Stripe, Google, npm and generic
-`sk-` keys, passwords in URLs and private-key bodies in place, keeping the byte length and the first four characters,
-touching only complete lines, so a transcript still being written is not corrupted. `--check` counts matches;
-`--self-test` builds its samples at run time so no credential sits in the repository. The leaked drawer was replaced
-with a redacted copy, the queue masked, and the store vacuumed (raw count 0).
+`docs/tools/memory_hook.sh` runs `docs/tools/redact_secrets.py` on a transcript before every mine. The script masks
+credentials in place and writes the complete lines it scanned, masked, to a per-session snapshot in
+`~/.mempalace/hook_state/redacted` (0600 in a 0700 directory); MemPalace mines only that snapshot, so a line the
+session appends after the scan is never filed unscanned. A missing or failing redaction means nothing is mined.
+`setup_memory.sh` backfills the same way, from snapshots, and mines the memory notes beside the transcripts as before.
+
+The patterns cover GitHub, AWS access keys, secret keys and session tokens, JWT and five-part JWE tokens (Cognito
+refresh tokens), Slack, Stripe, Google, npm and `sk-` keys, passwords in URLs (password-only ones included), PEM and
+PGP private keys (cut short, or printed with line numbers), in their JSON-escaped and ANSI-coloured forms. Masking
+keeps the byte length and the first four characters, never splits a UTF-8 character, keeps JSON escapes whole and
+keeps every line valid JSON. `--self-test` builds its samples at run time, as JSON tool-result records, so no
+credential sits in the repository. `pnpm check` runs the redactor, hook and backfill tests (`pnpm test:tools`).
+
+The leaked drawer was replaced with a redacted copy, the embeddings queue masked and the store vacuumed (raw count 0).
 
 ## Alternatives considered
 
 - Filter inside MemPalace: not ours to change, and the global hooks would still need it.
 - Delete transcripts after mining: loses the session record the vault and the palace rely on.
+- Mask the live file and mine it: a line appended between the scan and the mine was filed in clear (review OPS-03).
+- Purge the drawers filed under each live transcript path after every mine: proposed by a fixer and removed before
+  merge. MemPalace's delete-by-source matches the path in every wing, its own global wing included, and deleting
+  memory is the developer's decision, not a hook's.
 
 ## Consequences
 
+- Drawers mined from live transcript paths before this change stay in the wing and are no longer refreshed; the
+  snapshot's drawers sit beside them. Removing the old ones is a one-off the developer may choose (wing `ampm` only).
 - MemPalace's own global hooks in ~/.claude/settings.json (Stop, PreCompact, SessionEnd) still mine without the
   filter; changing them is the developer's global configuration and waits for their decision.
-- A credential shape the patterns do not know still reaches the palace; add patterns with a self-test case.
+- Shapes still left in clear: `aws configure set aws_secret_access_key <key>` (space separator), and a URL password
+  whose non-ASCII character is JSON-escaped inside nested JSON. Add patterns with a self-test case as they appear.
 - The leaked token must be revoked on GitHub by its owner; masking does not make it safe.
 
 ## Links
