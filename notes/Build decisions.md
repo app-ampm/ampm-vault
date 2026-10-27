@@ -34,3 +34,7 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-024 Graph refresh applies the doc-union after build_merge|D-024]] | Graph refresh applies the doc-union after build_merge | tooling | accepted | 2026-10-26 |
 | [[D-025 Generated files are committed as the generator writes them, outside Prettier|D-025]] | Generated files are committed as the generator writes them, outside Prettier | tooling | accepted | 2026-10-27 |
 | [[D-026 Team app offline store  expo-sqlite with our own change queue|D-026]] | Team app offline store: expo-sqlite with our own change queue | architecture | accepted | 2026-10-27 |
+| [[D-027 Permission engine reads every matrix note as a condition and takes the union of roles|D-027]] | Permission engine reads every matrix note as a condition and takes the union of roles | permissions | accepted | 2026-10-27 |
+| [[D-028 Transcripts are masked for credentials before they are mined into memory|D-028]] | Transcripts are masked for credentials before they are mined into memory | tooling | accepted | 2026-10-27 |
+| [[D-029 Denial is absence by default, and repositories scope from the guard's decision|D-029]] | Denial is absence by default, and repositories scope from the guard's decision | permissions | accepted | 2026-10-27 |
+| [[D-030 Screen-reader announcements on iOS go through useAnnounce|D-030]] | Screen-reader announcements on iOS go through useAnnounce | screens | accepted | 2026-10-27 |
