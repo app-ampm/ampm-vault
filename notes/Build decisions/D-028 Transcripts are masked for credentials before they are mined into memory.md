@@ -52,7 +52,13 @@ The leaked drawer was replaced with a redacted copy, the embeddings queue masked
   filter; changing them is the developer's global configuration and waits for their decision.
 - Shapes still left in clear: `aws configure set aws_secret_access_key <key>` (space separator), and a URL password
   whose non-ASCII character is JSON-escaped inside nested JSON. Add patterns with a self-test case as they appear.
-- The leaked token must be revoked on GitHub by its owner; masking does not make it safe.
+- The leaked token was revoked on 27 October 2026 at the developer's request, through GitHub's credential
+  revocation endpoint (202, then 401 on /user). It was the git keychain entry for amardeep-ideonovo (stored 31 May
+  2026), not the gh keyring token. GitHub revoked the whole GitHub CLI grant of that account, so the gh keyring
+  token went too: `gh auth login` signs it in again when it is needed (never for AMPM).
+- Until 27 October 20:40 the main checkout ran the pre-hardening hook: its main had split from origin/main at
+  14:12, so the checkpoint pushes were refused and the session hooks kept mining live transcripts unmasked.
+  Merged and pushed (f1a0d85). A checkpoint push that fails now has to be noticed, not just logged.
 
 ## Links
 - Session: [[2026-10-26 Session 6d9c1b45]]
