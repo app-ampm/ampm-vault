@@ -32,3 +32,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-022 Domain, policy and API skeleton  generated permission matrix, Cognito and local identity, pipeline guards, Prisma 7 module A|D-022]] | Domain, policy and API skeleton: generated permission matrix, Cognito and local identity, pipeline guards, Prisma 7 module A | architecture | accepted | 2026-10-26 |
 | [[D-023 Handover  the AMPM stack as built after the bootstrap|D-023]] | Handover: the AMPM stack as built after the bootstrap | process | accepted | 2026-10-26 |
 | [[D-024 Graph refresh applies the doc-union after build_merge|D-024]] | Graph refresh applies the doc-union after build_merge | tooling | accepted | 2026-10-26 |
+| [[D-025 Generated files are committed as the generator writes them, outside Prettier|D-025]] | Generated files are committed as the generator writes them, outside Prettier | tooling | accepted | 2026-10-27 |
