@@ -24,4 +24,4 @@ Access "depends on subscription, service agreement and project permissions" (SPE
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-10-26.*
+*Generated on 2026-10-27.*

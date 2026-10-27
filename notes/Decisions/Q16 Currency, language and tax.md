@@ -37,4 +37,4 @@ Indian rupees. English as the primary language. The platform will not issue GST 
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: none
 
-*Generated from docs/decisions.json on 2026-10-26; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-10-27; edit the JSON and rebuild, not this note.*

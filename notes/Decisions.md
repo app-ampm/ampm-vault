@@ -4,24 +4,24 @@ tags: [ampm, index]
 ---
 # Decisions
 
-All 25 questions AMPM was asked, with its answers of 2026-10-25: 13 decided, 9 partly decided, 3 still open.
+All 25 questions AMPM was asked, with its answers of 2026-10-25: 16 decided, 7 partly decided, 2 still open.
 
 | Q | Question | Tier | Status | Open points |
 |---|---|---|---|---|
-| [[Q01 Delivery platform|Q1]] | Delivery platform | 1 | Decided | 1 |
-| [[Q02 Payment mode for Phase 1|Q2]] | Payment mode for Phase 1 | 1 | Decided | 1 |
-| [[Q03 Subscription shape|Q3]] | Subscription shape | 1 | Decided | 2 |
+| [[Q01 Delivery platform|Q1]] | Delivery platform | 1 | Decided | 0 |
+| [[Q02 Payment mode for Phase 1|Q2]] | Payment mode for Phase 1 | 1 | Decided | 0 |
+| [[Q03 Subscription shape|Q3]] | Subscription shape | 1 | Decided | 0 |
 | [[Q04 Client-visible finance|Q4]] | Client-visible finance | 1 | Partly decided | 2 |
 | [[Q05 Client-side users|Q5]] | Client-side users | 1 | Partly decided | 2 |
 | [[Q06 Roles|Q6]] | Roles | 1 | Partly decided | 1 |
 | [[Q07 Guest identity in the RSVP portal|Q7]] | Guest identity in the RSVP portal | 1 | Partly decided | 1 |
 | [[Q08 Identity documents|Q8]] | Identity documents | 1 | Partly decided | 1 |
 | [[Q09 Hotel data|Q9]] | Hotel data | 1 | Decided | 0 |
-| [[Q10 Phase 1 scope|Q10]] | Phase 1 scope | 1 | Partly decided | 1 |
+| [[Q10 Phase 1 scope|Q10]] | Phase 1 scope | 1 | Decided | 0 |
 | [[Q11 Guest and client communication channels|Q11]] | Guest and client communication channels | 2 | Partly decided | 1 |
 | [[Q12 Public website|Q12]] | Public website | 2 | Decided | 0 |
-| [[Q13 Sign-in|Q13]] | Sign-in | 2 | Partly decided | 1 |
-| [[Q14 Hosting and data residency|Q14]] | Hosting and data residency | 2 | Still open | 3 |
+| [[Q13 Sign-in|Q13]] | Sign-in | 2 | Decided | 0 |
+| [[Q14 Hosting and data residency|Q14]] | Hosting and data residency | 2 | Decided | 0 |
 | [[Q15 Volumes|Q15]] | Volumes | 2 | Partly decided | 1 |
 | [[Q16 Currency, language and tax|Q16]] | Currency, language and tax | 2 | Decided | 0 |
 | [[Q17 Privacy notice, consent wording and retention schedule|Q17]] | Privacy notice, consent wording and retention schedule | 2 | Still open | 2 |

@@ -23,8 +23,8 @@ Wedding-planning platform for AMPM. Design drafts at version 0.2 with AMPM's dec
 
 | | |
 |---|---|
-| Questions | 13 decided, 9 partly, 3 open |
-| Assumptions | 35 changed, 28 confirmed, 15 partly decided, 9 not addressed, stands, 7 still open, 4 dropped |
+| Questions | 16 decided, 7 partly, 2 open |
+| Assumptions | 41 changed, 30 confirmed, 13 partly decided, 8 not addressed, stands, 4 dropped, 2 still open |
 | Open items | 13 |
 | Shared pages | [Full package](https://claude.ai/artifact/55fJPFQnnqi8sVVU7FUFcv) · [Decision brief](https://claude.ai/artifact/1VSdFMEAXfqj8V6NzkjPG3) |
 
@@ -40,4 +40,4 @@ Wedding-planning platform for AMPM. Design drafts at version 0.2 with AMPM's dec
 - Each Claude Code session gets a note under notes/Sessions: requests, commits and changed files are refreshed automatically at the end of every turn, and the narrative (what was decided and why) is written at wrap-up. Build decisions are D-nnn records under notes/Build decisions. [[AMPM Dashboard.base|The dashboard]] shows live tables of all of these.
 - To record a confirmation from AMPM: write it in the open item's note, update docs/decisions.json, then run `apply_decisions.py`, `decision_log_build.py`, the register and sheet generators, `vault_build.py` and `site_build.mjs`.
 
-*Home regenerated on 2026-10-26.*
+*Home regenerated on 2026-10-27.*
