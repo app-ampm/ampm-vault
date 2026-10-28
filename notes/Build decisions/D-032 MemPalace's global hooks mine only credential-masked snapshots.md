@@ -50,9 +50,14 @@ answered in 48 ms and had MemPalace save its diary and ingest the snapshot into 
 - The copies in `~/.mempalace/bin` do not follow the repository: re-run the installer, from the checkout whose
   version should apply (normally main), after any change to `redact_secrets.py` or `mempalace_global_hook.sh`.
   `memory_hook.sh session-start` puts a warning in the session context while `--check` fails.
-- A Stop worker rescans and rewrites the snapshot at the end of every turn, even when MemPalace will not save (it
-  saves every 15 human messages): about 5 s of CPU and one 141 MB write for the largest transcript, off the turn's
-  critical path. A gate on MemPalace's save interval would cut most of it.
+- The Stop worker gates on MemPalace's save interval, so it no longer rescans and rewrites the snapshot at the
+  end of every turn. It counts human messages with MemPalace's own counter (`-m mempalace.hook_shell
+  count-human-messages`, ~0.13 s) and reads the `{session_id}_last_save` marker the way MemPalace's `hook_stop`
+  does; when fewer than `SAVE_INTERVAL` (15) have built up since the last save it skips the snapshot and the
+  mine, logging `skipped: N of 15 ...`, sparing the ~5 s of CPU and the up-to-141 MB write unless a save is
+  actually due. Any failure (no interpreter, an unexpected MemPalace, an unreadable marker) falls through to the
+  full rescan, and PreCompact and SessionEnd are never gated, so a final save is never missed (added
+  28 October 2026).
 - Given up: MemPalace's "checkpoint saved" line in the terminal and its legacy block mode (off by default).
 - Claude Code may keep the hooks a session loaded when it started, so a session started before the install may
   still run MemPalace's old commands until it is restarted; every wrapper run leaves a line in the log above.
