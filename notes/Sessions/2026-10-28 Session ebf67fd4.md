@@ -5,7 +5,7 @@ session: ebf67fd4
 started: "2026-10-28 09:00"
 title: ""
 requests: 0
-commits: 0
+commits: 7
 tags: [ampm, session]
 ---
 # Session 2026-10-28 ebf67fd4
@@ -45,8 +45,16 @@ the PR #3/#4 merge) is owned by the dedicated refresh-knowledge-graph sessions, 
 
 ## Commits (ampm-platform)
 
-- (none yet)
+- [0993331](https://github.com/app-ampm/ampm-platform/commit/0993331cdf994067e5c463d9be0e36d232e1a5a4) chore: merge main (Module A kernel, PR #3) into the global-hook masking branch
+- [06d99e4](https://github.com/app-ampm/ampm-platform/commit/06d99e48e2888698668fc208231328c67a8f70bc) chore: checkpoint 2026-10-28 09:21: graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-893c0c5185811086.nudges
+- [68c7fde](https://github.com/app-ampm/ampm-platform/commit/68c7fdeea69ce16afab4e03d38888b3a35d8ed18) Merge pull request #4: MemPalace's global hooks mine only credential-masked snapshots
+- [99e9030](https://github.com/app-ampm/ampm-platform/commit/99e9030f3b74819032c5b73bc17855351492a43e) chore: merge origin/main (PR #3 and PR #4) into the main checkout's checkpoint commits
+- [233ec63](https://github.com/app-ampm/ampm-platform/commit/233ec63c6be5b7d86d0f01d9302119cbc466ef95) chore: checkpoint 2026-10-28 09:55: graphify-out/cache/hook_sessions/ebf67fd4-62d7-43ea-8f8e-d0412d9f417e.nudges
+- [6fae8d0](https://github.com/app-ampm/ampm-platform/commit/6fae8d0d42b4e382f6625fb9ea2ebbd1adb2e963) chore: checkpoint 2026-10-28 10:18: graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-3a4b6891a46c91d7.nudges
+- [5deea3d](https://github.com/app-ampm/ampm-platform/commit/5deea3da819699859800aebc86fee29bf3a14fca) chore: checkpoint 2026-10-28 10:26: graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-3a4b6891a46c91d7.nudges, graphify-out/cache/hook_sessions/ebf67fd4-62d7-43ea-8f8e-d0412d9f417e.nudges
 
 ## Changed files
 
-- (none yet)
+- graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-3a4b6891a46c91d7.nudges
+- graphify-out/cache/hook_sessions/ebf67fd4-62d7-43ea-8f8e-d0412d9f417e.nudges
+- graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-893c0c5185811086.nudges
