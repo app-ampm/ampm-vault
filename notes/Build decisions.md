@@ -45,3 +45,8 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-035 R9 baseline  nine staff roles and cost visibility confirmed|D-035]] | R9 baseline: nine staff roles and cost visibility confirmed | permissions | accepted | 2026-10-28 |
 | [[D-036 Dynamic RBAC  runtime-editable roles over a code-defined capability catalog|D-036]] | Dynamic RBAC: runtime-editable roles over a code-defined capability catalog | permissions | accepted | 2026-10-28 |
 | [[D-037 Visibility stays switch-based for system roles; custom-role classes bounded additively|D-037]] | Visibility stays switch-based for system roles; custom-role classes bounded additively | permissions | accepted | 2026-10-28 |
+| [[D-038 Super-Admin role administration surface and its guardrails|D-038]] | Super-Admin role administration surface and its guardrails | permissions | accepted | 2026-10-28 |
+| [[D-039 Reusable permission sets, attachable to custom roles|D-039]] | Reusable permission sets, attachable to custom roles | permissions | accepted | 2026-10-28 |
+| [[D-040 Audit-log read and export surface (SA-only, matrix-faithful)|D-040]] | Audit-log read and export surface (SA-only, matrix-faithful) | permissions | accepted | 2026-10-28 |
+| [[D-041 Identity provisioning  link on activate, with a mandatory email match|D-041]] | Identity provisioning: link on activate, with a mandatory email match | permissions | accepted | 2026-10-28 |
+| [[D-042 Client-login two-per-wedding cap enforced by a partial unique index|D-042]] | Client-login two-per-wedding cap enforced by a partial unique index | data-model | accepted | 2026-10-28 |
