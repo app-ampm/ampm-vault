@@ -50,3 +50,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-040 Audit-log read and export surface (SA-only, matrix-faithful)|D-040]] | Audit-log read and export surface (SA-only, matrix-faithful) | permissions | accepted | 2026-10-28 |
 | [[D-041 Identity provisioning  link on activate, with a mandatory email match|D-041]] | Identity provisioning: link on activate, with a mandatory email match | permissions | accepted | 2026-10-28 |
 | [[D-042 Client-login two-per-wedding cap enforced by a partial unique index|D-042]] | Client-login two-per-wedding cap enforced by a partial unique index | data-model | accepted | 2026-10-28 |
+| [[D-043 Close the Cognito verified-email gap with a Pre-Token-Generation Lambda|D-043]] | Close the Cognito verified-email gap with a Pre-Token-Generation Lambda | api | accepted | 2026-10-28 |
