@@ -42,3 +42,5 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-032 MemPalace's global hooks mine only credential-masked snapshots|D-032]] | MemPalace's global hooks mine only credential-masked snapshots | tooling | accepted | 2026-10-28 |
 | [[D-033 Server-side sessions keyed by the token jti|D-033]] | Server-side sessions keyed by the token jti | architecture | accepted | 2026-10-28 |
 | [[D-034 Monthly partitioning of audit_events and notifications|D-034]] | Monthly partitioning of audit_events and notifications | data-model | accepted | 2026-10-28 |
+| [[D-035 R9 baseline  nine staff roles and cost visibility confirmed|D-035]] | R9 baseline: nine staff roles and cost visibility confirmed | permissions | accepted | 2026-10-28 |
+| [[D-036 Dynamic RBAC  runtime-editable roles over a code-defined capability catalog|D-036]] | Dynamic RBAC: runtime-editable roles over a code-defined capability catalog | permissions | accepted | 2026-10-28 |
