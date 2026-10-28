@@ -41,3 +41,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-031 Job runner and event bus (BullMQ on Redis)|D-031]] | Job runner and event bus (BullMQ on Redis) | architecture | accepted | 2026-10-28 |
 | [[D-032 MemPalace's global hooks mine only credential-masked snapshots|D-032]] | MemPalace's global hooks mine only credential-masked snapshots | tooling | accepted | 2026-10-28 |
 | [[D-033 Server-side sessions keyed by the token jti|D-033]] | Server-side sessions keyed by the token jti | architecture | accepted | 2026-10-28 |
+| [[D-034 Monthly partitioning of audit_events and notifications|D-034]] | Monthly partitioning of audit_events and notifications | data-model | accepted | 2026-10-28 |
