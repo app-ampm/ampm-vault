@@ -4,7 +4,7 @@ date: 2026-10-28
 session: b19dcdf4
 started: "2026-10-28 18:40"
 title: ""
-requests: 5
+requests: 6
 commits: 4
 tags: [ampm, session]
 ---
@@ -27,6 +27,7 @@ Built board **"AMPM Platform — Build Plan"** (id 5032167934): six phase groups
 - 28 Oct 19:13 Set a start date and add a Timeline/Gantt view to the board so I can see a real schedule.
 - 28 Oct 19:26 I want to add more details when we click a particular task so the founder could understand a bit more about the task and progress we are making and also i wa...
 - 28 Oct 19:55 Do the board gets auto updated from other sessions and PRs automatically like working on it and done?
+- 28 Oct 20:00 what about the detail we are providing about task, will it be included?
 
 ## Commits (ampm-platform)
 
