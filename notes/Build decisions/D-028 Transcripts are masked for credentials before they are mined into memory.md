@@ -48,8 +48,8 @@ The leaked drawer was replaced with a redacted copy, the embeddings queue masked
 
 - Drawers mined from live transcript paths before this change stay in the wing and are no longer refreshed; the
   snapshot's drawers sit beside them. Removing the old ones is a one-off the developer may choose (wing `ampm` only).
-- MemPalace's own global hooks in ~/.claude/settings.json (Stop, PreCompact, SessionEnd) still mine without the
-  filter; changing them is the developer's global configuration and waits for their decision.
+- MemPalace's own global hooks in ~/.claude/settings.json (Stop, PreCompact, SessionEnd) mined without the filter
+  until 28 October 2026; since then they mine only a masked snapshot too ([[D-032]]).
 - Shapes still left in clear: `aws configure set aws_secret_access_key <key>` (space separator), and a URL password
   whose non-ASCII character is JSON-escaped inside nested JSON. Add patterns with a self-test case as they appear.
 - The leaked token was revoked on 27 October 2026 at the developer's request, through GitHub's credential
