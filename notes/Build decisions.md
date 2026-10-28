@@ -44,3 +44,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-034 Monthly partitioning of audit_events and notifications|D-034]] | Monthly partitioning of audit_events and notifications | data-model | accepted | 2026-10-28 |
 | [[D-035 R9 baseline  nine staff roles and cost visibility confirmed|D-035]] | R9 baseline: nine staff roles and cost visibility confirmed | permissions | accepted | 2026-10-28 |
 | [[D-036 Dynamic RBAC  runtime-editable roles over a code-defined capability catalog|D-036]] | Dynamic RBAC: runtime-editable roles over a code-defined capability catalog | permissions | accepted | 2026-10-28 |
+| [[D-037 Visibility stays switch-based for system roles; custom-role classes bounded additively|D-037]] | Visibility stays switch-based for system roles; custom-role classes bounded additively | permissions | accepted | 2026-10-28 |
