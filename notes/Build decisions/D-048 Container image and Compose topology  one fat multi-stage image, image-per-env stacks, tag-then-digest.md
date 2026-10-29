@@ -69,6 +69,8 @@ features and the external accounts.
 - The production/staging Compose default `AMPM_IMAGE` to `…:latest` as a dev convenience; the deploy
   workflow sets it explicitly to the pinned tag+digest, so production never rides `latest` by accident.
 
+- **Coupling the later trim must respect:** `prisma migrate deploy` and `apps/api/prisma.config.ts` rely on `prisma` and `tsx`, which are devDependencies kept only because this image is fat. A trim to production-only deps must keep them (or build a dedicated migration layer), or the migration job breaks. `AMPM_IMAGE` is an interpolation-time variable (shell / compose-dir `.env`), never a container env var, so the deploy sets it there; the production/staging stacks give it no default and refuse to start unpinned.
+
 ## Links
 - Session: [[2026-10-27 Session 3e0c1fa3]]
 - Related: [[D-015]]
