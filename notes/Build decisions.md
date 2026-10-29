@@ -53,3 +53,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-043 Close the Cognito verified-email gap with a Pre-Token-Generation Lambda|D-043]] | Close the Cognito verified-email gap with a Pre-Token-Generation Lambda | api | accepted | 2026-10-28 |
 | [[D-044 Notification render variables on a server-only column, cleared after delivery|D-044]] | Notification render variables on a server-only column, cleared after delivery | data-model | accepted | 2026-10-29 |
 | [[D-045 Email delivery via nodemailer and SMTP (SES over SMTP)|D-045]] | Email delivery via nodemailer and SMTP (SES over SMTP) | api | accepted | 2026-10-29 |
+| [[D-046 Abuse protection  hand-rolled rate limiter, strict CSP and the deferred public-form controls|D-046]] | Abuse protection: hand-rolled rate limiter, strict CSP and the deferred public-form controls | architecture | accepted | 2026-10-29 |
