@@ -20,4 +20,4 @@ generated: true
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-10-30.*
+*Generated on 2026-10-31.*

@@ -43,4 +43,4 @@ Identity documents may be collected only where a hotel requires them for a weddi
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: [[Privacy wording and retention periods]]
 
-*Generated from docs/decisions.json on 2026-10-30; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-10-31; edit the JSON and rebuild, not this note.*

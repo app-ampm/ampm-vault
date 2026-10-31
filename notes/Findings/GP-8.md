@@ -24,4 +24,4 @@ BIZ Step 4 and §4 require "quoted prices and verification dates"; SPEC §2.2 re
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-10-30.*
+*Generated on 2026-10-31.*

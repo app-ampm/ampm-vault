@@ -43,4 +43,4 @@ Also citing this question: [[W-15]]
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: [[Demo duration and limits]], [[Demo hotel count per location]]
 
-*Generated from docs/decisions.json on 2026-10-30; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-10-31; edit the JSON and rebuild, not this note.*
