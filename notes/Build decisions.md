@@ -64,3 +64,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-054 Monitoring and alerts  Prometheus + Alertmanager + node-exporter on the VPS (feature 6.7)|D-054]] | Monitoring and alerts: Prometheus + Alertmanager + node-exporter on the VPS (feature 6.7) | infra | accepted | 2026-10-31 |
 | [[D-055 CI scoped to relevant changes (path-gated jobs)|D-055]] | CI scoped to relevant changes (path-gated jobs) | tooling | accepted | 2026-10-31 |
 | [[D-056 Runbooks and the rehearsed restore rebuild — the backup→restore cycle proven (feature 6.8)|D-056]] | Runbooks and the rehearsed restore/rebuild — the backup→restore cycle proven (feature 6.8) | infra | accepted | 2026-10-31 |
+| [[D-057 Lead capture (feature 8.1) — enquiry, workspace, reminder|D-057]] | Lead capture (feature 8.1) — enquiry, workspace, reminder | architecture | accepted | 2026-10-31 |
