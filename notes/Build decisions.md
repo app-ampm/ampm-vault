@@ -61,3 +61,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-051 sops+age secrets, per-trust-zone split, and the committed-secret CI scan (feature 6.4)|D-051]] | sops+age secrets, per-trust-zone split, and the committed-secret CI scan (feature 6.4) | infra | accepted | 2026-10-30 |
 | [[D-052 Host bootstrap and the security baseline (feature 6.5)|D-052]] | Host bootstrap and the security baseline (feature 6.5) | infra | accepted | 2026-10-30 |
 | [[D-053 The deploy pipeline (feature 6.6)|D-053]] | The deploy pipeline (feature 6.6) | infra | accepted | 2026-10-31 |
+| [[D-054 Monitoring and alerts  Prometheus + Alertmanager + node-exporter on the VPS (feature 6.7)|D-054]] | Monitoring and alerts: Prometheus + Alertmanager + node-exporter on the VPS (feature 6.7) | infra | accepted | 2026-10-31 |
