@@ -60,3 +60,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-050 PostgreSQL tuning and pgBackRest backups as code (feature 6.3)|D-050]] | PostgreSQL tuning and pgBackRest backups as code (feature 6.3) | infra | accepted | 2026-10-30 |
 | [[D-051 sops+age secrets, per-trust-zone split, and the committed-secret CI scan (feature 6.4)|D-051]] | sops+age secrets, per-trust-zone split, and the committed-secret CI scan (feature 6.4) | infra | accepted | 2026-10-30 |
 | [[D-052 Host bootstrap and the security baseline (feature 6.5)|D-052]] | Host bootstrap and the security baseline (feature 6.5) | infra | accepted | 2026-10-30 |
+| [[D-053 The deploy pipeline (feature 6.6)|D-053]] | The deploy pipeline (feature 6.6) | infra | accepted | 2026-10-31 |
