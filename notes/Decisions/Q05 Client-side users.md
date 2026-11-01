@@ -46,4 +46,4 @@ Only two nominated family representatives use the client portal, one from the br
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: [[Representative logins shared or separate]]
 
-*Generated from docs/decisions.json on 2026-11-01; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-11-02; edit the JSON and rebuild, not this note.*

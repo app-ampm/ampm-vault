@@ -70,3 +70,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-060 Deploy re-verification — application-deployable; deploy-readiness pass gates the VPS|D-060]] | Deploy re-verification — application-deployable; a deploy-readiness pass gates the real VPS deploy | process | accepted | 2026-11-01 |
 | [[D-061 Sales workspace (TW-11) demo — dev sign-in, leads list, lead detail, convert|D-061]] | Sales workspace (TW-11) demo in the Expo app — dev sign-in, leads list, lead detail, convert | screens | accepted | 2026-11-01 |
 | [[D-062 Client portal (CP-11) demo — client sign-in, subscribe, pay, hotel discovery unlocks|D-062]] | Client portal (CP-11) demo — client sign-in, subscribe, pay, hotel discovery unlocks | screens | accepted | 2026-11-01 |
+| [[D-063 Module C hotel discovery (MVP slice)|D-063]] | Module C hotel discovery (MVP slice) | engineering | accepted | 2026-11-02 |

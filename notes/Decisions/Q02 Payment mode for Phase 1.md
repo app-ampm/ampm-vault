@@ -39,4 +39,4 @@ AMPM creates the client's account or sends an invitation link. The client enters
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: [[Payment gateway provider]]
 
-*Generated from docs/decisions.json on 2026-11-01; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-11-02; edit the JSON and rebuild, not this note.*

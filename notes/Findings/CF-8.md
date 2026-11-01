@@ -31,4 +31,4 @@ generated: true
 - Assumptions citing it: [[W-12]]
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-01.*
+*Generated on 2026-11-02.*
