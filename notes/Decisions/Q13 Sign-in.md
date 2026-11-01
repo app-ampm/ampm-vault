@@ -40,4 +40,4 @@ Prospects, demo users and clients sign in with their mobile number and an OTP. T
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: [[WhatsApp and SMS providers]]
 
-*Generated from docs/decisions.json on 2026-10-31; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-11-01; edit the JSON and rebuild, not this note.*
