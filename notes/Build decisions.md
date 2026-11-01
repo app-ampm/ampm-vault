@@ -66,3 +66,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-056 Runbooks and the rehearsed restore rebuild — the backup→restore cycle proven (feature 6.8)|D-056]] | Runbooks and the rehearsed restore/rebuild — the backup→restore cycle proven (feature 6.8) | infra | accepted | 2026-10-31 |
 | [[D-057 Lead capture (feature 8.1) — enquiry, workspace, reminder|D-057]] | Lead capture (feature 8.1) — enquiry, workspace, reminder | architecture | accepted | 2026-10-31 |
 | [[D-058 Lead conversion (feature 8.2) — client account, primary contact, portal invite|D-058]] | Lead conversion (feature 8.2) — client account, primary contact, portal invite | architecture | accepted | 2026-10-31 |
+| [[D-059 Subscription purchase, Razorpay webhook activation and entitlement gating (feature 8.3)|D-059]] | Subscription purchase, Razorpay webhook activation and entitlement gating (feature 8.3) | architecture | accepted | 2026-11-01 |
