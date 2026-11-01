@@ -4,8 +4,8 @@ date: 2026-10-31
 session: 9bd19cad
 started: "2026-10-31 19:23"
 title: ""
-requests: 0
-commits: 2
+requests: 1
+commits: 4
 tags: [ampm, session]
 ---
 # Session 2026-10-31 9bd19cad
@@ -24,27 +24,35 @@ tags: [ampm, session]
 
 **What remains.** The developer's call on the hardening pass; fast-forwarding the main checkout; a graph refresh; and the entry documents, which still describe 26 October.
 
+**Hardening pass (1 November).** On the user's go-ahead ("Yes, start fixing") the whole "Fix before 8.2 and 8.3" list was implemented on this branch and opened as PR #32 (not merged; CI running), one commit per area, the full gate green under Node 24. Fixed: the notification pipeline (job-id separator so BullMQ accepts it, a JobQueue dead-letter hook so a send retries then clears its token, re-invite routes, REDIS_URL required in production, worker egress, a Redis-backed driver test), the session reaper (keep each row until its token's `exp`, reap only expired, so a revoked/idle token stays denied), client activation joining the wedding, the admin guards (last Super Admin, never-activated re-activation, demo subject, email reuse after soft delete via a partial unique index), the lead workspace (a config-selected bot check that production refuses the stub for, a status machine, active-staff owner, update invariants, audit images, a job_runs reminder that claims after queueing), the website CSP and field accessibility, and the deploy/bootstrap/redis and checkpoint-hook/CI/graph process items.
+
+**Decided along the way.** The session reaper fix stores the access token's expiry on the row rather than guess a max lifetime, so revocation is assumption-free (extends D-033). The notification retry uses a general JobQueue dead-letter hook so the row is only marked failed once BullMQ has exhausted its attempts (D-031/D-044). The bot check became a provider-agnostic siteverify adapter chosen by config, with production refusing the stub (the R15 interim). The lead status machine lives in the service (packages/policy §7 has no lead rows). Feature 8.2 (PR #31) merged into main mid-pass and was merged in and its conflicts resolved. A formal D-record was not filed from here because the vault's current-session pointer belongs to another active session; the decisions are captured in the report, the PR body, the per-area commit messages and the project-stage memory.
+
+**What remains.** PR #32 review and CI; the website serving topology, F3 shared ports, Caddy non-root, the operator secrets (GHCR login/deploy key/`*.enc.yaml`), and the workflow_run CI gate are flagged in the PR as real-host/topology decisions; and P1 (fast-forward the main checkout) is still the developer's to run.
+
 ## Requests
 
-- (none recorded)
+- 01 Nov 07:08 Yes, start fixing
 
 ## Commits (ampm-platform)
 
 - [3458b2e](https://github.com/app-ampm/ampm-platform/commit/3458b2e18e1c35e0868cca85b61c26701b0ae462) chore: checkpoint 2026-10-31 19:27: graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-2de9447b58d21547.nudges, graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-b2408baeb591e2ed.nudges, graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-b53dd40746595716.nudges (+4 more)
 - [b17bc53](https://github.com/app-ampm/ampm-platform/commit/b17bc538df2efb471c072dac75abb6b34dd6c85f) chore: checkpoint 2026-10-31 19:57: graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-47700e261fe342fc.nudges, graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-7922cf5a16add6ed.nudges, graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-99e22bf373078a2e.nudges (+11 more)
+- [d42c05c](https://github.com/app-ampm/ampm-platform/commit/d42c05c2982c81f38242df39ec937d15828b9045) chore: checkpoint 2026-10-31 20:19: graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-1300387d6c019826.nudges, graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-5f206276a9178a69.nudges, graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-a4ed1f30c1ce4499.nudges (+1 more)
+- [f7d3bb6](https://github.com/app-ampm/ampm-platform/commit/f7d3bb6502388bfb4557592855a60b4a1205e536) chore: checkpoint 2026-10-31 20:40: graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-0903e268366fa643.nudges, graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-4d9ab26bddfbe22c.nudges, graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-9b82377c0f2c2e92.nudges
 
 ## Changed files
 
+- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-0903e268366fa643.nudges
+- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-4d9ab26bddfbe22c.nudges
+- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-9b82377c0f2c2e92.nudges
+- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-1300387d6c019826.nudges
+- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-5f206276a9178a69.nudges
+- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-a4ed1f30c1ce4499.nudges
+- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-ce4427e080ec971e.nudges
 - graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-47700e261fe342fc.nudges
 - graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-7922cf5a16add6ed.nudges
 - graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-99e22bf373078a2e.nudges
 - graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-bbb7619740f8527b.nudges
 - graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-c50461e3d838d0c4.nudges
-- graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-f1a7b664c1474d42.nudges
-- graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-fd5e8a6199251fe0.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-018bec3204114e9d.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-07276a5e12baf26e.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-362e57cb1ef16fa3.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-3d89c3ebd6912091.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-64fabab4fb6eda09.nudges
-- (+8 more)
+- (+15 more)
