@@ -4,8 +4,8 @@ date: 2026-10-31
 session: 9bd19cad
 started: "2026-10-31 19:23"
 title: ""
-requests: 2
-commits: 4
+requests: 3
+commits: 13
 tags: [ampm, session]
 ---
 # Session 2026-10-31 9bd19cad
@@ -34,26 +34,36 @@ tags: [ampm, session]
 
 - 01 Nov 07:08 Yes, start fixing
 - 01 Nov 08:54 merge it
+- 01 Nov 08:56 Yes, fix checkout
 
 ## Commits (ampm-platform)
 
-- [3458b2e](https://github.com/app-ampm/ampm-platform/commit/3458b2e18e1c35e0868cca85b61c26701b0ae462) chore: checkpoint 2026-10-31 19:27: graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-2de9447b58d21547.nudges, graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-b2408baeb591e2ed.nudges, graphify-out/cache/hook_sessions/3e0c1fa3-8075-4405-a901-cafa1455d3f9-b53dd40746595716.nudges (+4 more)
-- [b17bc53](https://github.com/app-ampm/ampm-platform/commit/b17bc538df2efb471c072dac75abb6b34dd6c85f) chore: checkpoint 2026-10-31 19:57: graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-47700e261fe342fc.nudges, graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-7922cf5a16add6ed.nudges, graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-99e22bf373078a2e.nudges (+11 more)
-- [d42c05c](https://github.com/app-ampm/ampm-platform/commit/d42c05c2982c81f38242df39ec937d15828b9045) chore: checkpoint 2026-10-31 20:19: graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-1300387d6c019826.nudges, graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-5f206276a9178a69.nudges, graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-a4ed1f30c1ce4499.nudges (+1 more)
-- [f7d3bb6](https://github.com/app-ampm/ampm-platform/commit/f7d3bb6502388bfb4557592855a60b4a1205e536) chore: checkpoint 2026-10-31 20:40: graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-0903e268366fa643.nudges, graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-4d9ab26bddfbe22c.nudges, graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-9b82377c0f2c2e92.nudges
+- [939b486](https://github.com/app-ampm/ampm-platform/commit/939b4860d5ec5114580947a9a9238554bff74005) chore: merge origin/main (sprints 3 to 8 and the VPS block) into the verification worktree
+- [dfd3d20](https://github.com/app-ampm/ampm-platform/commit/dfd3d20dcae64a5abd2af201057476617d090543) docs(engineering): add the 31 October build verification
+- [d2707bd](https://github.com/app-ampm/ampm-platform/commit/d2707bdbde0c18b8649963f1b5b7ffb156714418) feat(crm): convert lead to client account + portal invite (feature 8.2)
+- [21c4b73](https://github.com/app-ampm/ampm-platform/commit/21c4b734ac0c4c60c1b8e572345512e74bdf2a01) Merge pull request #31 from app-ampm/claude/sprint-8-phase1-setup-3d43d0
+- [6b391e8](https://github.com/app-ampm/ampm-platform/commit/6b391e8c8f06c7ca536e6b51ea0efda0d00bd442) fix(api): harden notification delivery, sessions, activation and admin
+- [36705ae](https://github.com/app-ampm/ampm-platform/commit/36705ae3ed1d9d084728fbcf35ec273dd631294b) fix(crm): harden the lead workspace — status machine, owner, invariants, bot check
+- [beab4c8](https://github.com/app-ampm/ampm-platform/commit/beab4c874b40cc93f55424ae1800b15b88622194) fix(web): allow the enquiry POST in the CSP and wire PUB-06 field accessibility
+- [043b0f5](https://github.com/app-ampm/ampm-platform/commit/043b0f51a531984e9fe254f41248210edc8b8547) fix(infra): gate the deploy, harden bootstrap order, run redis non-root
+- [1b00db8](https://github.com/app-ampm/ampm-platform/commit/1b00db8c45ece9b58a2f340e15fe353f30856de2) fix(tools): let the checkpoint commit in worktrees and scan before it pushes
+- [c2a5fe3](https://github.com/app-ampm/ampm-platform/commit/c2a5fe38a53263088999839049d952c659e08a3f) chore(graph): refresh the knowledge graph after the hardening pass (P2)
+- [f1508ed](https://github.com/app-ampm/ampm-platform/commit/f1508edf3ac48b9d5fc3b30200796339cb4077e5) fix(web): import env with an extensionless path so Turbopack and vitest both resolve it
+- [2aada92](https://github.com/app-ampm/ampm-platform/commit/2aada92bc9a665aafa5b637c071ec093a6686b9b) Merge remote-tracking branch 'origin/main' into claude/build-verification-gaps-8b909b
+- [3d3edea](https://github.com/app-ampm/ampm-platform/commit/3d3edea10c5b6426d565b92cea3a8aef548c4b8b) Merge pull request #32 from app-ampm/claude/build-verification-gaps-8b909b
 
 ## Changed files
 
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-0903e268366fa643.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-4d9ab26bddfbe22c.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-9b82377c0f2c2e92.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-1300387d6c019826.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-5f206276a9178a69.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-a4ed1f30c1ce4499.nudges
-- graphify-out/cache/hook_sessions/cc800ca8-2e97-4187-8883-bf16f987dfe6-ce4427e080ec971e.nudges
-- graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-47700e261fe342fc.nudges
-- graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-7922cf5a16add6ed.nudges
-- graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-99e22bf373078a2e.nudges
-- graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-bbb7619740f8527b.nudges
-- graphify-out/cache/hook_sessions/9bd19cad-bcfb-42e0-b47e-b45334801400-c50461e3d838d0c4.nudges
-- (+15 more)
+- apps/web/src/middleware.ts
+- .gitignore
+- graphify-out/.graphify_labels.json
+- graphify-out/.graphify_labels.json.sig
+- graphify-out/GRAPH_REPORT.md
+- graphify-out/cache/ast/v0.9.95-s25-g7154a062ba57/01a494a309d8402a94b9fcd2ccad3ac9fc62f38d77f6fb24b1e88d6ced536719.json
+- graphify-out/cache/ast/v0.9.95-s25-g7154a062ba57/0c8b94485a21b6c647c7813a578b8166b726809b7d7e25ea9b55ce7d6212935a.json
+- graphify-out/cache/ast/v0.9.95-s25-g7154a062ba57/0ee29b31498192317e54e0cc8479198956b3404046e7020f7a29f95f0654f3b7.json
+- graphify-out/cache/ast/v0.9.95-s25-g7154a062ba57/144206b3aa50455f4fcf0c9acdbb0d7bba232952428ca88d76efb24dc74266e7.json
+- graphify-out/cache/ast/v0.9.95-s25-g7154a062ba57/1585d9fbba5ce82bf9f527a6f8a8947fe79df6f18545915b58f40afdd1644d50.json
+- graphify-out/cache/ast/v0.9.95-s25-g7154a062ba57/15cbbcb67291b9881e25d393f9848924a1a8d6358fa911869928dd39a1bff223.json
+- graphify-out/cache/ast/v0.9.95-s25-g7154a062ba57/1f74b2d820272339218e0054fd4f2fc18870760ee5cc53223c48ee210df80ce4.json
+- (+114 more)
