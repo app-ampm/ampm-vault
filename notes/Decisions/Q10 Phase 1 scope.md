@@ -41,4 +41,4 @@ Also citing this question: [[T-10]], [[U-1]], [[U-6]], [[W-1]], [[V-10]]
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: [[Demo duration and limits]]
 
-*Generated from docs/decisions.json on 2026-11-02; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-11-03; edit the JSON and rebuild, not this note.*

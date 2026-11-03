@@ -23,4 +23,4 @@ generated: true
 - Assumptions citing it: [[U-2]]
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-02.*
+*Generated on 2026-11-03.*
