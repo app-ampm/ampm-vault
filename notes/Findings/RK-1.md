@@ -20,4 +20,4 @@ Phase 1's value is a populated, verified hotel database. No document names an ex
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-04.*
+*Generated on 2026-11-05.*

@@ -40,4 +40,4 @@ Read-only client access for three months after the wedding, then the project is 
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: [[Archiving workflow]]
 
-*Generated from docs/decisions.json on 2026-11-04; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-11-05; edit the JSON and rebuild, not this note.*
