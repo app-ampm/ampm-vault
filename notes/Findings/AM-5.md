@@ -24,4 +24,4 @@ Is `hotel_rooms.capacity` the number of rooms in the category or the occupancy p
 - Assumptions citing it: [[A-27]]
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-03.*
+*Generated on 2026-11-04.*
