@@ -33,4 +33,4 @@ No. AMPM staff will not edit public website content through the app in the initi
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: none
 
-*Generated from docs/decisions.json on 2026-11-05; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-11-06; edit the JSON and rebuild, not this note.*

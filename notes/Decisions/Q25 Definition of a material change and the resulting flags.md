@@ -40,4 +40,4 @@ Thresholds must be configurable; AMPM will define the final budget-change percen
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: [[Material-change thresholds and approval rules]]
 
-*Generated from docs/decisions.json on 2026-11-05; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-11-06; edit the JSON and rebuild, not this note.*
