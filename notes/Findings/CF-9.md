@@ -20,4 +20,4 @@ WHY §2 asks for three distinct environments; SPEC §10 asks for a shared backen
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-06.*
+*Generated on 2026-11-07.*

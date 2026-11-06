@@ -20,4 +20,4 @@ under TEAM-FLOW's More tab is undefined.
 - Assumptions citing it: [[W-2]]
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-06.*
+*Generated on 2026-11-07.*
