@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 4
+requests: 5
 commits: 1
 tags: [ampm, session]
 ---
@@ -30,12 +30,15 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 
 **Build — admin console, audit log (TW-96) + the DataTable primitive.** Built the roadmap's #1 H1.0 primitive, DataTable, in packages/ui: a cross-platform columnar table (fixed column widths so header and cells line up; horizontal scroll so it works on a phone), presentational only, with a story + 3 tests, registered in the Gallery, class-audit clean. Added useAuditEvents (GET /admin/audit-events, cursor-paginated, SA-only) to api-client. Built the audit log screen — a table of events (When / Action / Action-chip / Entity / Actor), tap a row for the full record on a full-height Sheet (masked before/after images, IP, request), plus the four states — and added an "Audit log" section to the admin console hub (/admin/audit). Filters (actor/entity/action/date) and export are deferred: they need the Select and date-range primitives. Verified green across all three touched workspaces: ui (lint + class-audit clean, 593 tests incl. the DataTable suite), api-client (lint, 5 tests), mobile (typecheck, lint + class-audit clean, 384 tests incl. 9 new audit tests). Admin console now: Users & roles (complete) + Audit log (viewer).
 
+**Build — admin console, roles & permissions viewer (TW-91) + closing a real backend gap.** The user chose to stay in the admin console. Verifying the backend first (the Horizon-1 rule) surfaced a genuine gap: `GET /admin/roles` returns only *custom* roles (`listCustom`, `isSystem:false`), so on a seeded system (nine system roles, zero custom) the role-assignment checklist shipped last slice was empty — a new hire could be given no role at all — and system-role uuids are never sent to the client (and `@ampm/policy` carries only role keys), so it could not be fixed from the frontend. With the user's go-ahead to complete the backend first, added `GET /admin/roles/assignable` (SA-only, declared before `roles/:id`) returning every live role (system + custom) with resolved capabilities — system roles' resolve from the policy matrix catalog by `sourceRoles` (they carry no DB `role_grants`), custom roles' from their stored grants (new `capabilityViewsForRole`, `repository.listAll`, a branched service `toView`). Repointed the assignment checklist at the new `useAssignableRoles` hook (so system roles are finally assignable) and built the TW-91 viewer: a DataTable of every role (name / System|Custom chip / permission count), tap a row for its permissions grouped by module on a full-height Sheet, with an ‘Elevated’ tag on escalation-locked powers; added a ‘Roles and permissions’ hub card and the `/admin/roles` route. Recorded as D-081. Verified green: api unit (447, +1 service test covering both resolution branches + ordering), api-client (5), mobile jest (395, +11 roles tests), all three typechecks, lint + class-audit. The api **e2e** suite cannot be collected in this worktree (vite 8.3.5 / vitest 5.0.5 crash in the sourcemap printer, zero files discovered, every e2e spec affected equally — pre-existing, not this change); the new `/admin/roles/assignable` e2e case is written but unexecuted here. Next deferred: audit-log filters + export and a shared single-value Select (both need the Select + date-range primitives); TW-95 Configuration needs a config-read endpoint first.
+
 ## Requests
 
 - 07 Nov 19:22 Admin console first
 - 07 Nov 19:48 Build staff management
 - 07 Nov 20:06 Build role assignment
 - 07 Nov 20:14 Build audit log
+- 07 Nov 21:53 Stay in admin console
 
 ## Commits (ampm-platform)
 
