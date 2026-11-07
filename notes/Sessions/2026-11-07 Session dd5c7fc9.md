@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 2
+requests: 3
 commits: 1
 tags: [ampm, session]
 ---
@@ -26,10 +26,13 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 
 **Build — admin console, slice 2a (staff management).** The user chose to finish TW-90's Super-Admin actions. Added four mutation hooks to @ampm/api-client (useInviteStaffUser, useUpdateStaffUser, useSetStaffUserStatus, useReinviteStaffUser), each returning the updated StaffUserView and invalidating the directory key (so the list and the open record both refresh). Built an invite form (name/email/phone) and the destructive-action confirms on the shared Sheet — no new primitive; a centred Dialog and a Select stay for the role-assignment slice — wired into the list (Invite action) and the record (Manage card: enable/disable, reset authenticator, resend invitation). Followed the codebase's useState-draft + useToast form pattern and mapped errors to friendly toasts (never raw). Refactored the long view functions into small hooks + sub-views to keep the ≤40-line rule (lint clean, 0 warnings). Verified green: api-client + mobile typecheck, lint + class-audit (0 ungenerated), api-client vitest (5), mobile jest (374, +5 new admin tests). Role assignment (needs a cross-platform Select + GET /admin/roles) is the next slice.
 
+**Build — admin console, slice 2b (role assignment).** Completed TW-90's "and roles" half. Added three api-client hooks: useRoles (GET /admin/roles → RoleView[]) and useAssignStaffRole / useUnassignStaffRole (POST/DELETE /admin/users/:userId/roles). The assign/unassign return no body — the envelope interceptor emits {data: undefined} → `{}`, so the hooks parse with a z.unknown() schema — and both invalidate the directory so the record refreshes. On the record, a Roles card lists every role as a Checkbox (checked when held); toggling assigns/unassigns (the server revokes the user's sessions so the grant applies at once) with a confirming toast. Chose a checkbox checklist over the dropdown Select I'd floated — multi-select from a small fixed set reads better as a list, and the shared Select primitive is still owed for single-value admin form fields (configuration, reference data). TW-90 Users & roles is now functionally complete: directory, record, invite, enable/disable, reset authenticator, resend, assign/unassign. Verified green: api-client + mobile typecheck, lint + class-audit (0 ungenerated), api-client vitest (5), mobile jest (375). Next: the audit log (TW-96), which builds the DataTable primitive.
+
 ## Requests
 
 - 07 Nov 19:22 Admin console first
 - 07 Nov 19:48 Build staff management
+- 07 Nov 20:06 Build role assignment
 
 ## Commits (ampm-platform)
 
