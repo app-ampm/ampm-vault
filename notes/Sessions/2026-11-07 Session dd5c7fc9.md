@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 3
+requests: 4
 commits: 1
 tags: [ampm, session]
 ---
@@ -28,11 +28,14 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 
 **Build — admin console, slice 2b (role assignment).** Completed TW-90's "and roles" half. Added three api-client hooks: useRoles (GET /admin/roles → RoleView[]) and useAssignStaffRole / useUnassignStaffRole (POST/DELETE /admin/users/:userId/roles). The assign/unassign return no body — the envelope interceptor emits {data: undefined} → `{}`, so the hooks parse with a z.unknown() schema — and both invalidate the directory so the record refreshes. On the record, a Roles card lists every role as a Checkbox (checked when held); toggling assigns/unassigns (the server revokes the user's sessions so the grant applies at once) with a confirming toast. Chose a checkbox checklist over the dropdown Select I'd floated — multi-select from a small fixed set reads better as a list, and the shared Select primitive is still owed for single-value admin form fields (configuration, reference data). TW-90 Users & roles is now functionally complete: directory, record, invite, enable/disable, reset authenticator, resend, assign/unassign. Verified green: api-client + mobile typecheck, lint + class-audit (0 ungenerated), api-client vitest (5), mobile jest (375). Next: the audit log (TW-96), which builds the DataTable primitive.
 
+**Build — admin console, audit log (TW-96) + the DataTable primitive.** Built the roadmap's #1 H1.0 primitive, DataTable, in packages/ui: a cross-platform columnar table (fixed column widths so header and cells line up; horizontal scroll so it works on a phone), presentational only, with a story + 3 tests, registered in the Gallery, class-audit clean. Added useAuditEvents (GET /admin/audit-events, cursor-paginated, SA-only) to api-client. Built the audit log screen — a table of events (When / Action / Action-chip / Entity / Actor), tap a row for the full record on a full-height Sheet (masked before/after images, IP, request), plus the four states — and added an "Audit log" section to the admin console hub (/admin/audit). Filters (actor/entity/action/date) and export are deferred: they need the Select and date-range primitives. Verified green across all three touched workspaces: ui (lint + class-audit clean, 593 tests incl. the DataTable suite), api-client (lint, 5 tests), mobile (typecheck, lint + class-audit clean, 384 tests incl. 9 new audit tests). Admin console now: Users & roles (complete) + Audit log (viewer).
+
 ## Requests
 
 - 07 Nov 19:22 Admin console first
 - 07 Nov 19:48 Build staff management
 - 07 Nov 20:06 Build role assignment
+- 07 Nov 20:14 Build audit log
 
 ## Commits (ampm-platform)
 
