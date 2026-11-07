@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 0
+requests: 1
 commits: 1
 tags: [ampm, session]
 ---
@@ -22,9 +22,11 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 
 **What remains.** Awaiting the user's pick of the first Horizon-1 workstream before building. No code changed this session; no D-record yet (the roadmap is proposed, not an accepted decision) — record one once the direction is confirmed.
 
+**Build — admin console, slice 1 (after the roadmap).** The user chose "admin console first." Built the first frontend for the already-shipped admin backend following the house contract-first method (hook → screen → tests) with pure component reuse (no new packages/ui primitive). Added `useStaffUsers`/`useStaffUser` to @ampm/api-client; a new staff workspace area "Admin console" (`/admin`, icon shield-check) the rail, tab bar and chrome pick up automatically from STAFF_AREAS; a console hub (`/admin`), the staff directory (`/admin/users`, TW-90) and a staff-user record (`/admin/users/[userId]`), all Peacock Night with the four shared states and a11y labels; plus `admin.format.ts` for status/role/authenticator presentation. Gated the area on `admin.staff_users.update` (SA-only) rather than the all-staff `.read`, so only the Super Admin sees the console (TW-90 "Who: SA"); per-section reveal for other roles comes when those sections are built. Mutations (invite, assign roles, disable, reset authenticator) are the next slice. Verified green: api-client + mobile typecheck, lint + class-audit (0 ungenerated), api-client vitest (5), mobile jest (369 incl. 19 new admin tests). No D-record (reused existing patterns).
+
 ## Requests
 
-- (none recorded)
+- 07 Nov 19:22 Admin console first
 
 ## Commits (ampm-platform)
 
