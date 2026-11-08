@@ -99,3 +99,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-089 Client accounts workspace with manual payments (H1.3)|D-089]] | Client accounts workspace with manual payments (H1.3) | screens | accepted | 2026-11-08 |
 | [[D-090 Finance payment ledger — GET  crm payments and crm.payments.read (H1.3)|D-090]] | Finance payment ledger — GET /crm/payments and crm.payments.read (H1.3) | api | accepted | 2026-11-08 |
 | [[D-091 Sales-leads working actions — log activity, advance, assign (H1.3)|D-091]] | Sales-leads working actions — log activity, advance, assign (H1.3) | screens | accepted | 2026-11-08 |
+| [[D-092 Lead funnel report — counts by stage and source (H1.3)|D-092]] | Lead funnel report — counts by stage and source (H1.3) | screens | accepted | 2026-11-08 |
