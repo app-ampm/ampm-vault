@@ -5,7 +5,7 @@ session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
 requests: 10
-commits: 4
+commits: 5
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -34,6 +34,8 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 
 **Shipped — admin console live on app.ampmverse.com (8 Nov).** With the user's go-ahead to push, merge and deploy: committed the whole admin console as one feature commit (d475878), opened PR #73, let CI's api job run the full e2e suite against a fresh Postgres (green — so the /admin/roles/assignable e2e passes in CI; the worktree-only vite 8 / vitest 5 collection crash was environmental), ran a 5-agent adversarial review of the diff (0 blockers; two minor follow-ups noted below), squash-merged to main (c9ceb91). Deployed to the hand-built Plesk test box using the user's existing ampm_test_vps key loaded into the shared macOS agent (authenticates as app_ampmverse, docker group): git-archive-shipped the source minus graphify-out, ran redeploy-box.sh (rebuild api+worker, migrate deploy — none pending, idempotent re-seed — 680 grantable capabilities, health ok), and deploy-web.sh (expo web export 6MB, rsynced to httpdocs, .htaccess/proxy preserved). Verified live: GET /_api/admin/roles/assignable -> 401 API envelope (mounted + auth-gated; 404 before), /_api/health -> 200 database:ok, box .deployed-commit c9ceb91. Follow-ups (minor, not blockers): the useAssignableRoles/useRoles docstrings say “Super-Admin only” but the server gate is all-staff admin.roles.read (matrix-correct; docstring wording only); DataTable rows use the browser default focus ring, not the shared focusRingStyles; and the box image logs a non-fatal Prisma openssl-version warning (pre-existing, DB works). Next: the custom-role editor (completes the roles CRUD, backend-ready) or pivot to H1.1 hotels + photos.
 
+**Build — custom role editor (D-036 frontend, 8 Nov).** The user chose to complete the roles feature. Built the editor over the existing backend: api-client useCapabilities + useCreateRole/useUpdateRole/useDeleteRole (both role lists invalidated on change); a collapsible-by-module CapabilityPicker over the 660-capability pick-list (16 modules, per-module selected counts, expand on tap, loading/error states) — a flat 660-item checklist would be unusable; a create/edit Sheet (name + picker) that re-seeds its draft from the role on open (clean create, pre-filled edit), with the picker mounted only while open so it never background-fetches 660 capabilities; wired into the roles viewer with a 'New role' primary action and, for custom roles, Edit + Delete (gold-outline confirm) on the detail sheet (system roles stay read-only). Verified green: api-client + mobile typecheck, lint + class-audit, api-client vitest (5), mobile jest (400, +5 editor flows). An ultracode adversarial review (3 lenses -> verify) confirmed one real a11y defect and refuted the rest: the picker's collapsible header exposed its expanded state only via accessibilityState, which react-native-web drops on the admin web build (WCAG 4.1.2) — fixed to aria-expanded, matching nav-rail-item.tsx's documented convention. Not committed/pushed yet. The roles feature is now complete end to end: view, assign (incl. system roles via /assignable, D-081), and create/edit/delete custom roles.
+
 ## Requests
 
 - 07 Nov 19:22 Admin console first
@@ -53,13 +55,15 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [2555cab](https://github.com/app-ampm/ampm-platform/commit/2555cabe57745f348426a2f1dd1733f88d7622a8) chore: checkpoint 2026-11-07 22:42: graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-599abfa59a74b952.nudges, graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-5b03ed78ae96fc2d.nudges, graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-6165db42b699c68c.nudges (+11 more)
 - [ff515de](https://github.com/app-ampm/ampm-platform/commit/ff515de1880e40338b496232d6feed6de32b8aa4) chore: checkpoint 2026-11-07 23:01: graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-5bc179e3b4b70042.nudges, graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-9a411af25b0b2513.nudges, graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-d0995dbba1419cfa.nudges (+3 more)
 - [af7af51](https://github.com/app-ampm/ampm-platform/commit/af7af519c1b68822862b4164012def219a850162) chore: checkpoint 2026-11-08 06:15: graphify-out/cache/hook_sessions/8f70df0c-1682-4cc6-91eb-99c4dccade1c.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-35ac24fb80093011.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ab323c78676e4068.nudges (+1 more)
+- [ba59268](https://github.com/app-ampm/ampm-platform/commit/ba5926803ea6adb6b9ff50db3e76bafcc5ca7a95) chore: checkpoint 2026-11-08 06:25: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-35ac24fb80093011.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-a0e08fd6a26131b0.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ab323c78676e4068.nudges (+1 more)
 
 ## Changed files
 
-- graphify-out/cache/hook_sessions/8f70df0c-1682-4cc6-91eb-99c4dccade1c.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-35ac24fb80093011.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-a0e08fd6a26131b0.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ab323c78676e4068.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-e94b14e639b4ebed.nudges
+- graphify-out/cache/hook_sessions/8f70df0c-1682-4cc6-91eb-99c4dccade1c.nudges
 - graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-5bc179e3b4b70042.nudges
 - graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-9a411af25b0b2513.nudges
 - graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-d0995dbba1419cfa.nudges
@@ -67,5 +71,4 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-937c87b3f0805bf8.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-c414c57fd794cde9.nudges
 - graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-599abfa59a74b952.nudges
-- graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-5b03ed78ae96fc2d.nudges
-- (+19 more)
+- (+20 more)
