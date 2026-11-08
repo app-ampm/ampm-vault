@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 10
+requests: 11
 commits: 5
 tags: [ampm, session]
 ---
@@ -48,6 +48,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 08 Nov 05:42 how can i generate the key?
 - 08 Nov 05:50 Generate it
 - 08 Nov 05:55 Custom role editor
+- 08 Nov 06:25 Ship it
 
 ## Commits (ampm-platform)
 
