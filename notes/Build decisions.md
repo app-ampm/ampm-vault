@@ -92,3 +92,5 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-082 The api-client gains a non-JSON upload path for binary media|D-082]] | The api-client gains a non-JSON upload() path for binary media uploads | architecture | accepted | 2026-11-08 |
 | [[D-083 Client hotel cards carry a signed cover URL from the first client-visible image|D-083]] | Client hotel cards carry a signed cover URL from the first client-visible image | architecture | accepted | 2026-11-08 |
 | [[D-084 The test box stores uploaded media on a writable host bind-mount|D-084]] | The test box stores uploaded media on a writable host bind-mount | tooling | accepted | 2026-11-08 |
+| [[D-085 Staff hotel profile editor — create and edit hotels (H1.1b)|D-085]] | Staff hotel profile editor — create and edit hotels (H1.1b) | screens | accepted | 2026-11-08 |
+| [[D-086 Both repos made public so GitHub Actions runs free (CI billing)|D-086]] | Both repos made public so GitHub Actions runs free (CI billing) | process | accepted | 2026-11-08 |
