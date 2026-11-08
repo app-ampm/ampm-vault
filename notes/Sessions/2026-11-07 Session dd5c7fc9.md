@@ -5,7 +5,7 @@ session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
 requests: 27
-commits: 16
+commits: 17
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -100,19 +100,20 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [95e7342](https://github.com/app-ampm/ampm-platform/commit/95e7342904b45a0589db9ecc0d94ded36562de11) chore: checkpoint 2026-11-08 15:11: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3a815a36151e5f7d.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-aad655a66d3cf65e.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-bd87b88446058c9b.nudges (+1 more)
 - [0362dce](https://github.com/app-ampm/ampm-platform/commit/0362dcea0ae4716a94d237ea2df751b1cc47e2b8) chore: checkpoint 2026-11-08 15:37: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-1e199609ffa67df8.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-2a924f0ee254cc81.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3e8eebccb7679886.nudges (+3 more)
 - [ff16558](https://github.com/app-ampm/ampm-platform/commit/ff165582ca92bcaf98117490eff10af104204c95) chore: checkpoint 2026-11-08 17:11: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3917135866b0c08e.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-a01002d9dd50ed70.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-c6c67d4b8522e0ac.nudges (+1 more)
+- [1711ee3](https://github.com/app-ampm/ampm-platform/commit/1711ee3e0d5f41db6bc04380a732f239421006ee) chore: checkpoint 2026-11-08 17:38: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-1a4ec4c4254bf95e.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3917135866b0c08e.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-39b29564508795f6.nudges (+9 more)
 
 ## Changed files
 
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-1a4ec4c4254bf95e.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3917135866b0c08e.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-39b29564508795f6.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-4cb7d3deff5dd7cc.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-842da14cf515a25b.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-8806fd531a8a9e3d.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-8814e6a18b5e2812.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-a01002d9dd50ed70.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-bd7cfe865eaab2bc.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-be99a33d1a3b7f2c.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-c6c67d4b8522e0ac.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-dc1a0e534f5fa466.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-1e199609ffa67df8.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-2a924f0ee254cc81.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3e8eebccb7679886.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-451e434ec27dd497.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-d58fb671320b99f2.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-fdce3cbcdde8481b.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3a815a36151e5f7d.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-aad655a66d3cf65e.nudges
-- (+136 more)
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-d463ebbddffb4240.nudges
+- (+145 more)
