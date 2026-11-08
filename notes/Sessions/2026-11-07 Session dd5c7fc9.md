@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 35
+requests: 36
 commits: 23
 tags: [ampm, session]
 ---
@@ -95,6 +95,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 08 Nov 20:50 Payment ledger
 - 08 Nov 21:52 Ship it
 - 08 Nov 22:09 Sales-leads depth
+- 08 Nov 22:50 Ship it
 
 ## Commits (ampm-platform)
 
