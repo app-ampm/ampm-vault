@@ -90,3 +90,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-080 The test box keeps dev sign-in behind the password and signs tokens with its own key|D-080]] | The test box keeps dev sign-in behind the password and signs tokens with its own key | tooling | accepted | 2026-11-07 |
 | [[D-081 Assignable-roles endpoint for assignment and the permissions viewer|D-081]] | An assignable-roles endpoint unifies system and custom roles for assignment and the permissions viewer | permissions | accepted | 2026-11-07 |
 | [[D-082 The api-client gains a non-JSON upload path for binary media|D-082]] | The api-client gains a non-JSON upload() path for binary media uploads | architecture | accepted | 2026-11-08 |
+| [[D-083 Client hotel cards carry a signed cover URL from the first client-visible image|D-083]] | Client hotel cards carry a signed cover URL from the first client-visible image | architecture | accepted | 2026-11-08 |
