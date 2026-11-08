@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 22
+requests: 23
 commits: 13
 tags: [ampm, session]
 ---
@@ -70,6 +70,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 08 Nov 13:45 Ship it
 - 08 Nov 13:49 CI is failing on the PR. Find out why, fix it, and push.
 - 08 Nov 14:15 what if we make the repos public?
+- 08 Nov 14:18 can we make it public and later before going live me make repos private
 
 ## Commits (ampm-platform)
 
