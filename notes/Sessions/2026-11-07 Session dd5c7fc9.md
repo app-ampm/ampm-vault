@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 20
+requests: 21
 commits: 13
 tags: [ampm, session]
 ---
@@ -68,6 +68,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 08 Nov 12:44 Commit storage config
 - 08 Nov 12:51 Build H1.1b
 - 08 Nov 13:45 Ship it
+- 08 Nov 13:49 CI is failing on the PR. Find out why, fix it, and push.
 
 ## Commits (ampm-platform)
 
