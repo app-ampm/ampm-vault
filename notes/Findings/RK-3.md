@@ -20,4 +20,4 @@ Native iOS and Android apps for the team and clients roughly double front-end ef
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-07.*
+*Generated on 2026-11-08.*

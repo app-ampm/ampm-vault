@@ -20,4 +20,4 @@ Whether AMPM runs a margin model (marked-up vendor prices, confidential margin) 
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-07.*
+*Generated on 2026-11-08.*
