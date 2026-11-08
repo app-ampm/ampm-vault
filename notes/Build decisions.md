@@ -96,3 +96,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-086 Both repos made public so GitHub Actions runs free (CI billing)|D-086]] | Both repos made public so GitHub Actions runs free (CI billing) | process | accepted | 2026-11-08 |
 | [[D-087 Hotel room, venue and contact sub-editors (staff)|D-087]] | Hotel room, venue and contact sub-editors (staff) | screens | accepted | 2026-11-08 |
 | [[D-088 Hotel rate cards, items and verify to publish (H1.1c)|D-088]] | Hotel rate cards, items and verify to publish (H1.1c) | screens | accepted | 2026-11-08 |
+| [[D-089 Client accounts workspace with manual payments (H1.3)|D-089]] | Client accounts workspace with manual payments (H1.3) | screens | accepted | 2026-11-08 |
