@@ -94,3 +94,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-084 The test box stores uploaded media on a writable host bind-mount|D-084]] | The test box stores uploaded media on a writable host bind-mount | tooling | accepted | 2026-11-08 |
 | [[D-085 Staff hotel profile editor — create and edit hotels (H1.1b)|D-085]] | Staff hotel profile editor — create and edit hotels (H1.1b) | screens | accepted | 2026-11-08 |
 | [[D-086 Both repos made public so GitHub Actions runs free (CI billing)|D-086]] | Both repos made public so GitHub Actions runs free (CI billing) | process | accepted | 2026-11-08 |
+| [[D-087 Hotel room, venue and contact sub-editors (staff)|D-087]] | Hotel room, venue and contact sub-editors (staff) | screens | accepted | 2026-11-08 |
