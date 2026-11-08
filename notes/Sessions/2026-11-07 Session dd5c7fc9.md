@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 28
+requests: 29
 commits: 17
 tags: [ampm, session]
 ---
@@ -82,6 +82,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 08 Nov 16:08 Ship it
 - 08 Nov 16:40 H1.1c rate cards
 - 08 Nov 18:38 Ship it
+- 08 Nov 18:40 After above task, give me a complete for overview about the progress of backend and frontend. Then we will start next task.
 
 ## Commits (ampm-platform)
 
