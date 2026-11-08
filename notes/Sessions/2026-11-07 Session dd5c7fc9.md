@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 7
+requests: 8
 commits: 3
 tags: [ampm, session]
 ---
@@ -41,6 +41,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 07 Nov 21:53 Stay in admin console
 - 07 Nov 22:28 ask me after we push the change and merge and deploy them to live.
 - 08 Nov 05:37 i can give you access on terminal, you deploy it
+- 08 Nov 05:42 how can i generate the key?
 
 ## Commits (ampm-platform)
 
