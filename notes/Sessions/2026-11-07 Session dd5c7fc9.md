@@ -5,7 +5,7 @@ session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
 requests: 13
-commits: 7
+commits: 8
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -38,6 +38,8 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 
 **Shipped — custom role editor live on app.ampmverse.com (8 Nov).** Branched fresh from main (c9ceb91, so the PR did not re-include the squash-merged admin console), committed the editor (32b2bfb), opened PR #74, let CI run (no api/e2e job — no backend change; quality + mobile bundle + web build + secrets-scan green), enabled auto-merge which merged the instant the last checks passed (squash 58f8f02). Deployed web-only (the box API already serves the role endpoints at c9ceb91): pre-built the Expo web export — the exact build CI's mobile job runs — and rsynced it to httpdocs, preserving .htaccess/.htpasswd. Verified live: GET /_api/admin/capabilities -> 401 API envelope (mounted + auth-gated), the editor bundle on the box (25 JS, 5MB), .htaccess intact. The roles feature is now complete AND live end to end: view, assign (incl. system roles via /assignable, D-081), and create/edit/delete custom roles (D-036 frontend). Next candidate: H1.1 hotels + photos (the roadmap's top client-demo-value Horizon-1 item).
 
+**Build — hotel photo manager (H1.1a, 8 Nov).** The user chose hotels (H1.1, highest client-demo value). A 6-agent ultracode map (Workflow map-hotels-media) confirmed the hotel + media backend is 100% built (staff hotel CRUD + a Module-N media pipeline: register -> octet-stream upload -> fail-closed AV scan -> sharp web/thumbnail derivatives -> signed URLs -> caption/order/visibility/rights with the GP-20 consent gate), and that the CLIENT hotel detail gallery ALREADY renders real images -- empty only because no photos have ever been uploaded (seed-hotels seeds zero media; no staff tool). So H1.1 is pure frontend. Built the first slice (the demo payoff): a non-JSON upload() path on the shared api-client client for the octet-stream byte upload (D-082; the JSON request/get path unchanged); staff-hotel + media hooks (useStaffHotels/useStaffHotel; useHotelMedia, a composed useAddHotelPhoto [register -> upload -> invalidate], useUpdateMedia, useDeleteMedia, useMediaDownloadUrl); a web-first file picker (pick-image-file.web.ts DOM input; the base .ts returns null on native -- a native picker via expo-image-picker is a follow-up, and the module is jest-mockable so the upload flow is tested); a staff Hotels area -> catalogue list (DataTable) -> photo manager (add via pick -> register -> scan; caption + visibility + rights option pickers with a GP-20 pre-save warning; delete), all four states + a11y. Once a photo is scan-clean + client-visible + rights-cleared it appears in client discovery automatically. Verified green: api-client + mobile typecheck, lint + class-audit, api-client vitest (6, +1 upload test), mobile jest (419, +19 hotels-admin tests). An ultracode adversarial review (3 lenses -> verify) confirmed 0 blockers and refuted 2 nits; took one cheap improvement (radio uses accessibilityState checked not selected on native) and added the untested GP-20-warning test. Not committed/pushed yet. H1.1 remains: H1.1b hotel profile editor, H1.1c rate cards + import.
+
 ## Requests
 
 - 07 Nov 19:22 Admin console first
@@ -63,9 +65,12 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [ba59268](https://github.com/app-ampm/ampm-platform/commit/ba5926803ea6adb6b9ff50db3e76bafcc5ca7a95) chore: checkpoint 2026-11-08 06:25: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-35ac24fb80093011.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-a0e08fd6a26131b0.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ab323c78676e4068.nudges (+1 more)
 - [634d13a](https://github.com/app-ampm/ampm-platform/commit/634d13aa3437c023e71bf5e442fb2de36dc30208) chore: checkpoint 2026-11-08 06:45: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-1683b09f9ec5510f.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3d260091c00d7feb.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-5d176a3b92a6a53b.nudges (+3 more)
 - [e8e99de](https://github.com/app-ampm/ampm-platform/commit/e8e99de91aa91c660d171f7b9193a45c44f63209) chore: checkpoint 2026-11-08 07:09: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-6296426bb5e5ebf9.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-b5b625b7a4658f88.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-e50dafbeef2a3914.nudges
+- [7327858](https://github.com/app-ampm/ampm-platform/commit/7327858c65e26ad0598d5f8b8f48dfac6a828039) chore: checkpoint 2026-11-08 07:21: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3fb499b023073594.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-b26a905a7871450e.nudges
 
 ## Changed files
 
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3fb499b023073594.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-b26a905a7871450e.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-6296426bb5e5ebf9.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-b5b625b7a4658f88.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-e50dafbeef2a3914.nudges
@@ -76,6 +81,4 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-bf470569c96617bf.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-e2ca50d33b32368e.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-35ac24fb80093011.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-a0e08fd6a26131b0.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ab323c78676e4068.nudges
-- (+29 more)
+- (+31 more)
