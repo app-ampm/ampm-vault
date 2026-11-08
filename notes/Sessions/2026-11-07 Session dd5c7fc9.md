@@ -4,8 +4,8 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 12
-commits: 6
+requests: 13
+commits: 7
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -52,6 +52,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 08 Nov 05:55 Custom role editor
 - 08 Nov 06:25 Ship it
 - 08 Nov 06:35 Hotels + photos
+- 08 Nov 06:45 Photo manager
 
 ## Commits (ampm-platform)
 
@@ -61,9 +62,13 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [af7af51](https://github.com/app-ampm/ampm-platform/commit/af7af519c1b68822862b4164012def219a850162) chore: checkpoint 2026-11-08 06:15: graphify-out/cache/hook_sessions/8f70df0c-1682-4cc6-91eb-99c4dccade1c.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-35ac24fb80093011.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ab323c78676e4068.nudges (+1 more)
 - [ba59268](https://github.com/app-ampm/ampm-platform/commit/ba5926803ea6adb6b9ff50db3e76bafcc5ca7a95) chore: checkpoint 2026-11-08 06:25: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-35ac24fb80093011.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-a0e08fd6a26131b0.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ab323c78676e4068.nudges (+1 more)
 - [634d13a](https://github.com/app-ampm/ampm-platform/commit/634d13aa3437c023e71bf5e442fb2de36dc30208) chore: checkpoint 2026-11-08 06:45: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-1683b09f9ec5510f.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3d260091c00d7feb.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-5d176a3b92a6a53b.nudges (+3 more)
+- [e8e99de](https://github.com/app-ampm/ampm-platform/commit/e8e99de91aa91c660d171f7b9193a45c44f63209) chore: checkpoint 2026-11-08 07:09: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-6296426bb5e5ebf9.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-b5b625b7a4658f88.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-e50dafbeef2a3914.nudges
 
 ## Changed files
 
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-6296426bb5e5ebf9.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-b5b625b7a4658f88.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-e50dafbeef2a3914.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-1683b09f9ec5510f.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3d260091c00d7feb.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-5d176a3b92a6a53b.nudges
@@ -73,7 +78,4 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-35ac24fb80093011.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-a0e08fd6a26131b0.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ab323c78676e4068.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-e94b14e639b4ebed.nudges
-- graphify-out/cache/hook_sessions/8f70df0c-1682-4cc6-91eb-99c4dccade1c.nudges
-- graphify-out/cache/hook_sessions/3c5511c6-fe05-4765-a206-7c71de371683-5bc179e3b4b70042.nudges
-- (+26 more)
+- (+29 more)

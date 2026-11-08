@@ -89,3 +89,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-079 The website runs on the test box as a Next standalone container at site.ampmverse.com|D-079]] | The website runs on the test box as a Next standalone container at site.ampmverse.com | tooling | accepted | 2026-11-07 |
 | [[D-080 The test box keeps dev sign-in behind the password and signs tokens with its own key|D-080]] | The test box keeps dev sign-in behind the password and signs tokens with its own key | tooling | accepted | 2026-11-07 |
 | [[D-081 Assignable-roles endpoint for assignment and the permissions viewer|D-081]] | An assignable-roles endpoint unifies system and custom roles for assignment and the permissions viewer | permissions | accepted | 2026-11-07 |
+| [[D-082 The api-client gains a non-JSON upload path for binary media|D-082]] | The api-client gains a non-JSON upload() path for binary media uploads | architecture | accepted | 2026-11-08 |
