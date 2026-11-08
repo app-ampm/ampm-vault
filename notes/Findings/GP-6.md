@@ -24,4 +24,4 @@ Only the subscription payment is described. PORTAL-FLOW shows "payment status" b
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-08.*
+*Generated on 2026-11-09.*
