@@ -40,4 +40,4 @@ Wedding-planning platform for AMPM. Design drafts at version 0.2 with AMPM's dec
 - Each Claude Code session gets a note under notes/Sessions: requests, commits and changed files are refreshed automatically at the end of every turn, and the narrative (what was decided and why) is written at wrap-up. Build decisions are D-nnn records under notes/Build decisions. [[AMPM Dashboard.base|The dashboard]] shows live tables of all of these.
 - To record a confirmation from AMPM: write it in the open item's note, update docs/decisions.json, then run `apply_decisions.py`, `decision_log_build.py`, the register and sheet generators, `vault_build.py` and `site_build.mjs`.
 
-*Home regenerated on 2026-11-09.*
+*Home regenerated on 2026-11-10.*

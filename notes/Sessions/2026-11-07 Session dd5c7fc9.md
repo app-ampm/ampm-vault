@@ -4,8 +4,8 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 71
-commits: 48
+requests: 72
+commits: 49
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -157,6 +157,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 09 Nov 23:19 Audit-log filters
 - 09 Nov 23:45 Ship it
 - 09 Nov 23:51 merge it
+- 09 Nov 23:55 Demo polish (H1.4)
 
 ## Commits (ampm-platform)
 
@@ -208,19 +209,20 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [94074d6](https://github.com/app-ampm/ampm-platform/commit/94074d64f2ea49b06e4ae0d64d76ed842a1d2569) chore: checkpoint 2026-11-09 23:02: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-02e3c6a07f800e35.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-052bf0693b6289f9.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-095558ffb7b92d93.nudges (+40 more)
 - [4e47eff](https://github.com/app-ampm/ampm-platform/commit/4e47eff1382bd2e58b41cbf11407a6582ade7999) chore: checkpoint 2026-11-09 23:28: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-20fd37ba35d44412.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-4d676853aff594b3.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-922ba893f6160fd7.nudges (+7 more)
 - [8a4203c](https://github.com/app-ampm/ampm-platform/commit/8a4203cbe0fa362bf3706baec737fc1bd392eef6) chore: checkpoint 2026-11-09 23:44: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-02e84de0e4688072.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-042787155961b41b.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-10482e80c3cb15aa.nudges (+25 more)
+- [b98acc6](https://github.com/app-ampm/ampm-platform/commit/b98acc6f2ae307c24aff5218cb47ca0aea09b594) chore: checkpoint 2026-11-10 00:10: graphify-out/cache/hook_sessions/639f78ef-7cfc-4116-a851-24f54ae03beb.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-52c724326698998b.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-6757fa8e9a9237ea.nudges (+4 more)
 
 ## Changed files
 
+- graphify-out/cache/hook_sessions/639f78ef-7cfc-4116-a851-24f54ae03beb.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-52c724326698998b.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-6757fa8e9a9237ea.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-7aae0c5132d3cdcc.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-9041bebab27525fe.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-b33052b6e6d08115.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-e45560da2645e83f.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-02e84de0e4688072.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-042787155961b41b.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-10482e80c3cb15aa.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-136176fcae07bdc9.nudges
 - graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-20314a365d0667fe.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3ae4707dc54eab37.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3b3c12e40a089a0a.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-40d8acbb20b7451e.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-46b32799384a217a.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-4e22e140c09b983a.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-5597e2b4e8959f31.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-564c5a742c73d3e3.nudges
-- (+384 more)
+- (+386 more)

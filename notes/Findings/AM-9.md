@@ -24,4 +24,4 @@ per account (A-29) (data model §20.2)
 - Assumptions citing it: [[A-29]]
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-09.*
+*Generated on 2026-11-10.*

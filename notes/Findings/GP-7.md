@@ -20,4 +20,4 @@ Undecided in BIZ §9 and SPEC §13. Affects the gateway integration and the subs
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-09.*
+*Generated on 2026-11-10.*
