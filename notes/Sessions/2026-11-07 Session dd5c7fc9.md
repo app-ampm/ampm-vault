@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 76
+requests: 77
 commits: 80
 tags: [ampm, session]
 ---
@@ -184,6 +184,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 10 Nov 00:28 merge it
 - 10 Nov 00:42 Lets first give me the full overview of the development according to hotel discovery, demo and wedding.
 - 10 Nov 01:08 Give me detail about R17.
+- 10 Nov 01:20 Explain me in simple
 
 ## Commits (ampm-platform)
 
