@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 60
+requests: 61
 commits: 42
 tags: [ampm, session]
 ---
@@ -138,6 +138,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 09 Nov 18:41 merge it
 - 09 Nov 18:46 What's left in H1?
 - 09 Nov 19:06 Hotel import
+- 09 Nov 19:49 Ship it
 
 ## Commits (ampm-platform)
 
