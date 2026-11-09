@@ -14,6 +14,8 @@ tags: [ampm, session]
 
 ## Narrative
 
+**Follow-up 2 (same session):** once the admin pages were `wide`, the `DataTable`'s fixed-width columns (~460pt) sat left-aligned in the ~1150pt card, so the Roles, Configuration, Catalogue, Audit, Notifications and Templates tables looked broken (empty right half). Fixed the shared `DataTable`: a `grow` flag makes the primary column take the spare width (`flex-1`, `width` as its min) and the table is `min-w-full` with full-width rows — fills the card on desktop, still scrolls on a phone. Marked the primary column in all six tables. Verified in the web build (forced 1120pt card → row fills, grow column 160→820pt; phone overflows/scrolls). ui+mobile lint/typecheck/tests green (630+648). Merged PR #100 (squash `7f40db7`), shipped to app.ampmverse.com, main re-synced to `7f40db7`.
+
 **Follow-up (same session):** the user found Tasks & Operations (field notes) and Settings still at the narrow 768 column on web — two of the six staff rail areas the first pass missed (classified by feature folder). Set both to `Screen width="wide"`; phones unchanged (the cap is tablet/desktop only), client portal's own screens stay `content`. mobile typecheck + those tests + scans green; merged PR #99 (squash `3cb8068`) and shipped the web export to app.ampmverse.com; main re-synced to `3cb8068`. Also fixed a Stop-hook typecheck failure that was the main checkout missing `expo-blur` (stale install, unrelated) — `pnpm install --frozen-lockfile` in main.
 
 
