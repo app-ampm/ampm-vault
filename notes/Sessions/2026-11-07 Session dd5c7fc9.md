@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 64
+requests: 65
 commits: 45
 tags: [ampm, session]
 ---
@@ -78,6 +78,8 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 
 **Build + shipped — bulk hotel CSV import (D-100, H1.1, 9 Nov).** The user chose the hotel bulk import — the last build-plan piece of H1.1. Built the frontend for the already-shipped synchronous `POST /hotels-admin/imports` (no backend change): a `useHotelImport` hook (the only packages/ addition; invalidates the staff hotel list only on an applied run) and a `HotelImportScreen` where staff paste or choose a `.csv`, **Validate** (dry run — rejected rows by line and field, nothing saved) then **Import** (upsert valid rows, refresh the catalogue), with a `pick-csv-file.web`/`.ts` split mirroring `pick-image-file` (native falls back to paste) and an Import button + route on the catalogue. Reused the existing @ampm/ui primitives; no new component. An adversarial ultracode review (4 dimensions, each finding verified by 3 skeptics) fixed three before ship: clear the result panel before each run (no stale outcome after a failed/edited re-run), announce the Validate outcome to screen readers via its own live toast (ui.md a11y, matching the import path), and test the file-pick path; five nitpicks were refuted. Tests: 7 screen + 6 format + the catalogue nav test; `pnpm check` green across the slice (the pre-existing api-e2e vitest-collection break is unrelated and CI-path-gated off for a frontend PR). Shipped web-only: PR #93 squash-merged to main (6d7edeb), the Expo web export rsynced to app.ampmverse.com (box API unchanged at 7a8f94a), verified live (index fresh, new import bundle present, api_health 200). H1.1 is now complete end to end (catalogue, profile editor, media, rate cards, sub-editors, bulk import). Next H1 candidates: the H1.2 admin-console remainder (audit-log filters/export, notifications bell) or the H1.0 primitives (Select, date-range, Dialog, Drawer, native uploader).
 
+**Build + shipped — Select dropdown primitive (D-101, H1.0, 9 Nov).** The user chose the H1.0 primitives; I split them into two tight slices (Select now, date-range next) and built the first: a shared single-value `Select` in packages/ui — a labelled trigger that **reuses the Input field frame** (fieldStyles + FieldLabel/FieldMessage/requiredLabel, inheriting the focus halo, gold error stroke, dashed-disabled and announced error) opening a **Sheet listbox** radiogroup with an optional search box; generic over the value type, all strings as props (uiCopy.select defaults), forwards a ref to the trigger. No new overlay or field styling — it composes Sheet/Input/Icon/Text; the only new kit primitive. Adopted in the hotel destination field, replacing the inline-chip `MediaOptionPicker` (destinations are a growing list; the chip picker stays for the small fixed enums), which now owns its required-field error. An adversarial ultracode review (34 agents, 4 dimensions, each finding verified by 3 skeptics) confirmed 6, all fixed: ref forwarding, the required marking on the destination Select, noMatchesLabel as a prop, and disabled-option/search-reset/empty-destinations tests; 3 nitpicks refuted (incl. the trigger's accessible-name choice, which the skeptics validated). Green: ui 615 + mobile 636 tests, lint 0 errors, class-audit clean, typecheck. Cut a fresh branch from origin/main (6d7edeb). Shipped web-only: PR #94 squash-merged to main (1a01379), Expo web export rsynced to app.ampmverse.com (box API unchanged at 7a8f94a), verified live (index fresh @16:25, api_health 200, ui 401). **Next H1.0 primitive: the date-range picker** — with Select it unblocks the deferred audit-log filters/export.
+
 ## Requests
 
 - 07 Nov 19:22 Admin console first
@@ -144,6 +146,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 09 Nov 20:08 merge it
 - 09 Nov 20:18 H1.0 primitives
 - 09 Nov 21:44 Ship it
+- 09 Nov 21:54 merge it
 
 ## Commits (ampm-platform)
 
