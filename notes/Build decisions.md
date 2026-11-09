@@ -110,3 +110,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-100 Bulk hotel CSV import screen (H1.1)|D-100]] | Bulk hotel CSV import screen (H1.1) | screens | accepted | 2026-11-09 |
 | [[D-101 Select dropdown form field (H1.0 primitive)|D-101]] | Select dropdown form field (H1.0 primitive) | screens | accepted | 2026-11-09 |
 | [[D-102 Date-range field (H1.0 primitive)|D-102]] | Date-range field (H1.0 primitive) | screens | accepted | 2026-11-09 |
+| [[D-103 Audit-log action filter and CSV export (H1.2)|D-103]] | Audit-log action filter and CSV export (H1.2) | screens | accepted | 2026-11-09 |
