@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 67
+requests: 68
 commits: 46
 tags: [ampm, session]
 ---
@@ -80,6 +80,8 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 
 **Build + shipped — Select dropdown primitive (D-101, H1.0, 9 Nov).** The user chose the H1.0 primitives; I split them into two tight slices (Select now, date-range next) and built the first: a shared single-value `Select` in packages/ui — a labelled trigger that **reuses the Input field frame** (fieldStyles + FieldLabel/FieldMessage/requiredLabel, inheriting the focus halo, gold error stroke, dashed-disabled and announced error) opening a **Sheet listbox** radiogroup with an optional search box; generic over the value type, all strings as props (uiCopy.select defaults), forwards a ref to the trigger. No new overlay or field styling — it composes Sheet/Input/Icon/Text; the only new kit primitive. Adopted in the hotel destination field, replacing the inline-chip `MediaOptionPicker` (destinations are a growing list; the chip picker stays for the small fixed enums), which now owns its required-field error. An adversarial ultracode review (34 agents, 4 dimensions, each finding verified by 3 skeptics) confirmed 6, all fixed: ref forwarding, the required marking on the destination Select, noMatchesLabel as a prop, and disabled-option/search-reset/empty-destinations tests; 3 nitpicks refuted (incl. the trigger's accessible-name choice, which the skeptics validated). Green: ui 615 + mobile 636 tests, lint 0 errors, class-audit clean, typecheck. Cut a fresh branch from origin/main (6d7edeb). Shipped web-only: PR #94 squash-merged to main (1a01379), Expo web export rsynced to app.ampmverse.com (box API unchanged at 7a8f94a), verified live (index fresh @16:25, api_health 200, ui 401). **Next H1.0 primitive: the date-range picker** — with Select it unblocks the deferred audit-log filters/export.
 
+**Build + shipped — DateRangeField primitive (D-102, H1.0, 9 Nov).** The second H1.0 primitive (the user picked the date-range picker after Select). A shared `DateRangeField` in packages/ui: a labelled trigger (reusing the Input field frame) → a `Sheet` of preset radios (All time, Last 7/30/90 days, This month/year) **plus a custom from/to entry** (two Inputs + Apply, validated with isIsoDate + order-checked), emitting a `{from,to}` of YYYY-MM-DD bounds; `now` is injectable, the custom draft reseeds on each open (the Modal unmounts its children). Pure `date-range.ts` util (preset→range UTC math, match/label/order). **Reuse-first:** composes Sheet/Input/Button/Icon/Text + the Input field parts + isIsoDate from core; no new overlay; forwards a ref. **Adopted** as the **audit-log date filter** — frontend-only (useAuditEvents already takes from/to); the range maps to from=day-start, to=day-end-inclusive. A 43-agent ultracode review (4 dimensions, each finding verified by 3 skeptics) confirmed 7, all fixed: the invalid-date message (named, not the format hint), the custom "→" spoken as "to" (MoneyText en-dash precedent), a narrowed JSDoc, + half-open/invalid-date/inclusive-end/single-digit-month tests. **6 refuted, validating choices:** the reuse-first duplication flags for the trigger + preset row (0/3) and the "text inputs aren't a date picker" concern (0/3). Green: ui 630 + mobile 637 tests, lint 0 err, class-audit clean, typecheck. Cut a fresh branch from origin/main (1a01379). Shipped web-only: PR #95 squash-merged to main (1947084), Expo web export rsynced to app.ampmverse.com (box API unchanged at 7a8f94a), verified live (index fresh @17:46, api_health 200, ui 401). **Both H1.0 primitives (Select + DateRangeField) are now shipped — the full audit-log filters (action/actor + date) and export are the natural next slice;** remaining H1.0 primitives are Dialog/Drawer/native-uploader.
+
 ## Requests
 
 - 07 Nov 19:22 Admin console first
@@ -149,6 +151,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 09 Nov 21:54 merge it
 - 09 Nov 22:17 Date-range picker
 - 09 Nov 23:03 Ship it
+- 09 Nov 23:15 merge it
 
 ## Commits (ampm-platform)
 
