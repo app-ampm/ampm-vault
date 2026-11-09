@@ -107,3 +107,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-097 Notification-template editor — edit message content (H1.2)|D-097]] | Notification-template editor — edit message content (H1.2) | screens | accepted | 2026-11-09 |
 | [[D-098 CRM-list pagination — shared cursor-list hook + Load more|D-098]] | CRM-list pagination — shared cursor-list hook + Load more | screens | accepted | 2026-11-09 |
 | [[D-099 Close a lead with a reason, merge duplicate leads (Sales)|D-099]] | Close a lead with a reason, merge duplicate leads (Sales) | screens | accepted | 2026-11-09 |
+| [[D-100 Bulk hotel CSV import screen (H1.1)|D-100]] | Bulk hotel CSV import screen (H1.1) | screens | accepted | 2026-11-09 |

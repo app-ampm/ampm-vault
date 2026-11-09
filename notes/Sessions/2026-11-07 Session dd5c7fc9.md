@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 61
+requests: 62
 commits: 42
 tags: [ampm, session]
 ---
@@ -76,6 +76,8 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 
 **Built + shipped — close & merge leads (D-099) live on app.ampmverse.com (9 Nov).** The user chose the deferred Sales follow-ups after CRM pagination: close-a-lead (with reason) + merge duplicates, both left from D-091. The lead backend already ships them (`crm.leads.*`), so **frontend-only**. Two actions on the lead **manage card** (open leads only): **Close** — `lead-close-sheet.tsx`, a bottom sheet with a **required** reason → `PATCH {status:"closed", closedReason}` via the existing `useUpdateLead` (terminal, destructive submit); **Merge** — new `useMergeLead()` (`POST /crm/leads/:id/merge {survivorLeadId}`), offered only on a lead flagged as a possible duplicate (`duplicateOfLeadId`), a `ConfirmSheet` merging it into that original (`survivorLeadId = lead.duplicateOfLeadId`) — the duplicate's activity moves to the original and the duplicate closes (AC-01.6). Both `crm.leads.update`, server-enforced; a terminal lead's card hides. **Reuse-first:** **promoted `ConfirmSheet` from `apps/mobile/.../admin` to `packages/ui`** so sales/admin/hotels-admin share one confirm — which also **removed a cross-feature import** (hotels-admin's managed-subresource/rate-card/hotel-media imported `../admin/confirm-sheet`, a boundary violation); git tracked it as a 71% rename. **No @ampm/core/policy/backend change.** A **4-dimension ultracode adversarial review** (each finding verified) returned **2 raw → 2 confirmed (both low), 0 refuted** — **no correctness or security findings** (the merge survivor direction, the promotion across all 5 consumers, and the close logic were clean). Fixed: `ConfirmSheet`'s hardcoded "Cancel" → a `cancelLabel` prop defaulting to `uiCopy.cancel` (the packages/ui strings-as-props invariant the literal broke on promotion, a sibling to `Sheet`'s `closeLabel`); the required-reason gate gained a whitespace test so its `.trim()` can't regress. Green: ui jest **604** (+2 ConfirmSheet), mobile jest **621** (+4 manage-card close/merge), lint 0 errors, typecheck, scans; **apps/api + packages/core unchanged** (api e2e env-gated locally, path-skipped in CI). Shipped as PR #92 (squash **e08f4a2**, `team-screens progress` Monday trailer), squash-merged to main; **deployed WEB-ONLY** (no API box rebuild — expo export → httpdocs). Verified live: health 200 {db ok}; `GET /_api/crm/leads` → 401 (CRM routes mounted, unchanged); `index.html` fresh @13:11; box API **unchanged** (`.deployed-commit` 7a8f94a, container 07:42). Authenticated close/merge behind Basic-Auth (password not held) → user confirms in-browser. Recorded **D-099**. The Sales workspace's lead lifecycle is now complete for H1.3. Deferred: arbitrary-survivor merge (a lead picker), bulk close/merge from the board. Next: reference-data viewers, or another H1 piece.
 
+**Build + shipped — bulk hotel CSV import (D-100, H1.1, 9 Nov).** The user chose the hotel bulk import — the last build-plan piece of H1.1. Built the frontend for the already-shipped synchronous `POST /hotels-admin/imports` (no backend change): a `useHotelImport` hook (the only packages/ addition; invalidates the staff hotel list only on an applied run) and a `HotelImportScreen` where staff paste or choose a `.csv`, **Validate** (dry run — rejected rows by line and field, nothing saved) then **Import** (upsert valid rows, refresh the catalogue), with a `pick-csv-file.web`/`.ts` split mirroring `pick-image-file` (native falls back to paste) and an Import button + route on the catalogue. Reused the existing @ampm/ui primitives; no new component. An adversarial ultracode review (4 dimensions, each finding verified by 3 skeptics) fixed three before ship: clear the result panel before each run (no stale outcome after a failed/edited re-run), announce the Validate outcome to screen readers via its own live toast (ui.md a11y, matching the import path), and test the file-pick path; five nitpicks were refuted. Tests: 7 screen + 6 format + the catalogue nav test; `pnpm check` green across the slice (the pre-existing api-e2e vitest-collection break is unrelated and CI-path-gated off for a frontend PR). Shipped web-only: PR #93 squash-merged to main (6d7edeb), the Expo web export rsynced to app.ampmverse.com (box API unchanged at 7a8f94a), verified live (index fresh, new import bundle present, api_health 200). H1.1 is now complete end to end (catalogue, profile editor, media, rate cards, sub-editors, bulk import). Next H1 candidates: the H1.2 admin-console remainder (audit-log filters/export, notifications bell) or the H1.0 primitives (Select, date-range, Dialog, Drawer, native uploader).
+
 ## Requests
 
 - 07 Nov 19:22 Admin console first
@@ -139,6 +141,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 09 Nov 18:46 What's left in H1?
 - 09 Nov 19:06 Hotel import
 - 09 Nov 19:49 Ship it
+- 09 Nov 20:08 merge it
 
 ## Commits (ampm-platform)
 
