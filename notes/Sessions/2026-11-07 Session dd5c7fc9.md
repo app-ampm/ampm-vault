@@ -4,8 +4,8 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 75
-commits: 79
+requests: 76
+commits: 80
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -181,6 +181,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 10 Nov 00:23 Ship it
 - 10 Nov 00:28 merge it
 - 10 Nov 00:42 Lets first give me the full overview of the development according to hotel discovery, demo and wedding.
+- 10 Nov 01:08 Give me detail about R17.
 
 ## Commits (ampm-platform)
 
@@ -263,19 +264,20 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [945d21d](https://github.com/app-ampm/ampm-platform/commit/945d21db6f89955221273de59605aad3407a512b) chore: checkpoint 2026-11-10 00:47: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-0f0121fb8df16606.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-37442ae61010ec69.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-8697ccc18fae8145.nudges (+3 more)
 - [c8b19db](https://github.com/app-ampm/ampm-platform/commit/c8b19dbfecfb57ac9c585af055401bdaf05661f7) chore: checkpoint 2026-11-10 00:49: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-0f0121fb8df16606.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-37442ae61010ec69.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-8697ccc18fae8145.nudges (+3 more)
 - [3cb8068](https://github.com/app-ampm/ampm-platform/commit/3cb8068a785ac711775a0c445f3fee762092839f) Widen the last two narrow staff pages (Tasks, Settings) to the web column (#99)
+- [7f40db7](https://github.com/app-ampm/ampm-platform/commit/7f40db750a771d43fd9edf97dd416432da50a30d) Fill admin data tables to their card width (growable primary column) (#100)
 
 ## Changed files
 
-- apps/mobile/src/features/account/account-screen.tsx
-- apps/mobile/src/features/field-notes/field-notes-screen.tsx
-- docs/design/peacock-night.md
+- apps/mobile/src/features/admin/audit-log-screen.tsx
+- apps/mobile/src/features/admin/configuration-screen.tsx
+- apps/mobile/src/features/admin/notification-templates-screen.tsx
+- apps/mobile/src/features/admin/notifications-log-screen.tsx
+- apps/mobile/src/features/admin/roles-screen.tsx
+- apps/mobile/src/features/hotels-admin/hotels-list-screen.tsx
 - graphify-out/.graphify_labels.json.sig
 - graphify-out/GRAPH_REPORT.md
-- graphify-out/cache/ast/v0.9.95-s25-g7154a062ba57/0135a365c8e2ed581146c86cb78860806743041851fa8e6042d3efde8f813b2f.json
-- graphify-out/cache/ast/v0.9.95-s25-g7154a062ba57/764a3fbccec5b22f67f514e6076768c8a48cd3c62c01dfe945f4c8407175b66a.json
 - graphify-out/cache/stat-index.json
-- graphify-out/graph.html
 - graphify-out/graph.json
 - graphify-out/manifest.json
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-0f0121fb8df16606.nudges
+- packages/ui/src/components/data-table/data-table.stories.tsx
 - (+722 more)
