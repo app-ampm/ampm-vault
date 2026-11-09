@@ -4,8 +4,8 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 59
-commits: 39
+requests: 60
+commits: 41
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -137,6 +137,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 09 Nov 18:36 Ship it
 - 09 Nov 18:41 merge it
 - 09 Nov 18:46 What's left in H1?
+- 09 Nov 19:06 Hotel import
 
 ## Commits (ampm-platform)
 
@@ -179,19 +180,21 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [1f51a43](https://github.com/app-ampm/ampm-platform/commit/1f51a43e265875e01ae4e6fcc2d8517adb3337cb) chore: checkpoint 2026-11-09 18:19: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-1a4ec4c4254bf95e.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-2536f37d4e89d779.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3917135866b0c08e.nudges (+11 more)
 - [3590940](https://github.com/app-ampm/ampm-platform/commit/3590940142a10d282d505a69980b39c45208e200) chore: checkpoint 2026-11-09 18:35: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-088622bbbb1b2386.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-172617a4723f6698.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-181985ba0b638b67.nudges (+3 more)
 - [1fabb87](https://github.com/app-ampm/ampm-platform/commit/1fabb87941df478e8362e31c1a594242d73490f0) chore: checkpoint 2026-11-09 18:56: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-83bc29915e0227fc.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-8ce1e22c11bfc356.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-960a539b759edf77.nudges (+1 more)
+- [f6124af](https://github.com/app-ampm/ampm-platform/commit/f6124af6eddffd35d8fa6da7562494951f4a27ac) chore: checkpoint 2026-11-09 19:17: graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-5689b37a72d0721b.nudges, graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-58b53750565d879f.nudges, graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-5eeb74970b09f971.nudges (+5 more)
+- [58618c0](https://github.com/app-ampm/ampm-platform/commit/58618c06e8fe7b1a5b924b003616c8b5f169dc83) chore: checkpoint 2026-11-09 19:27: graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-58b53750565d879f.nudges, graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-9fffa0e7f12fd187.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-26770ad27ba3772b.nudges (+3 more)
 
 ## Changed files
 
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-83bc29915e0227fc.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-8ce1e22c11bfc356.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-960a539b759edf77.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ddc4b1985fb05327.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-088622bbbb1b2386.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-172617a4723f6698.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-181985ba0b638b67.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-2536f37d4e89d779.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-767eba71424606ba.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-dd3411350b717f45.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-1a4ec4c4254bf95e.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3917135866b0c08e.nudges
-- (+241 more)
+- graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-58b53750565d879f.nudges
+- graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-9fffa0e7f12fd187.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-26770ad27ba3772b.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-29ce5810e17cae35.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-a0cd20a17d9e4a07.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-c659e7ede0366a1b.nudges
+- graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-5689b37a72d0721b.nudges
+- graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-5eeb74970b09f971.nudges
+- graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-62ef0c4628299216.nudges
+- graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-75f669127598844e.nudges
+- graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe-89ca4ea6647019e6.nudges
+- graphify-out/cache/hook_sessions/2c7c1737-bce5-492f-8cf7-c45417eb4cfe.nudges
+- (+253 more)
