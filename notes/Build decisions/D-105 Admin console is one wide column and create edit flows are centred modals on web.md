@@ -32,6 +32,8 @@ The user reviewed the deployed admin workspace (app.ampmverse.com) and found the
 
 Every current and future create/add/edit flow is a modal on the desktop for free, and the console reads as one width. Full-*route* create flows that are not sheets (the CSV Import page, the client's new-request page) stay as pages. Merged to main via PR #98 (squash `c586e3e`) and deployed to app.ampmverse.com (Expo web export). Frontend only — no api/core change, so the box's API source and container are unchanged.
 
+**Follow-up (9 Nov 2026, PR #99, squash `3cb8068`):** the first pass classified screens by feature folder and missed two of the six staff rail areas — Tasks & Operations (`field-notes-screen`) and Settings (the shared `account-screen`, also the client's "More") — which stayed at `content` (768) and read as mobile-width beside the rail. Both set to `width="wide"`. `wide` only caps the column on tablet/desktop, so phones are unchanged; the client portal's own browsing/reading screens stay `content` by design. Shipped to app.ampmverse.com.
+
 ## Links
 - Session: [[2026-11-07 Session dd5c7fc9]]
 - Related: [[D-076]], [[D-078]]

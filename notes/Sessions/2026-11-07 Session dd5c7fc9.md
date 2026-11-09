@@ -14,6 +14,9 @@ tags: [ampm, session]
 
 ## Narrative
 
+**Follow-up (same session):** the user found Tasks & Operations (field notes) and Settings still at the narrow 768 column on web — two of the six staff rail areas the first pass missed (classified by feature folder). Set both to `Screen width="wide"`; phones unchanged (the cap is tablet/desktop only), client portal's own screens stay `content`. mobile typecheck + those tests + scans green; merged PR #99 (squash `3cb8068`) and shipped the web export to app.ampmverse.com; main re-synced to `3cb8068`. Also fixed a Stop-hook typecheck failure that was the main checkout missing `expo-blur` (stale install, unrelated) — `pnpm install --frozen-lockfile` in main.
+
+
 **Asked:** fix the admin console's inconsistent page widths (some full-bleed, some a narrow 768 column, some edge to edge) and make create/add/edit flows modals instead of full-screen panels (the user showed the hotel catalogue, enquiries and the full-screen "Edit photo").
 
 **Decided (with why)** ([[D-105 Admin console is one wide column and create edit flows are centred modals on web]]):
