@@ -101,3 +101,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-091 Sales-leads working actions — log activity, advance, assign (H1.3)|D-091]] | Sales-leads working actions — log activity, advance, assign (H1.3) | screens | accepted | 2026-11-08 |
 | [[D-092 Lead funnel report — counts by stage and source (H1.3)|D-092]] | Lead funnel report — counts by stage and source (H1.3) | screens | accepted | 2026-11-08 |
 | [[D-093 Notifications log — staff delivery history (H1.2)|D-093]] | Notifications log — staff delivery history (H1.2) | screens | accepted | 2026-11-09 |
+| [[D-094 Notification templates viewer + config read route (H1.2)|D-094]] | Notification templates viewer + config read route (H1.2) | screens | accepted | 2026-11-09 |
