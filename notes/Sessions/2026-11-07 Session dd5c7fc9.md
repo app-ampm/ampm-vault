@@ -14,6 +14,21 @@ tags: [ampm, session]
 
 ## Narrative
 
+**Asked:** fix the admin console's inconsistent page widths (some full-bleed, some a narrow 768 column, some edge to edge) and make create/add/edit flows modals instead of full-screen panels (the user showed the hotel catalogue, enquiries and the full-screen "Edit photo").
+
+**Decided (with why)** ([[D-105 Admin console is one wide column and create edit flows are centred modals on web]]):
+- One width for the whole admin workspace — every staff screen passes `Screen width="wide"` (the centred 1152 "dashboards and tables" column), so the header and the content share one column at every window. Chosen over per-screen list-vs-detail widths because the user wanted one consistent width.
+- `Sheet` becomes a centred dialog on the web (max 512, centred on both axes) while staying a bottom sheet on a phone, via one `Platform.OS` branch in `packages/ui/src/components/sheet/sheet.tsx`. Because every edit/create is a `Sheet` (and `ConfirmSheet` wraps it), they all became modals through this one change. Chosen over a `sheet.web.tsx` split or a new Dialog component to keep the native path and its tests byte-for-byte.
+
+**Built:** `width="wide"` on 18 staff screens (hotels, enquiries, leads, accounts, admin console, roles, users, audit, configuration, notifications, templates); the `Sheet` web-dialog branch; both conventions recorded in `docs/design/peacock-night.md`.
+
+**Verified:** measured the full-size `Sheet` in the running Expo web build at 1440 — a 512px dialog centred on both axes (gapL=gapR=464, gapT=gapB=259). `@ampm/ui` + `mobile` lint, typecheck and tests green (644 mobile tests), class audits and scans clean. After deploy, confirmed live in the user's Chrome that the catalogue header and content now share one centred column.
+
+**Shipped:** merged via PR #98 (squash `c586e3e`), then the Expo web export rebuilt and rsynced to app.ampmverse.com (frontend only — api source/container and site.ampmverse.com unchanged). Main checkout re-synced (rebased 48 cache-only checkpoints onto origin/main, pushed `8e67d72`; backup branch `backup/main-before-sync-2026-11-09`).
+
+**Remains:** nothing outstanding for this request. The CSV Import page and the client new-request page stay full routes (not sheets) — offered to make Import a modal if wanted. The user's staff session may have timed out; they sign in again to see the live tables and the Edit-photo modal.
+
+
 Planning session to set the way forward for frontend work now that the VPS, the live test domains and Peacock Night are in place. Ran a six-agent code-verified audit (Workflow `ampm-frontend-state-map`) across `apps/api`, `apps/mobile`, `apps/web`, `packages/ui`, `packages/tokens` and the design package, deliberately not trusting the stale graphify graph.
 
 **What the audit established.** Built end-to-end: the public marketing site (`apps/web`, marketing-only — the product portal is the Expo web export of `apps/mobile`, not Next.js), Flow 1 (lead→demo→subscription, but on dev-login + a payment stub), and Flow 2 (hotel discovery & assistance — the deepest, most complete flow, client + staff). Backend READY but zero frontend: the whole admin console (~30 endpoints), the staff hotel catalogue + media pipeline (~18 endpoints, why hotels show placeholder photos), Sales/Finance CRM completion, real auth (Cognito/OTP), real Razorpay checkout. Backend NOT ready: the entire engaged-wedding product (Flows 3–10, guest RSVP) behind the locked My Wedding/Approvals tabs. The UI kit (39 components) is complete for built screens but missing ~a dozen primitives (DataTable, Select/Menu, Date picker, FilePicker/Uploader, Dialog, Drawer…) that the next screens need; each costs ~2× (RN + web recipe).
