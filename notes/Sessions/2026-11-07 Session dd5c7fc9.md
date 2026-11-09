@@ -5,7 +5,7 @@ session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
 requests: 69
-commits: 47
+commits: 48
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -203,19 +203,20 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [44e385e](https://github.com/app-ampm/ampm-platform/commit/44e385e3fde5a1f363504fc5f502bb203ae179ef) chore: checkpoint 2026-11-09 21:47: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
 - [94074d6](https://github.com/app-ampm/ampm-platform/commit/94074d64f2ea49b06e4ae0d64d76ed842a1d2569) chore: checkpoint 2026-11-09 23:02: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-02e3c6a07f800e35.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-052bf0693b6289f9.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-095558ffb7b92d93.nudges (+40 more)
 - [4e47eff](https://github.com/app-ampm/ampm-platform/commit/4e47eff1382bd2e58b41cbf11407a6582ade7999) chore: checkpoint 2026-11-09 23:28: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-20fd37ba35d44412.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-4d676853aff594b3.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-922ba893f6160fd7.nudges (+7 more)
+- [8a4203c](https://github.com/app-ampm/ampm-platform/commit/8a4203cbe0fa362bf3706baec737fc1bd392eef6) chore: checkpoint 2026-11-09 23:44: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-02e84de0e4688072.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-042787155961b41b.nudges, graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-10482e80c3cb15aa.nudges (+25 more)
 
 ## Changed files
 
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-20fd37ba35d44412.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-4d676853aff594b3.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-922ba893f6160fd7.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-c7fe21d3aa74c6d8.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-cccc7eaee88808cb.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-d9ab4371d90386d1.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-dddc89b3a7488583.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-e7c53d513b8f00d4.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-eb45627a4067ed54.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-ff001c280139ae69.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-02e3c6a07f800e35.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-052bf0693b6289f9.nudges
-- (+357 more)
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-02e84de0e4688072.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-042787155961b41b.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-10482e80c3cb15aa.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-136176fcae07bdc9.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-20314a365d0667fe.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3ae4707dc54eab37.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-3b3c12e40a089a0a.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-40d8acbb20b7451e.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-46b32799384a217a.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-4e22e140c09b983a.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-5597e2b4e8959f31.nudges
+- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6-564c5a742c73d3e3.nudges
+- (+384 more)
