@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 98
+requests: 99
 commits: 100
 tags: [ampm, session]
 ---
@@ -13,6 +13,9 @@ tags: [ampm, session]
 > The Narrative is written by Claude at wrap-up (what was decided and why, what was built, what remains) and is never overwritten. The sections from Requests down are refreshed automatically at the end of every Claude Code turn.
 
 ## Narrative
+
+### D-113/114/115 — B10 pagination + B11 card enrichment + B16 subscriber home (one PR), 10 Nov
+Built three discovery slices in a batch (user: "do all these"), each adversarially reviewed on its own (3 ultracode workflows, ~41 agents; 9 raw → 5 confirmed+fixed, 4 refuted). Shipped as ONE combined PR #107 (squash a7b301c) because the test files intertwined (B11's a11y label change + B10's load-more test share hotels-screen.test). **B10** (D-113, web): the hotel results, shortlist and enquiry tracker get a "Load more" footer via the existing useCursorList + LoadMore (+ a keepPreviousData option so D-108's live filter keeps its no-flash behaviour). **B11** (D-114, API+web contract change): a required `summary` on hotelView — rates freshness + an indicative client price range + a venue capacity range — derived by a batched cardSummaryRows read from the SAME verified/stale, client-visible rate cards the detail uses (one rate type + one unit, so units never mix), folded into the card's accessible name because the pressable Card collapses its children (WCAG 1.3.1 — the review's main catch; the other fix was price-range unit mixing). **B16** (D-115, web): destination chips (useDestinations → the B8 browse) + a saved-preview section (useSavedHotels limit 4 → reused HotelCard previews) on the subscriber home; Ask-AMPM (CP-36 client_requests backend unbuilt) and recent searches (a personal-data client-store decision) deferred. FULL API-FIRST deploy (redeploy-box.sh then deploy-web.sh; no new migration). Verified live: summary on every /hotels hotel (=on_request for the seeded hotels, which have no rate cards — prices need seeded rate-cards+venues, the recurring seed follow-up), nextCursor present, /hotels/destinations → Goa/Jaipur/Udaipur. The canonical vault already held D-112 (staff Cognito sign-in, another session), so these took D-113/114/115. main tip a7b301c.
 
 ### D-111 — Browse hotels by destination (B8 / CP-02), 10 Nov
 Fourth discovery slice, pure-frontend over the ready `GET /hotels/destinations` (already on the box). Added `useDestinations()` + a `destinationBrowseSubtitle` helper, a Destinations browse screen (Card of spaced glass rows → opens a destination) whose per-destination list reuses `HotelResults`, the `/hotels/destinations` + `/[id]` routes, and a gated icon-only "Browse destinations" header entry. 16-agent ultracode review: 4 raw → 4 confirmed, all fixed (row spacing via `Stack gap`; list split into `DestinationCards` for the 40-line rule; empty-state SR `announce`; `string|string[]` name-param safety). Green: typecheck 11/11, full mobile 675 (+6), lint/prettier/scans. PR #105 (squash d3d4e4f), WEB-ONLY deploy. Verified live: client@example.com → Udaipur (Mewar, 2), Jaipur (Dhundhar, 1), Goa (North Goa, 1) — demoable now. Took D-111 because the canonical vault already held a D-110 (live Cognito provisioning, a different session).
@@ -219,6 +222,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 10 Nov 15:19 merge it
 - 10 Nov 15:39 Do all these
 - 10 Nov 17:08 ship it
+- 10 Nov 17:14 merge it
 
 ## Commits (ampm-platform)
 
