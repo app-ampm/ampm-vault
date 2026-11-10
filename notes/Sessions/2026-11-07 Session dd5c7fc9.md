@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 95
+requests: 96
 commits: 94
 tags: [ampm, session]
 ---
@@ -13,6 +13,9 @@ tags: [ampm, session]
 > The Narrative is written by Claude at wrap-up (what was decided and why, what was built, what remains) and is never overwritten. The sections from Requests down are refreshed automatically at the end of every Claude Code turn.
 
 ## Narrative
+
+### D-111 — Browse hotels by destination (B8 / CP-02), 10 Nov
+Fourth discovery slice, pure-frontend over the ready `GET /hotels/destinations` (already on the box). Added `useDestinations()` + a `destinationBrowseSubtitle` helper, a Destinations browse screen (Card of spaced glass rows → opens a destination) whose per-destination list reuses `HotelResults`, the `/hotels/destinations` + `/[id]` routes, and a gated icon-only "Browse destinations" header entry. 16-agent ultracode review: 4 raw → 4 confirmed, all fixed (row spacing via `Stack gap`; list split into `DestinationCards` for the 40-line rule; empty-state SR `announce`; `string|string[]` name-param safety). Green: typecheck 11/11, full mobile 675 (+6), lint/prettier/scans. PR #105 (squash d3d4e4f), WEB-ONLY deploy. Verified live: client@example.com → Udaipur (Mewar, 2), Jaipur (Dhundhar, 1), Goa (North Goa, 1) — demoable now. Took D-111 because the canonical vault already held a D-110 (live Cognito provisioning, a different session).
 
 **Follow-up 2 (same session):** once the admin pages were `wide`, the `DataTable`'s fixed-width columns (~460pt) sat left-aligned in the ~1150pt card, so the Roles, Configuration, Catalogue, Audit, Notifications and Templates tables looked broken (empty right half). Fixed the shared `DataTable`: a `grow` flag makes the primary column take the spare width (`flex-1`, `width` as its min) and the table is `min-w-full` with full-width rows — fills the card on desktop, still scrolls on a phone. Marked the primary column in all six tables. Verified in the web build (forced 1120pt card → row fills, grow column 160→820pt; phone overflows/scrolls). ui+mobile lint/typecheck/tests green (630+648). Merged PR #100 (squash `7f40db7`), shipped to app.ampmverse.com, main re-synced to `7f40db7`.
 
@@ -213,6 +216,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 10 Nov 13:36 merge it
 - 10 Nov 13:41 Next discovery slice
 - 10 Nov 15:12 ship it
+- 10 Nov 15:19 merge it
 
 ## Commits (ampm-platform)
 
