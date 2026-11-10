@@ -119,3 +119,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-109 Compare saved hotels side by side|D-109]] | Compare saved hotels side by side | screens | accepted | 2026-11-10 |
 | [[D-110 Provisioned live Amazon Cognito in Mumbai (pool, app client, pre-token V2 Lambda); AWS account upgraded to paid plan + advanced features|D-110]] | Provisioned live Amazon Cognito in Mumbai (pool, app client, pre-token V2 Lambda); AWS account upgraded to paid plan + advanced features | architecture | accepted | 2026-11-10 |
 | [[D-111 Browse hotels by destination (CP-02)|D-111]] | Browse hotels by destination (CP-02) | screens | accepted | 2026-11-10 |
+| [[D-112 Staff Cognito sign-in in the Expo app  add aws-amplify for SRP+TOTP, tokens in expo-secure-store, web-export tested first|D-112]] | Staff Cognito sign-in in the Expo app: add aws-amplify for SRP+TOTP, tokens in expo-secure-store, web-export tested first | architecture | accepted | 2026-11-10 |
