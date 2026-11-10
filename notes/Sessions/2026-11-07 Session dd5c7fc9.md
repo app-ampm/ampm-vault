@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 78
+requests: 80
 commits: 81
 tags: [ampm, session]
 ---
@@ -186,6 +186,8 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 10 Nov 01:08 Give me detail about R17.
 - 10 Nov 01:20 Explain me in simple
 - 10 Nov 05:49 whats left on web? give me everything which is still pending to develop, to wire for discovery launch.
+- 10 Nov 06:22 Lets setup this VPS as production ready, what we need to do for that?
+- 10 Nov 06:27 I mean to say, the current VPS we are using- set it up as production ready and make media storage on the current VPS only. Later in future if we need to chan...
 
 ## Commits (ampm-platform)
 
