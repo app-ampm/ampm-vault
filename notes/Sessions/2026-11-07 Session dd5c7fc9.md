@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 87
+requests: 88
 commits: 86
 tags: [ampm, session]
 ---
@@ -201,6 +201,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 10 Nov 10:27 Next discovery slice
 - 10 Nov 11:28 Ship it
 - 10 Nov 11:50 merge it
+- 10 Nov 12:10 Ship the storage code after explaining me the detail in simple terms
 
 ## Commits (ampm-platform)
 
