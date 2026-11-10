@@ -117,3 +117,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-107 Venues and room categories on the client hotel detail|D-107]] | Venues and room categories on the client hotel detail | screens | accepted | 2026-11-10 |
 | [[D-108 Search filters on hotel discovery|D-108]] | Search filters on hotel discovery | screens | accepted | 2026-11-10 |
 | [[D-109 Compare saved hotels side by side|D-109]] | Compare saved hotels side by side | screens | accepted | 2026-11-10 |
+| [[D-110 Provisioned live Amazon Cognito in Mumbai (pool, app client, pre-token V2 Lambda); AWS account upgraded to paid plan + advanced features|D-110]] | Provisioned live Amazon Cognito in Mumbai (pool, app client, pre-token V2 Lambda); AWS account upgraded to paid plan + advanced features | architecture | accepted | 2026-11-10 |
