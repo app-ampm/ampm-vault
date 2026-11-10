@@ -116,3 +116,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-106 Local-disk media storage on the current VPS (interim production store)|D-106]] | Local-disk media storage on the current VPS (interim production store) | architecture | accepted | 2026-11-10 |
 | [[D-107 Venues and room categories on the client hotel detail|D-107]] | Venues and room categories on the client hotel detail | screens | accepted | 2026-11-10 |
 | [[D-108 Search filters on hotel discovery|D-108]] | Search filters on hotel discovery | screens | accepted | 2026-11-10 |
+| [[D-109 Compare saved hotels side by side|D-109]] | Compare saved hotels side by side | screens | accepted | 2026-11-10 |
