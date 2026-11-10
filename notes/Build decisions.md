@@ -114,3 +114,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-104 Demo-environment banner (H1.4)|D-104]] | Demo-environment banner (H1.4) | screens | accepted | 2026-11-10 |
 | [[D-105 Admin console is one wide column and create edit flows are centred modals on web|D-105]] | Admin console is one wide column and create/edit flows are centred modals on web | screens | accepted | 2026-11-10 |
 | [[D-106 Local-disk media storage on the current VPS (interim production store)|D-106]] | Local-disk media storage on the current VPS (interim production store) | architecture | accepted | 2026-11-10 |
+| [[D-107 Venues and room categories on the client hotel detail|D-107]] | Venues and room categories on the client hotel detail | screens | accepted | 2026-11-10 |
