@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 105
+requests: 106
 commits: 105
 tags: [ampm, session]
 ---
@@ -236,6 +236,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 11 Nov 17:17 Next quick win
 - 11 Nov 21:09 Merge & deploy
 - 11 Nov 21:21 Compare on cards
+- 11 Nov 22:00 Merge & deploy
 
 ## Commits (ampm-platform)
 
