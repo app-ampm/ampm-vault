@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 115
+requests: 116
 commits: 108
 tags: [ampm, session]
 ---
@@ -258,6 +258,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 11 Nov 23:57 Merge & deploy
 - 12 Nov 00:27 Check public site media
 - 12 Nov 00:30 First give me whats build and hidden ?
+- 12 Nov 00:33 Enable Cognito on box
 
 ## Commits (ampm-platform)
 
