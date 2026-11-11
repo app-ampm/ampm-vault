@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 111
+requests: 112
 commits: 107
 tags: [ampm, session]
 ---
@@ -251,6 +251,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 11 Nov 22:50 Saved-note editor
 - 11 Nov 23:13 Merge & deploy
 - 11 Nov 23:25 One thing i want to know why the hotel photos/images are not visible?
+- 11 Nov 23:37 Fix in the app
 
 ## Commits (ampm-platform)
 
