@@ -126,3 +126,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-116 Cognito user provisioning via an additive IdentityProvisioner adapter (@aws-sdk)|D-116]] | Cognito user provisioning via an additive IdentityProvisioner adapter (@aws-sdk) | architecture | accepted | 2026-11-11 |
 | [[D-117 Seed demo venues, rooms and verified rate cards for hotel discovery|D-117]] | Seed demo venues, rooms and verified rate cards for hotel discovery | tooling | accepted | 2026-11-11 |
 | [[D-118 Save hotels to the shortlist from the discovery result cards|D-118]] | Save hotels to the shortlist from the discovery result cards | screens | accepted | 2026-11-11 |
+| [[D-119 Compare hotels from the discovery result cards (save then compare)|D-119]] | Compare hotels from the discovery result cards (save then compare) | screens | accepted | 2026-11-11 |
