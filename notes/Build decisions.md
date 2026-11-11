@@ -128,3 +128,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-118 Save hotels to the shortlist from the discovery result cards|D-118]] | Save hotels to the shortlist from the discovery result cards | screens | accepted | 2026-11-11 |
 | [[D-119 Compare hotels from the discovery result cards (save then compare)|D-119]] | Compare hotels from the discovery result cards (save then compare) | screens | accepted | 2026-11-11 |
 | [[D-120 Reliable per-card saved state via a complete saved-ids lookup|D-120]] | Reliable per-card saved state via a complete saved-ids lookup | flows | accepted | 2026-11-11 |
+| [[D-121 Client note editor on each shortlisted hotel|D-121]] | Client note editor on each shortlisted hotel | screens | accepted | 2026-11-11 |
