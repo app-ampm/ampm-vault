@@ -20,4 +20,4 @@ The flowcharts and the specification describe different products (§9). If AMPM'
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-11.*
+*Generated on 2026-11-12.*

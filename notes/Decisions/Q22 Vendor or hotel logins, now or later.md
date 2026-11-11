@@ -36,4 +36,4 @@ No vendor or hotel logins in the current version.
 - [[decision-log|Decision log]], [[decision-register|Decision register]], [[requirements-audit|Requirements audit]] §11
 - Open items linked to this question: none
 
-*Generated from docs/decisions.json on 2026-11-11; edit the JSON and rebuild, not this note.*
+*Generated from docs/decisions.json on 2026-11-12; edit the JSON and rebuild, not this note.*
