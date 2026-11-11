@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 100
+requests: 101
 commits: 100
 tags: [ampm, session]
 ---
@@ -224,6 +224,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 10 Nov 17:08 ship it
 - 10 Nov 17:14 merge it
 - 10 Nov 17:32 Give me complete table of pending backend, frontend and wiring till now so i could get clarity whats pending in hotel discovery.
+- 11 Nov 16:29 Give me visual status board first than start on the highest-value item (the demo rate-card seed)
 
 ## Commits (ampm-platform)
 
