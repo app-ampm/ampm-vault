@@ -20,4 +20,4 @@ SPEC §13 asks about "term, renewal, expiry" but no document says whether billin
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-12.*
+*Generated on 2026-11-13.*
