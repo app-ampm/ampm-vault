@@ -4,7 +4,7 @@ date: 2026-11-13
 session: cd5dce9a
 started: "2026-11-13 19:34"
 title: ""
-requests: 2
+requests: 3
 commits: 1
 tags: [ampm, session]
 ---
@@ -18,6 +18,7 @@ tags: [ampm, session]
 
 - 13 Nov 19:45 can you audit the cognito/SNS service pricing with other free tiers
 - 13 Nov 19:53 Give me the complete table with free sms and pricing after free usage per sms and additional features, so i could decide which one to choice. Which one is fr...
+- 13 Nov 20:04 For now we can setup SMS and add whats app later
 
 ## Commits (ampm-platform)
 
