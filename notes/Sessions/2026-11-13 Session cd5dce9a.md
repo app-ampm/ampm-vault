@@ -4,7 +4,7 @@ date: 2026-11-13
 session: cd5dce9a
 started: "2026-11-13 19:34"
 title: ""
-requests: 0
+requests: 1
 commits: 1
 tags: [ampm, session]
 ---
@@ -16,7 +16,7 @@ tags: [ampm, session]
 
 ## Requests
 
-- (none recorded)
+- 13 Nov 19:45 can you audit the cognito/SNS service pricing with other free tiers
 
 ## Commits (ampm-platform)
 
