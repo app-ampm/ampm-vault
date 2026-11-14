@@ -4,8 +4,8 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 121
-commits: 135
+requests: 122
+commits: 136
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -264,6 +264,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 14 Nov 16:21 In future how we going to add a new staff, do we have to go through cognito everytime to create a new staff member?, can't we setup it on the admin console w...
 - 14 Nov 16:32 lets first active it and add the first super admin to the cognito so we switch it on live, after that we can work on other deprovision.
 - 14 Nov 16:38 Can we create username admin@ampm.com for super admin?
+- 14 Nov 16:41 Which one to choose?
 
 ## Commits (ampm-platform)
 
@@ -402,6 +403,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [e995510](https://github.com/app-ampm/ampm-platform/commit/e995510c0340823dd3a40628cf18f1750da04523) chore: checkpoint 2026-11-14 16:04: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
 - [fe395be](https://github.com/app-ampm/ampm-platform/commit/fe395beb7086dbee5663d32a44c4aec37c018dd4) chore: checkpoint 2026-11-14 16:22: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
 - [3df1380](https://github.com/app-ampm/ampm-platform/commit/3df13800ebd40750a0d8416c7d7cd95bc5e4cb3f) chore: checkpoint 2026-11-14 16:37: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
+- [4f6da5e](https://github.com/app-ampm/ampm-platform/commit/4f6da5e338aa0564554016bec15a6d07b116307b) chore: checkpoint 2026-11-14 16:45: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
 
 ## Changed files
 
