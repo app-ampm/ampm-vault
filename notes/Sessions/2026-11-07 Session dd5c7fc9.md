@@ -4,8 +4,8 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 128
-commits: 138
+requests: 129
+commits: 140
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -271,6 +271,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 14 Nov 17:19 why can't we setup for today only? what is the issue to active cognito and client login with UI OTP? explain me in simple
 - 14 Nov 17:25 I am still not getting it like why clients needs to do anything with the cognito as it gets its seperate SMS service provider, explain me in simple and with...
 - 14 Nov 17:32 What was according to the documents for the client and staff logins? give me what was decided and whats currently build and whats working
+- 14 Nov 17:39 Explain me in simple- give me complete flow of client on our product according to documents with help of flow and diagram so i could understand the next steps
 
 ## Commits (ampm-platform)
 
@@ -412,9 +413,16 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [4f6da5e](https://github.com/app-ampm/ampm-platform/commit/4f6da5e338aa0564554016bec15a6d07b116307b) chore: checkpoint 2026-11-14 16:45: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
 - [dc8f222](https://github.com/app-ampm/ampm-platform/commit/dc8f222779ecb6afa48761e1fff0c4dd9a5f35fe) chore: checkpoint 2026-11-14 16:53: graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-1955a424574bb9d4.nudges, graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-1a2c5057f976fb8a.nudges, graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-a02362d12543776f.nudges
 - [457e50d](https://github.com/app-ampm/ampm-platform/commit/457e50dfe9f43f8a4280318980c6e80a14e86bbe) chore: checkpoint 2026-11-14 17:03: graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-0b6ce7d7ef830d3d.nudges, graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-17d9d90b9501aecc.nudges, graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-46481a7e8c7717f6.nudges (+3 more)
+- [1e95bbc](https://github.com/app-ampm/ampm-platform/commit/1e95bbce23a3fb05300dda87bd879ae71e99e2f4) chore: checkpoint 2026-11-14 17:41: graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-11aa8cc5f0319483.nudges, graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-2db39137bf0f66b2.nudges, graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-9f9f1c89c34b3367.nudges
+- [c0b06f8](https://github.com/app-ampm/ampm-platform/commit/c0b06f847e3d07cb159b4e2ef9906ac196e250a6) chore: checkpoint 2026-11-14 17:44: graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-73e53ce28573bd44.nudges, graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-b5770b898faacb0b.nudges
 
 ## Changed files
 
+- graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-73e53ce28573bd44.nudges
+- graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-b5770b898faacb0b.nudges
+- graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-11aa8cc5f0319483.nudges
+- graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-2db39137bf0f66b2.nudges
+- graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-9f9f1c89c34b3367.nudges
 - graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-0b6ce7d7ef830d3d.nudges
 - graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-17d9d90b9501aecc.nudges
 - graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-46481a7e8c7717f6.nudges
@@ -422,9 +430,4 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-67f7606971991740.nudges
 - graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-79e095fc6c270028.nudges
 - graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-1955a424574bb9d4.nudges
-- graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-1a2c5057f976fb8a.nudges
-- graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-a02362d12543776f.nudges
-- graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
-- graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-320077ee5f9a045b.nudges
-- graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-58d5c3c6c24f2947.nudges
-- (+1027 more)
+- (+1032 more)
