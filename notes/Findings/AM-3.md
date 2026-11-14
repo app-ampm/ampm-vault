@@ -24,4 +24,4 @@ two fields (A-26) (data model §20.2)
 - Assumptions citing it: [[A-26]]
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-14.*
+*Generated on 2026-11-15.*
