@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 120
+requests: 121
 commits: 135
 tags: [ampm, session]
 ---
@@ -263,6 +263,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 14 Nov 16:14 Whats pending to active the cognito for staff sign in? like switch on the global switch?
 - 14 Nov 16:21 In future how we going to add a new staff, do we have to go through cognito everytime to create a new staff member?, can't we setup it on the admin console w...
 - 14 Nov 16:32 lets first active it and add the first super admin to the cognito so we switch it on live, after that we can work on other deprovision.
+- 14 Nov 16:38 Can we create username admin@ampm.com for super admin?
 
 ## Commits (ampm-platform)
 
