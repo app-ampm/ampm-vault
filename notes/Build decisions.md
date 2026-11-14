@@ -132,3 +132,5 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-122 Resolve signed media URLs against the API base (MediaImage)|D-122]] | Resolve signed media URLs against the API base (MediaImage) | architecture | accepted | 2026-11-12 |
 | [[D-123 Desktop screens follow the D, C and T artboards  frame-aware Screen widths and shared column layouts|D-123]] | Desktop screens follow the D, C and T artboards: frame-aware Screen widths and shared column layouts | screens | accepted | 2026-11-14 |
 | [[D-124 List-beside-detail screens keep the open record in the route|D-124]] | List-beside-detail screens keep the open record in the route | screens | accepted | 2026-11-15 |
+| [[D-125 Finance records manual subscription payments (status-only grant, field-aware route guard)|D-125]] | Finance records manual subscription payments (status-only grant, field-aware route guard) | permissions | accepted | 2026-11-15 |
+| [[D-126 Closed leads sit behind a chip on the pipeline board|D-126]] | Closed leads sit behind a chip on the pipeline board | screens | accepted | 2026-11-15 |
