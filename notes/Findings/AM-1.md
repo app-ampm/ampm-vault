@@ -24,4 +24,4 @@ SPEC §2.5 says "wedding-specific link". A shared per-wedding link forces guests
 - Assumptions citing it: none
 - Source: [[requirements-audit|Requirements audit]]; in context in [[annotated-brief|the annotated brief]]
 
-*Generated on 2026-11-13.*
+*Generated on 2026-11-14.*
