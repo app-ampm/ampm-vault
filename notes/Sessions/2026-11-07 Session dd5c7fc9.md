@@ -4,8 +4,8 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 119
-commits: 134
+requests: 120
+commits: 135
 tags: [ampm, session]
 ---
 # Session 2026-11-07 dd5c7fc9
@@ -262,6 +262,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 14 Nov 16:00 Start the Cognito build-out
 - 14 Nov 16:14 Whats pending to active the cognito for staff sign in? like switch on the global switch?
 - 14 Nov 16:21 In future how we going to add a new staff, do we have to go through cognito everytime to create a new staff member?, can't we setup it on the admin console w...
+- 14 Nov 16:32 lets first active it and add the first super admin to the cognito so we switch it on live, after that we can work on other deprovision.
 
 ## Commits (ampm-platform)
 
@@ -399,6 +400,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - [13f290c](https://github.com/app-ampm/ampm-platform/commit/13f290cca0334282ee0171af1f1336780440c864) chore: checkpoint 2026-11-14 15:53: graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-320077ee5f9a045b.nudges, graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-58d5c3c6c24f2947.nudges, graphify-out/cache/hook_sessions/2848a499-611f-4a55-8bd9-256dc577a8be-69ad18cd8b4c3894.nudges (+2 more)
 - [e995510](https://github.com/app-ampm/ampm-platform/commit/e995510c0340823dd3a40628cf18f1750da04523) chore: checkpoint 2026-11-14 16:04: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
 - [fe395be](https://github.com/app-ampm/ampm-platform/commit/fe395beb7086dbee5663d32a44c4aec37c018dd4) chore: checkpoint 2026-11-14 16:22: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
+- [3df1380](https://github.com/app-ampm/ampm-platform/commit/3df13800ebd40750a0d8416c7d7cd95bc5e4cb3f) chore: checkpoint 2026-11-14 16:37: graphify-out/cache/hook_sessions/dd5c7fc9-e7f0-4ad9-a945-72c1dcc38ae6.nudges
 
 ## Changed files
 
