@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 126
+requests: 127
 commits: 138
 tags: [ampm, session]
 ---
@@ -269,6 +269,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 14 Nov 17:07 after we merge PR#122 which i guess for OTP related, then will it work - client login?
 - 14 Nov 17:13 This is my understanding - For staff related logins we use cognito to authanticate and give the access.
 - 14 Nov 17:19 why can't we setup for today only? what is the issue to active cognito and client login with UI OTP? explain me in simple
+- 14 Nov 17:25 I am still not getting it like why clients needs to do anything with the cognito as it gets its seperate SMS service provider, explain me in simple and with...
 
 ## Commits (ampm-platform)
 
