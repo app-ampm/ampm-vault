@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 130
+requests: 131
 commits: 142
 tags: [ampm, session]
 ---
@@ -273,6 +273,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 14 Nov 17:32 What was according to the documents for the client and staff logins? give me what was decided and whats currently build and whats working
 - 14 Nov 17:39 Explain me in simple- give me complete flow of client on our product according to documents with help of flow and diagram so i could understand the next steps
 - 14 Nov 17:52 This is my understanding -
+- 14 Nov 17:56 Yes i do understand the things to do before going live but for now i want to show the founder real login staff screens like super admin login than its contro...
 
 ## Commits (ampm-platform)
 
