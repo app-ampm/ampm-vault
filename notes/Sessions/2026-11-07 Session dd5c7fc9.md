@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 117
+requests: 118
 commits: 133
 tags: [ampm, session]
 ---
@@ -260,6 +260,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 12 Nov 00:30 First give me whats build and hidden ?
 - 12 Nov 00:33 Enable Cognito on box
 - 14 Nov 16:00 Start the Cognito build-out
+- 14 Nov 16:14 Whats pending to active the cognito for staff sign in? like switch on the global switch?
 
 ## Commits (ampm-platform)
 
