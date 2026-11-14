@@ -4,7 +4,7 @@ date: 2026-11-07
 session: dd5c7fc9
 started: "2026-11-07 18:44"
 title: ""
-requests: 134
+requests: 135
 commits: 147
 tags: [ampm, session]
 ---
@@ -277,6 +277,7 @@ Planning session to set the way forward for frontend work now that the VPS, the 
 - 14 Nov 18:08 Its all messy right now- i am getting your point - currently we want to make Hotel discovery live so we want to test the full flow before making anything liv...
 - 14 Nov 18:38 Close the gaps first
 - 14 Nov 19:05 Skip it, ship gap 1
+- 14 Nov 19:31 Merge & deploy
 
 ## Commits (ampm-platform)
 
