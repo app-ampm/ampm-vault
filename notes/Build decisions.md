@@ -137,3 +137,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-127 Finance reads subscriptions through the subscription status report|D-127]] | Finance reads subscriptions through the subscription status report | permissions | accepted | 2026-11-15 |
 | [[D-128 Finance & Reports area composes the T11 frame, with export in the first cut|D-128]] | Finance & Reports area composes the T11 frame, with export in the first cut | screens | accepted | 2026-11-15 |
 | [[D-129 Web export loads every route up front and the navigator paints no light background|D-129]] | Web export loads every route up front and the navigator paints no light background | architecture | accepted | 2026-11-15 |
+| [[D-130 Staff enquiry queue tracks the pipeline by stage, names the client and edits draft proposals in place|D-130]] | Staff enquiry queue tracks the pipeline by stage, names the client and edits draft proposals in place | screens | accepted | 2026-11-15 |
