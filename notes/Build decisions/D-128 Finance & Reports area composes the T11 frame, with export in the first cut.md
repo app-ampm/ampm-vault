@@ -29,7 +29,9 @@ A staff area "Finance & Reports" at `/finance`, gated on the report key and plac
 
 ## Consequences
 - The order is four slices: API, app, export, ship.
-- `RecordPaymentSheet` and the ledger row move to a shared billing module, because two features use them.
+- `RecordPaymentSheet`, `useCanRecordPayment` and the payment formatters are imported from `features/accounts`, as features already import siblings (the portal uses consultancy's `RequestRow`); no shared billing module was needed.
+- Record payment shows to whoever may record (SA, SM, FA, D-125). The plan's first draft said Sales would get no Record button; that was wrong, since Sales already records on the account page and the button follows the server's rule.
+- The header is T11's plain header, not a panel; the side panel is "Recent payments" (gateway attempts included) inside an `InternalPanel`, since its amounts are finance figures; the record sheet names the account, plan and amount.
 - Finance's home moves from `/enquiries` to `/finance`.
 
 ## Links

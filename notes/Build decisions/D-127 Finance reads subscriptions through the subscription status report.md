@@ -20,7 +20,7 @@ Finance lists subscriptions through the "Subscription status and payment history
 - The route is `GET /crm/reports/subscriptions`. Its row is strict: account name, plan, amount, status, dates and the last payment.
 - The row carries no contacts, billing details, internal notes or demo flag. Demo accounts are left out.
 - The Finance ledger view gains the account's name.
-- Decided with the user on 15 November 2026: Sales sees the Finance & Reports area too, as the matrix lets Sales run the report. Sales gets the subscriptions table only, with no ledger and no Record button.
+- Decided with the user on 15 November 2026: Sales sees the Finance & Reports area too, as the matrix lets Sales run the report. Sales gets the subscriptions table without the ledger. (The first draft also said no Record button; Sales may record per D-125, so the button shows for Sales too, see D-128.)
 
 ## Alternatives considered
 - A field-aware read of `/crm/subscriptions` with a Finance response model. It needs a ruling on what "RU status" lets Finance read, a matrix interpretation for AMPM that would carry over to "RU billing". Not taken.
