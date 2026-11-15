@@ -134,3 +134,5 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-124 List-beside-detail screens keep the open record in the route|D-124]] | List-beside-detail screens keep the open record in the route | screens | accepted | 2026-11-15 |
 | [[D-125 Finance records manual subscription payments (status-only grant, field-aware route guard)|D-125]] | Finance records manual subscription payments (status-only grant, field-aware route guard) | permissions | accepted | 2026-11-15 |
 | [[D-126 Closed leads sit behind a chip on the pipeline board|D-126]] | Closed leads sit behind a chip on the pipeline board | screens | accepted | 2026-11-15 |
+| [[D-127 Finance reads subscriptions through the subscription status report|D-127]] | Finance reads subscriptions through the subscription status report | permissions | accepted | 2026-11-15 |
+| [[D-128 Finance & Reports area composes the T11 frame, with export in the first cut|D-128]] | Finance & Reports area composes the T11 frame, with export in the first cut | screens | accepted | 2026-11-15 |
