@@ -136,3 +136,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-126 Closed leads sit behind a chip on the pipeline board|D-126]] | Closed leads sit behind a chip on the pipeline board | screens | accepted | 2026-11-15 |
 | [[D-127 Finance reads subscriptions through the subscription status report|D-127]] | Finance reads subscriptions through the subscription status report | permissions | accepted | 2026-11-15 |
 | [[D-128 Finance & Reports area composes the T11 frame, with export in the first cut|D-128]] | Finance & Reports area composes the T11 frame, with export in the first cut | screens | accepted | 2026-11-15 |
+| [[D-129 Web export loads every route up front and the navigator paints no light background|D-129]] | Web export loads every route up front and the navigator paints no light background | architecture | accepted | 2026-11-15 |
