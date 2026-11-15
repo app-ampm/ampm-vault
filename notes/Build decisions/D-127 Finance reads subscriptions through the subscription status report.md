@@ -28,7 +28,9 @@ Finance lists subscriptions through the "Subscription status and payment history
 
 ## Consequences
 - No change to the matrix.
-- One new read route, audited like the ledger, and one additive contract change (`accountName` on `paymentFinanceView`).
+- One new read route and one additive contract change (`accountName` on `paymentFinanceView`).
+- A run of the report is not audited: every field is CLIENT-class, so it is no restricted read, and the audit log has no plain-read action. The export (D-128) is audited.
+- Only client-visible inbound payments count as a subscription's last payment, which keeps the row CLIENT-class.
 - It needs a full API-first redeploy when it ships.
 
 ## Links
