@@ -8,6 +8,7 @@ One note per Claude Code session: the requests made, the commits and files that 
 
 | Session | Title | Started | Requests | Commits |
 |---|---|---|---|---|
+| [[2026-11-20 Session 343113b0]] |  | 2026-11-20 15:01 | 0 | 0 |
 | [[2026-11-17 Session c1b0716c]] | Test-build invite link for staff (PR #150) | 2026-11-17 09:23 | 0 | 2 |
 | [[2026-11-17 Session a7d855da]] |  | 2026-11-17 08:34 | 7 | 5 |
 | [[2026-11-17 Session 4e73e1be]] |  | 2026-11-17 08:26 | 1 | 1 |
@@ -15,7 +16,7 @@ One note per Claude Code session: the requests made, the commits and files that 
 | [[2026-11-16 Session 9c203c1f]] |  | 2026-11-16 13:54 | 1 | 3 |
 | [[2026-11-15 Session ffac82ba]] |  | 2026-11-15 19:35 | 1 | 2 |
 | [[2026-11-15 Session ddc0b142]] |  | 2026-11-15 18:20 | 3 | 1 |
-| [[2026-11-15 Session c9f313e0]] |  | 2026-11-15 20:03 | 7 | 16 |
+| [[2026-11-15 Session c9f313e0]] |  | 2026-11-15 20:03 | 7 | 17 |
 | [[2026-11-15 Session a2531b5b]] |  | 2026-11-15 13:57 | 1 | 2 |
 | [[2026-11-15 Session 5c452fa0]] |  | 2026-11-15 21:20 | 0 | 2 |
 | [[2026-11-15 Session 559be09b]] | Signed contract upload on booking milestones (D-132) | 2026-11-15 21:20 | 0 | 2 |
