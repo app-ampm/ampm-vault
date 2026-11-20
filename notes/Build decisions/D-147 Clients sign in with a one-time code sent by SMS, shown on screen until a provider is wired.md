@@ -39,6 +39,18 @@ On 20 Nov 2026 the user decided: build everything for SMS delivery now, wire the
   - The API logs a warning at every boot while it is on, and turning it off, after the provider is live, is a go-live blocker.
 - **Sessions.** Client tokens last 30 days; the server-side session's idle timeout (config, 30 days for clients) and revocation still apply. Staff tokens stay at 12 hours.
 
+### After the independent review (20 Nov 2026, before the first deploy)
+
+An adversarial review of the change found that the decision's premise did not hold as built, plus five more defects. All were fixed with tests before anything was deployed.
+
+- **The curtain did not cover the API (high).** The portal's `.htaccess` exempts `/_api/` from the Basic-Auth curtain so the app's Bearer tokens pass, so the on-screen code was open to the internet. The client-code routes (`/_api/auth/client/` and `/_api/auth/activation/client/`) are now excluded from that exemption and stay behind the curtain. They send no Bearer, so the browser sends the curtain's credentials and fail2ban is not involved. **Going live must switch the on-screen code off before the curtain comes off.**
+- **Enumeration with the code off screen.** A wrong code ("didn't work") and a number with no client ("expired") read differently. Every refusal is now one message.
+- **The five tries could be exceeded by guesses sent at once.** A probe got 38–39 comparisons against one code. Each try is now reserved atomically before the comparison (`claimAttempt`), and the fifth wrong one burns the code. The staff challenge has the same count-then-compare pattern behind its password; that is a tracker item.
+- **A shared mobile locked both clients out.** Sign-in needs exactly one active client per number. Activation now refuses a mobile another active client already has (`mobileInUse`).
+- **Timing.** With the code off screen, asking for a code answers at once and issues and sends it afterwards, as the password reset does.
+- **The limiter failing open.** Issuing a code now fails closed (503) when the per-number limits cannot be counted, because the code is the client's only credential.
+- **Accepted trade-off.** Anyone can spend a number's daily allowance (ten codes, thirty seconds apart), blocking that client from new codes for up to a day and texting them ten times. Signed-in clients (30-day sessions) are unaffected. This is the price of per-number limits; an administrator's reset of a number's limits is a later option.
+
 ## Alternatives considered
 
 - **An emailed code through Resend.** It works today at no cost, but the user chose SMS as the client channel and the on-screen code as the bridge.
