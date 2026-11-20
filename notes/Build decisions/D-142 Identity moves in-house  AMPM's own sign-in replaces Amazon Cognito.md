@@ -17,11 +17,16 @@ On 26 October 2026 the identity service was locked as Amazon Cognito in Mumbai (
 
 ## Decision
 - **AMPM signs people in itself.** `IDENTITY_PROVIDER=ampm` is allowed in production. `local` stays dev-only and `cognito` is retired, with removal in a later PR.
-- **Staff sign-in.** Email and password first. Passwords are Argon2id from Node's own `crypto.argon2` (19 MiB, 2 passes, PHC string), with a dummy hash for unknown accounts. Then the 6-digit authenticator code (RFC 6238 TOTP on Node's HMAC, ±1 step, never the same step twice) against a five-minute, single-use challenge in `auth_tokens` that burns after five wrong codes. A single-use recovery code (ten per enrolment, SHA-256 stored) can replace the code.
-- **One refusal message.** It covers an unknown email, a wrong password and a paused account. Ten failures in a row pause the account for 15 minutes. Every public route is also rate-limited per IP.
+- **Staff sign-in.** Email and password first. Passwords are Argon2id from Node's own `crypto.argon2` (19 MiB, 2 passes, PHC string), with a dummy hash for unknown accounts. Then the 6-digit authenticator code (RFC 6238 TOTP on Node's HMAC, ±1 step, never the same step twice) against a five-minute, single-use challenge in `auth_tokens` that burns after five wrong codes. A single-use recovery code can replace the code: ten per enrolment, stored as HMAC-SHA256 under a key derived from `AUTH_ENCRYPTION_KEY`, so a leaked table cannot be searched offline. The email match is an exact `lower()` comparison; Prisma's case-insensitive `equals` compiles to ILIKE, where `_` is a wildcard. Forgot-password answers immediately and does the lookup afterwards, so its timing reveals nothing.
+- **One refusal message.** It covers an unknown email, a wrong password, a throttled try and an account that cannot sign in.
+- **Brute-force limits.**
+  - The password step is throttled per email and client network, with an IPv6 /64 counted as one client. It is a single atomic increment taken before any hashing, so one attacker cannot lock someone else out, and a burst of parallel requests cannot get ahead of the count.
+  - A challenge burns after five wrong codes. Twenty consecutive wrong codes lock the account for an administrator, and no reset clears that count.
+  - The route-level per-IP limits still apply.
 - **Activation.** The invitation link (`/activate?token=`) sets the password and then confirms the authenticator from a QR code (`react-native-qrcode-svg`, already a dependency). The account turns active with subject `ampm:<id>`, and the recovery codes are shown once.
-- **Password reset.** An emailed, single-use link valid for 60 minutes. A reset clears the lockout and signs out every session; the authenticator stays.
-- **Admin reset.** `POST /admin/staff-users/:id/reset-authenticator` clears the authenticator and the codes and signs the account out. The next sign-in enrols a new one.
+- **Password reset.** An emailed, single-use link valid for 60 minutes. A reset signs out every session and cancels any sign-in already past the old password. The authenticator stays.
+- **Admin reset.** `POST /admin/staff-users/:id/reset-authenticator` resets the whole sign-in: it clears the password, the authenticator and the codes, returns the account to `invited`, cancels any sign-in in progress, signs out every session and emails a fresh invitation. The person sets both again from that invitation.
+- **Accounts without a confirmed authenticator cannot sign in**, and a reset link is only issued to an account that has one. A password alone, or a mailbox alone, never opens an account.
 - **Tokens and sessions.** The API mints HS256 access tokens (`AUTH_TOKEN_SECRET`, 12 h) and **opens the server-side session at sign-in**, not on first use, so a revocation reaches a token that has not been used yet. Sign-out revokes the current session. Authenticator secrets are AES-256-GCM under `AUTH_ENCRYPTION_KEY`; both secrets are generated on the box by `prod-secrets.sh`.
 - **No new dependencies**: Node's crypto and libraries the repo already had.
 
@@ -43,3 +48,7 @@ On 26 October 2026 the identity service was locked as Amazon Cognito in Mumbai (
 ## Links
 - Session: [[2026-11-15 Session c9f313e0]]
 - Related: [[D-013]], [[D-015]], [[D-033]], [[D-041]], [[D-138]], [[D-141]]
+- **Independent security review (20 Nov 2026).**
+  - It found one high finding: an account without an authenticator was protected by its mailbox or password alone, both after an admin reset and through reset-then-enrol. Two medium findings: code guesses had no overall limit (resets cleared the count), and the per-account lock let anyone lock a person out.
+  - Six low findings: a race in the lock, IPv6 rotation, live challenges surviving a reset, `_` as an ILIKE wildcard in the email match, forgot-password timing, and recovery codes hashed without a key.
+  - All of these were fixed before merge, with tests. The remaining low finding, tokens in link query strings that reach access logs, is a cross-cutting follow-up: move them to URL fragments and shorten the invitation lifetime.
