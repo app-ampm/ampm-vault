@@ -45,6 +45,8 @@ Taken with the user on 20 November 2026:
 - The retired Cognito code (`aws-amplify`, `@aws-amplify/react-native`, `src/lib/amplify.ts`, `src/lib/cognito-auth.ts`) still compiles into native builds until the removal D-142 promised; it should go before the first store build.
 - `docs/planning/production-readiness.md` gains the native-app items.
 
+**Verified, 20 to 21 Nov 2026:** development builds built locally (Xcode 26.6, Gradle 9.4.1) and ran on the iPhone 17 Pro simulator (iOS 26.5), the iPad Pro 13-inch simulator (native tablet layout, `UIDeviceFamily` [1, 2]) and the Pixel 7 emulator (Android 14), signing in as a client on iOS and as staff on Android against a local API; `pnpm check`, `format:check` and `bundle:check` green, and the web build signed in and loaded the portal with no console errors. On this connection (about 150 to 370 KB/s) the first builds spent most of an hour downloading React Native's prebuilt artifacts; later builds reuse the caches.
+
 ## Links
 - Session: [[2026-11-20 Session 40f4f57b]]
 - Related: [[Q1]], [[R4]], [[R17]], [[T-1]], [[W-3]]
