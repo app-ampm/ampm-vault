@@ -34,5 +34,6 @@ D-142 (20 November 2026) replaced Amazon Cognito with AMPM's own sign-in and lef
 - Follow-up: delete the AWS resources in the console, then confirm the bill shows no Cognito charge.
 
 ## Links
+- PR: https://github.com/app-ampm/ampm-platform/pull/167
 - Session: [[2026-11-21 Session c1c1fb31]]
 - Related: [[D-142]], [[D-147]], [[D-152]], [[D-013]], [[Q13]], [[Q14]], [[T-6]]
