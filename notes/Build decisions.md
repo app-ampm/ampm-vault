@@ -153,3 +153,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-143 Production email goes out through Resend|D-143]] | Production email goes out through Resend | architecture | accepted | 2026-11-20 |
 | [[D-144 The test stack is retired at the production cutover|D-144]] | The test stack is retired at the production cutover | architecture | accepted | 2026-11-20 |
 | [[D-145 The website's bot check is Cloudflare Turnstile, loaded by hand|D-145]] | The website's bot check is Cloudflare Turnstile, loaded by hand | architecture | accepted | 2026-11-20 |
+| [[D-146 The API and worker stop gracefully  connections close after the drain, under an init|D-146]] | The API and worker stop gracefully: connections close after the drain, under an init | architecture | accepted | 2026-11-20 |
