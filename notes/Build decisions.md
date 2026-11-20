@@ -154,3 +154,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-144 The test stack is retired at the production cutover|D-144]] | The test stack is retired at the production cutover | architecture | accepted | 2026-11-20 |
 | [[D-145 The website's bot check is Cloudflare Turnstile, loaded by hand|D-145]] | The website's bot check is Cloudflare Turnstile, loaded by hand | architecture | accepted | 2026-11-20 |
 | [[D-146 The API and worker stop gracefully  connections close after the drain, under an init|D-146]] | The API and worker stop gracefully: connections close after the drain, under an init | architecture | accepted | 2026-11-20 |
+| [[D-147 Clients sign in with a one-time code sent by SMS, shown on screen until a provider is wired|D-147]] | Clients sign in with a one-time code sent by SMS, shown on screen until a provider is wired | architecture | accepted | 2026-11-20 |
