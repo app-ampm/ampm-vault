@@ -150,3 +150,5 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-140 Production secrets are box-only env files, not sops, on the shared box|D-140]] | Production secrets are box-only env files, not sops, on the shared box | process | accepted | 2026-11-20 |
 | [[D-141 Production starts from a clean database with reference data and an invited first Super Admin|D-141]] | Production starts from a clean database with reference data and an invited first Super Admin | data-model | accepted | 2026-11-20 |
 | [[D-142 Identity moves in-house  AMPM's own sign-in replaces Amazon Cognito|D-142]] | Identity moves in-house: AMPM's own sign-in replaces Amazon Cognito | architecture | accepted | 2026-11-20 |
+| [[D-143 Production email goes out through Resend|D-143]] | Production email goes out through Resend | architecture | accepted | 2026-11-20 |
+| [[D-144 The test stack is retired at the production cutover|D-144]] | The test stack is retired at the production cutover | architecture | accepted | 2026-11-20 |
