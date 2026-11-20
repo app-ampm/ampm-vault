@@ -28,7 +28,7 @@ D-142 (20 November 2026) replaced Amazon Cognito with AMPM's own sign-in and lef
 - **Keep `react-native-get-random-values` as a general polyfill.** Nothing in the app or its dependencies needs it today; it comes back with the dependency that does.
 
 ## Consequences
-- The native builds no longer carry Amplify or AsyncStorage (checked in the regenerated `ios/Podfile.lock`), and the lockfile loses about 840 lines.
+- The native builds no longer carry Amplify or AsyncStorage: against D-152's prebuild, the regenerated `ios/Podfile.lock` loses exactly three pods (`AmplifyRTNCore`, `RNCAsyncStorage`, `react-native-get-random-values`) and Android autolinks none of them. The exported bundles carry no Amplify and no `getRandomValues` call, and shrink by about a tenth (web 6.27 to 5.74 MB, iOS 10.62 to 9.52 MB, Android 10.84 to 9.77 MB). The lockfile loses about 840 lines.
 - `IDENTITY_PROVIDER` now defaults to `ampm` instead of `cognito`. Production already sets `ampm`; `.env.example`, the e2e setup, CI and the local Compose file set `local`. A configuration without the setting now needs `AUTH_TOKEN_SECRET` and `AUTH_ENCRYPTION_KEY`, as Cognito's settings were needed before.
 - The box's `app.env` may still hold `COGNITO_*` values; they are ignored and can be deleted.
 - Follow-up: delete the AWS resources in the console, then confirm the bill shows no Cognito charge.
