@@ -26,8 +26,12 @@ WEB_SSH=user@31.97.62.74 WEB_HTTPDOCS=/var/www/vhosts/app.ampmverse.com/httpdocs
   bash deploy/deploy-web.sh
 ```
 
-This runs `expo export --platform web` (the `web:export` script — a static export with
-`EXPO_PUBLIC_API_URL` baked in) and rsyncs `apps/mobile/dist/` to `httpdocs`. The rsync uses `--delete` to
+This first builds the workspace packages the app depends on (`pnpm turbo run build --filter='mobile^...'`):
+`@ampm/core` and `@ampm/policy` resolve to their compiled `dist/`, so exporting over a stale `dist` ships
+old shared code (on 15 Nov 2026 that blanked every enquiry page until a rebuilt bundle went out). It then
+runs `expo export --platform web --clear` with `EXPO_NO_DOTENV=1` (a static export with
+`EXPO_PUBLIC_API_URL` baked in, and no local `.env` leaking in) and rsyncs `apps/mobile/dist/` to
+`httpdocs`. After a deploy, open an enquiry page on the box and check the browser console. The rsync uses `--delete` to
 prune stale assets but `--exclude`s the box's hand-placed control files (`.htaccess`, `.htpasswd`,
 `.well-known/`), so the proxy, the auth gate and cert renewal survive every deploy; it then warns if
 `httpdocs/.htaccess` is missing.
@@ -136,6 +140,9 @@ same source.
   `/_api` proxy, a different origin from the site, as it will be under Caddy in production, so the API's
   `CORS_ORIGINS` lists `https://site.ampmverse.com`. The server-side reads (the discovery price on How it
   works, from `GET /crm/plans`) use the same public URL; `/_api` is outside the gate, so they need no login.
+  The third, `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, is the enquiry form's Cloudflare Turnstile widget: the test
+  site takes Cloudflare's always-pass test key `1x00000000000000000000AA`, whose dummy token the test API's
+  stub bot check accepts; production builds take the real widget's key.
 - **Container**: the `web` service of the box override, published on `127.0.0.1:7002` only, on a network
   of its own, read-only with a tmpfs for `.next/cache`, a 1 CPU / 1 GB limit and a healthcheck.
 

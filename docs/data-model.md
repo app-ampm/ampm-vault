@@ -158,6 +158,7 @@ erDiagram
     users ||--o{ audit_events : performs
     users ||--o{ import_jobs : runs
     users ||--o{ sessions : has
+    users ||--o{ user_recovery_codes : keeps
 
     users {
         uuid id PK
@@ -166,9 +167,22 @@ erDiagram
         string email UK
         string phone
         string status "enum invited / active / disabled / locked"
-        string identity_subject UK "the identity service's subject (Cognito sub, T-6); null until activated"
-        bool mfa_enabled "mandatory true for staff (A-13); enforced by the identity service, mirrored here"
+        string identity_subject UK "the token subject: ampm:<id> (D-142); null until activated"
+        bool mfa_enabled "mandatory true for staff (A-13); set when the authenticator is confirmed"
         datetime last_login_at
+        string password_hash "SECRET; Argon2id PHC string (D-142)"
+        datetime password_changed_at
+        string totp_secret_enc "SECRET; AES-256-GCM authenticator secret"
+        string totp_pending_enc "SECRET; a secret shown for enrolment, not yet confirmed"
+        datetime totp_confirmed_at
+        int totp_last_step "the step of the last accepted code; never accepted twice"
+        int failed_codes "consecutive wrong authenticator or recovery codes; twenty lock the account"
+    }
+    user_recovery_codes {
+        uuid id PK
+        uuid user_id FK
+        string code_hash "SECRET; HMAC-SHA256 of a single-use recovery code (D-142)"
+        datetime used_at
     }
     roles {
         uuid id PK
@@ -239,10 +253,11 @@ erDiagram
     auth_tokens {
         uuid id PK
         uuid user_id FK
-        string purpose "enum invite / password_reset / otp / magic_link"
+        string purpose "enum invite / password_reset / otp / magic_link / sign_in_challenge"
         string token_hash "RESTRICTED"
         datetime expires_at
         datetime used_at
+        int attempts "wrong answers against a sign-in challenge; five burn it"
     }
     notifications {
         uuid id PK
@@ -321,10 +336,28 @@ Notes:
 - `permissions.permission_key` follows `module.resource.action` and optionally `.scope`; the permission matrix lists them.
 - `audit_events.project_id` is denormalised so a project manager can read the history of their own project without scanning everything.
 - **26 October 2026 (T-6, D-022):** credentials, OTP and authenticator codes live in Amazon Cognito; `users` keeps `identity_subject` instead of `password_hash` and `mfa_secret_ref`, and `auth_tokens` remains for the invitation and link tokens the API still mints. Implemented in `apps/api/prisma/schema.prisma` (bootstrap step 5).
+- **20 November 2026 (D-142):** AMPM signs people in itself, superseding the Cognito arrangement above: staff credentials live on `users` (an Argon2id `password_hash`, the authenticator secret encrypted under `AUTH_ENCRYPTION_KEY`, the count of consecutive wrong codes that locks the account at twenty), single-use recovery codes in `user_recovery_codes` (HMAC-SHA256 under a key derived from `AUTH_ENCRYPTION_KEY`), and `auth_tokens` also carries the five-minute `sign_in_challenge` between password and code. Implemented in migration `20261120074702_in_app_sign_in`.
+- **20 November 2026 (D-147):** clients sign in, and invited clients activate, with a one-time code sent by SMS to `users.phone` (E.164). Each code is an `auth_tokens` row of purpose `otp`, whose `token_hash` is an HMAC-SHA256 of the account and the code under a key derived from `AUTH_ENCRYPTION_KEY`, never the code itself. It expires after 5 minutes, `attempts` burns it at 5, and a new code retires the old. No column or migration was added.
 - **28 October 2026 (D-036, dormant):** dynamic RBAC. `grantable_capabilities` is the code-defined capability catalog, seeded from `packages/policy/src/generated/capabilities.json` (every grant variant a system role holds; the matrix stays the source). A Super Admin builds custom roles from it: `role_grants` are a role's direct capabilities, `permission_sets` are reusable bundles attached through `role_permission_sets`, and a set's capabilities are `permission_set_grants`. The nine system roles stay matrix-authoritative and golden-pinned; these tables add custom roles *on top*. The engine does not read them yet — the API resolves a custom role's capabilities and injects them as `PolicyPrincipal.resolvedGrants`, validated against the catalog, once custom roles are wired (supersedes A-6/P-1). FKs are `ON DELETE RESTRICT`, so a capability, role or set in use cannot be removed.
 - **`sessions` (28 October 2026, D-033):** the server-side session security.md requires. The access token proves identity; a `sessions` row, keyed by the token's `jti`, is what the API can expire (staff 12 h / client 30 d idle, from `configurations`) and revoke (on sign-out or a role or membership change). Added here because the original model left it to the identity service, which cannot revoke on an AMPM role change.
 - **Client-login cap (28 October 2026, feature 5.3):** the Q5 "two client logins per wedding, one per side" rule is enforced at the database by a partial unique index on `project_members (project_id, client_side)` where `deleted_at IS NULL AND status <> 'removed' AND client_side IS NOT NULL` (raw migration; partial indexes are not expressible in the Prisma schema). The service also pre-checks it for a friendly error, but the index is the race-safe backstop. Staff memberships (`client_side` NULL) are unconstrained.
 - **`job_runs` (29 October 2026, feature 5.5):** the recorded outcome api.md requires for a background job — the session reaper only logs. Append-only: one row per run with its `job_name`, `idempotency_key`, `status`, a `detail_json` of per-table counts and a sanitised `error`. The nightly demo-restore job writes one; other scheduled jobs reuse it. No soft-delete columns (operational, like `sessions`). Not partitioned yet — volume is a handful of rows a day; revisit with the other operational tables if it grows.
+- **Partition maintenance (20 November 2026, D-150):** `audit_events` (on `occurred_at`) and `notifications` (on `created_at`) have one partition per UTC month, named `<table>_YYYY_MM`, plus a `<table>_default` partition for anything outside them. The partition migrations create October 2026 to December 2027 (`20261028050928_partition_audit_notifications`, then `20261120133309_partition_audit_notifications_2027`).
+  - **The job.** From then on the worker job `admin.partitions.maintain` (`apps/api/src/modules/admin/partitions/`) keeps the current month and the six after it in place. It runs daily at 02:30 UTC and records each run on `job_runs`. It creates a missing month with the migrations' own statement, `CREATE TABLE … PARTITION OF … FOR VALUES FROM ('YYYY-MM-01 00:00:00+00') TO (…)`, so the partition inherits the parent's primary key, indexes and foreign key.
+  - **Idempotent.** The catalog read takes no lock, so a run with nothing to create (every run until 1 July 2027, when January 2028 enters the window) changes nothing. A create takes the parent's lock first, gives up after 5 seconds rather than queue the table's traffic behind it, and checks again under the lock.
+  - **Rows stranded in DEFAULT.** The job never creates a month whose rows already sit in DEFAULT: PostgreSQL would refuse, and the rows need a person to look at them. It still creates the other months. The run is recorded `failed` with the partition and its row count, an `admin.partition_blocked` error is logged, and the job throws, so BullMQ retries it and then dead-letters it.
+  - **Moving the rows.** To clear it, move the month's rows in one transaction (shown for `notifications`, February 2027; `audit_events` is the same on `occurred_at`). The next run then finds the month in place:
+    ```sql
+    BEGIN;
+    SET LOCAL lock_timeout = '5s';
+    ALTER TABLE notifications DETACH PARTITION notifications_default;
+    CREATE TABLE "notifications_2027_02" PARTITION OF "notifications" FOR VALUES FROM ('2027-02-01 00:00:00+00') TO ('2027-03-01 00:00:00+00');
+    INSERT INTO notifications SELECT * FROM notifications_default WHERE created_at >= '2027-02-01 00:00:00+00' AND created_at < '2027-03-01 00:00:00+00';
+    DELETE FROM notifications_default WHERE created_at >= '2027-02-01 00:00:00+00' AND created_at < '2027-03-01 00:00:00+00';
+    ALTER TABLE notifications ATTACH PARTITION notifications_default DEFAULT;
+    COMMIT;
+    ```
+  - **Never dropped.** Partitions are never dropped; deleting old log rows stays a retention proposal for a Super Admin to approve (§1).
 
 ---
 
@@ -581,6 +614,7 @@ erDiagram
         text internal_notes "RESTRICTED"
         int total_rooms
         string street_view_ref "map or street view reference (Q9)"
+        json facilities_json
         datetime last_verified_at "denormalised from hotel_verifications"
     }
     hotel_contacts {
@@ -2180,4 +2214,4 @@ These are design choices a reviewer should confirm; each has a default in the dr
 4. **Comments table scope.** One polymorphic `comments` table serves designs, proposals, menus, requests, tasks, incidents and enquiries. Splitting it per entity is cleaner for indexing but multiplies code; the draft keeps one table with a type check constraint.
 5. **Demo hotels.** Demo accounts see real hotels flagged `demo_visible` with rate items masked. If AMPM prefers invented sample hotels, seed them as `hotels` rows with `status = inactive` and `demo_visible = true` (A-28).
 6. **Audit granularity.** Restricted-field reads are audited for identity documents and internal cost. Auditing every read of every restricted field is possible but noisy; confirm the list in permission matrix §9.
-7. **Partitioning.** `audit_events` and `notifications` are partitioned monthly from day one; `guest_function_attendance` is indexed by project and function. Revisit if volumes exceed A-15.
+7. **Partitioning.** `audit_events` and `notifications` are partitioned monthly from day one, and a daily job keeps the coming six months' partitions in place (§3, partition maintenance); `guest_function_attendance` is indexed by project and function. Revisit if volumes exceed A-15.
