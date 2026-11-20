@@ -14,7 +14,7 @@ tags: [ampm, session]
 
 ## Narrative
 
-A side session started by the production audit session, to replace the stub antivirus scanner (production-readiness §4). Pull request [#163](https://github.com/app-ampm/ampm-platform/pull/163); decision [[D-151 Uploads are scanned by ClamAV in two containers, and a scan without a verdict refuses the upload|D-151]].
+A side session started by the production audit session, to replace the stub antivirus scanner (production-readiness §4). Pull request [#163](https://github.com/app-ampm/ampm-platform/pull/163), squash-merged to main as `cfd98fe` on 20 Nov 2026 after a full green CI; decision [[D-151 Uploads are scanned by ClamAV in two containers, and a scan without a verdict refuses the upload|D-151]].
 
 **Built.**
 - `ClamAvScanner` streams each upload to clamd over TCP with INSTREAM. It uses `node:net`, with no new dependency.
