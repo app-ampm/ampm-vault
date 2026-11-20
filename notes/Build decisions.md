@@ -149,3 +149,4 @@ Technical and process decisions taken during the build, each with context, alter
 | [[D-139 Production backups stay on the server, and Postgres runs under an init|D-139]] | Production backups stay on the server, and Postgres runs under an init | architecture | accepted | 2026-11-20 |
 | [[D-140 Production secrets are box-only env files, not sops, on the shared box|D-140]] | Production secrets are box-only env files, not sops, on the shared box | process | accepted | 2026-11-20 |
 | [[D-141 Production starts from a clean database with reference data and an invited first Super Admin|D-141]] | Production starts from a clean database with reference data and an invited first Super Admin | data-model | accepted | 2026-11-20 |
+| [[D-142 Identity moves in-house  AMPM's own sign-in replaces Amazon Cognito|D-142]] | Identity moves in-house: AMPM's own sign-in replaces Amazon Cognito | architecture | accepted | 2026-11-20 |
