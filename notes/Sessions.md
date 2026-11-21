@@ -10,11 +10,12 @@ One note per Claude Code session: the requests made, the commits and files that 
 |---|---|---|---|---|
 | [[2026-11-21 Session d0d149d8]] |  | 2026-11-21 00:11 | 0 | 3 |
 | [[2026-11-21 Session c1c1fb31]] |  | 2026-11-21 00:09 | 0 | 3 |
+| [[2026-11-21 Session 2c39eb17]] |  | 2026-11-21 20:49 | 0 | 0 |
 | [[2026-11-20 Session f9a2d53d]] |  | 2026-11-20 18:50 | 0 | 1 |
 | [[2026-11-20 Session f3a30ff1]] | Log-table partition maintenance job and 2027 partitions (PR #161, D-150) | 2026-11-20 18:51 | 0 | 1 |
 | [[2026-11-20 Session 782dcfcf]] |  | 2026-11-20 18:51 | 0 | 1 |
 | [[2026-11-20 Session 4cf7a028]] |  | 2026-11-20 21:49 | 0 | 0 |
-| [[2026-11-20 Session 40f4f57b]] | Mobile apps status, then the native build setup (D-152) | 2026-11-20 21:49 | 8 | 7 |
+| [[2026-11-20 Session 40f4f57b]] | Mobile apps status, then the native build setup (D-152) | 2026-11-20 21:49 | 9 | 7 |
 | [[2026-11-20 Session 343113b0]] |  | 2026-11-20 15:01 | 0 | 4 |
 | [[2026-11-20 Session 288f88fc]] |  | 2026-11-20 15:25 | 0 | 3 |
 | [[2026-11-17 Session c1b0716c]] | Test-build invite link for staff (PR #150) | 2026-11-17 09:23 | 0 | 2 |
