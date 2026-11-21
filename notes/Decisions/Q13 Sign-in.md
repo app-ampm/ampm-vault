@@ -18,15 +18,15 @@ Email and password or phone OTP for clients? Multi-factor authentication for sta
 
 ## AMPM's decision (2026-10-25)
 
-Prospects, demo users and clients sign in with their mobile number and an OTP. There is no unrestricted self-registration; AMPM creates the account or sends an invitation. Staff have individual authorised accounts with role- and department-based access; the exact staff authentication method is to be finalised with the development team. Decided 26 October 2026: a client is verified by both email and mobile number; sign-in stays by mobile number and OTP. Decided 26 October 2026: staff sign in with a password and an authenticator-app code; the identity service is Amazon Cognito in Mumbai.
+Prospects, demo users and clients sign in with their mobile number and an OTP. There is no unrestricted self-registration; AMPM creates the account or sends an invitation. Staff have individual authorised accounts with role- and department-based access; the exact staff authentication method is to be finalised with the development team. Decided 26 October 2026: a client is verified by both email and mobile number; sign-in stays by mobile number and OTP. Decided 26 October 2026: staff sign in with a password and an authenticator-app code; the identity service is Amazon Cognito in Mumbai. Decided 20 November 2026 (D-142, D-147): AMPM signs people in itself, replacing Amazon Cognito: the API checks staff passwords and authenticator codes, and clients sign in with a one-time code sent by SMS to their mobile.
 
 ## Assumptions this answer confirms or changes
 
 | Assumption | Status | Note |
 |---|---|---|
-| [[A-13]] | Changed | Clients are verified by email and mobile and sign in with mobile OTP; staff sign in with a password and an authenticator-app code; the identity service is Cognito. |
+| [[A-13]] | Changed | Clients are verified by email and mobile and sign in with mobile OTP; staff sign in with a password and an authenticator-app code; the identity service is AMPM's own API since 20 November 2026 (D-142), replacing Cognito. |
 | [[P-6]] | Changed | Mobile OTP for prospects and clients; staff method to be finalised. |
-| [[T-6]] | Changed | Identity through Amazon Cognito (Mumbai): OTP for prospects and clients with email and mobile verified at activation, password plus authenticator app for staff; principals, guest tokens, entitlements and no self-registration in the API. |
+| [[T-6]] | Changed | Authentication back inside the API since 20 November 2026 (D-142, D-147), replacing Amazon Cognito (Mumbai): Argon2id passwords plus authenticator-app codes for staff, a one-time code by SMS for prospects and clients with email and mobile verified at activation; principals, guest tokens, entitlements and no self-registration in the API. |
 | [[U-9]] | Changed | Client activation verifies email and mobile; OTP sign-in for clients; staff by password plus authenticator-app code. |
 | [[W-7]] | Changed | OTP sign-in screens for prospects and clients. |
 | [[V-3]] | Changed | OTP sign-in tests for clients and prospects. |
